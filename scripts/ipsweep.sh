@@ -1,8 +1,8 @@
 #!/bin/sh
-if ["$1" == "" ]
+if [ "$1" == "" ]
 then
 echo "You forgot an IP address!"
-echo "Syntax: ./ipsweep.sh <ip>
+echo "Syntax: ./ipsweep.sh <ip>"
 
 else
 for ip in `seq 1 254`; do    
