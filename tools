@@ -7,6 +7,7 @@ zaproxy
 burpsuite
 wireshark
 crt.sh
+OWASP Amass
 
 ===================
 Vulnerability scanner
