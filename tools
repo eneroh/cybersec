@@ -1,11 +1,12 @@
 ===================
-Network/port scanner
+Network/domain/port scanner
 ===================
 nmap
 wappalyzer
 zaproxy
 burpsuite
 wireshark
+crt.sh
 
 ===================
 Vulnerability scanner
