@@ -1,16 +1,33 @@
+===================
+Network/port scanner
+===================
 nmap
 wappalyzer
 zaproxy
 burpsuite
+wireshark
+
+===================
+Vulnerability scanner
+===================
+nikto
+
+===================
+Password/decryption
+===================
+john the ripper
+hashcat
+
+===================
+Email Exploitation
+===================
+hunter.io
+breach-parse
+
+===================
+General Hacking
+===================
+seclists/wordlists
 metasploit
 smbclient
 gobuster
-nikto
-netcat
-wireshark
-sqlmap
-john the ripper
-hashcat
-hacker.io
-
-seclists/wordlists
