@@ -1,18 +1,26 @@
 ===================
-Network/domain/port scanner
+Network/port scanner (Attack surface mapping)
 ===================
 nmap
 wappalyzer
 builtwith.com
+wireshark
+OWASP Amass
+
+==================
+Proxy Server [Bring traffic through to monitor]
+==================
 zaproxy
 burpsuite
-wireshark
+
+===================
+Domain/Directory scanner (Attack surface mapping)
+===================
 crt.sh
-OWASP Amass
 Tomnomnom httpprobe
 
 ===================
-Vulnerability scanner
+Vulnerability scanner (Attack surface mapping)
 ===================
 nikto
 
@@ -35,6 +43,12 @@ seclists/wordlists
 metasploit/msfconsole
 smbclient
 gobuster
+
+===================
+Reverse shell (Gain access to remote machine using program)
+===================
+netcat
+reverseshell docs (wordlists/seclists)
 
 ===================
 WiFi Hacking
