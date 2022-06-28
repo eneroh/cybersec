@@ -32,6 +32,11 @@ breach-parse
 General Hacking
 ===================
 seclists/wordlists
-metasploit
+metasploit/msfconsole
 smbclient
 gobuster
+
+===================
+WiFi Hacking
+===================
+aircrack-ng
