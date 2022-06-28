@@ -18,6 +18,7 @@ Domain/Directory scanner (Attack surface mapping)
 ===================
 crt.sh
 Tomnomnom httpprobe
+gobuster
 
 ===================
 Vulnerability scanner (Attack surface mapping)
@@ -42,7 +43,6 @@ General Hacking
 seclists/wordlists
 metasploit/msfconsole
 smbclient
-gobuster
 
 ===================
 Reverse shell (Gain access to remote machine using program)
