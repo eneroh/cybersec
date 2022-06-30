@@ -2,16 +2,16 @@
 Network/port scanner (Attack surface mapping)
 ===================
 nmap
-wappalyzer
 builtwith.com
 wireshark
 OWASP Amass
 
 ==================
-Proxy Server [Bring traffic through to monitor]
+Web applicaton Hacking
 ==================
 zaproxy
 burpsuite
+wappalyzer
 
 ===================
 Domain/Directory scanner (Attack surface mapping)
