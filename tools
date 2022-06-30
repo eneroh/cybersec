@@ -80,3 +80,4 @@ Off-network/Isolated virtualised environment
 Active Directory Hacking
 ===================
 kerbrute
+getnpusers.py via impacket
