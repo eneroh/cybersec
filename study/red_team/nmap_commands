@@ -1,0 +1,5 @@
+nmap -T4 -p- -A <ip>
+
+nmap -sC -sV <ip>
+
+nmap -Pn <ip>

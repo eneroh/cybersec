@@ -1,0 +1,17 @@
+Physical/Social
+
+Location Information
+Satellite Images
+Drone recon
+Building layout (nfc readers, break areas, security, perimeter)
+
+Job Information
+Employees (name, job title, phone number, manager etc.) [LinkedIn, Twitter]
+Pictures (badge, desk, computer photos etc.)
+
+Build yourself a profile, know names of others, make a fake badge
+
+Web/Host Target Validation - WHOIS, nslookup, dnsrecon
+Finding subdomains - Google Fu, dig, nmap, bluto, crt.sh, sublister etc.
+Fingerprinting - nmap, wappalyzer, whatweb, builtwith, netcat
+Data breaches - HaveIBeenPwned, breach parse
