@@ -2,7 +2,6 @@
 Network/port scanner (Attack surface mapping)
 ===================
 nmap
-builtwith.com
 wireshark
 OWASP Amass
 
@@ -11,7 +10,9 @@ Web applicaton Hacking
 ==================
 zaproxy
 burpsuite
+builtwith.com
 wappalyzer
+whatweb
 
 ===================
 Domain/Directory scanner (Attack surface mapping)
