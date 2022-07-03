@@ -1,0 +1,25 @@
+metasploit scan overview
+
+scanning particularly this session
+
+slow, not as detailed as nmap
+
+feature exists, kind of meh
+
+in terminal:
+
+> msfconsole
+
+> seach portscan
+
+> 4 auxiliary/scanner/portscan/syn
+
+> use 4
+
+> options
+
+> set rhosts <ip of remote host>
+
+> set ports 1-65535
+
+> run

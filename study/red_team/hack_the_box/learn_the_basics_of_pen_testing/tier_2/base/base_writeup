@@ -1,0 +1,12 @@
+ip of machine: 10.129.95.184
+
+nmap scan: 
+nmap -T4 -p- -sC -sV -v -A <ip>
+nmap -sC -sV <ip>
+
+results (ports and services): 22/tcp SSH, 80/tcp HTTP
+versioning: SSH - OpenSSH 7.6p1 Ubuntu, HTTP - Apache httpd 2.4.29
+
+directory findings: 
+
+login: 

@@ -1,0 +1,11 @@
+masscan overview
+
+available via github
+
+https://github.com/robertdavidgreen/masscan
+
+built to scan the entire intranet fast
+
+Useful to see ports but not as in-depth as nmap
+
+syntax: masscan -p1-65535 --rate 1000 <ip>
