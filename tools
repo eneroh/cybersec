@@ -48,7 +48,7 @@ metasploit/msfconsole
 smbclient
 
 ===================
-Reverse shell (Gain access to remote machine using program)
+Reverse shell [Exploitation] (Gain access to remote machine using program)
 ===================
 netcat
 reverseshell docs (wordlists/seclists)
