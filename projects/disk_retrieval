@@ -1,0 +1,40 @@
+===============================================
+Disk Retrieval Project
+===============================================
+Project time: 24-48 hours, as disk scanning may take a while depending.
+
+Idea:
+
+Purchase hard drive for cheap from ebay or gumtree and attempt to retrieve information from the drive.
+
+May also be performed on a drive I purchase and try and clear myself without utilizing shred butttttt, may be less effective as I have more knowledge on data destruction than typical users. Hm, further investigation required.
+
+Unsure what application I will use to accomplish this as most people don't understand what data destruction is and how to utilize GNU shred, which just mangles any previous 0's and 1's on the drive.
+
+Perhaps an advertisement that doesn't display drive SMART data, as less likely to run into data destruction.
+
+Through closer inspection: dderescue or testdisk seem like potential applications
+
+Tools:
+smartmontools
+gnu shred
+dderescue
+testdisk
+===============================================
+Procedure
+===============================================
+Step 1:
+Locate and purchase drive from ebay.
+
+Step 2:
+Prepare test environment for data retrieval, i.e. external drive bay to perform testing, as well as relevant applications prepared to proceed, isolated environment may also be required as you never know what you're getting from ebay heh.
+
+Step 3:
+Begin data retrieval using testdisk, dderescue/other applications that may be relevant.
+
+Step 4:
+Observe results.
+===============================================
+Conclusion
+===============================================
+Pending
