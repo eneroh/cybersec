@@ -5,9 +5,9 @@ Project time: 24-48 hours, as disk scanning may take a while depending.
 
 Idea:
 
-Purchase hard drive for cheap from ebay or gumtree and attempt to retrieve information from the drive.
+Purchase USED hard drive for cheap from ebay or gumtree and attempt to retrieve information from the drive.
 
-May also be performed on a drive I purchase and try and clear myself without utilizing shred butttttt, may be less effective as I have more knowledge on data destruction than typical users. Hm, further investigation required.
+May also be performed on a NEW drive I purchase, fill it with baloney then try and clear myself without utilizing shred and try and retrieve info butttttt, may be less effective as I have more knowledge on data destruction than typical users. Hm, further investigation required.
 
 To ensure data is destroyed utilization of GNU shred is a requirement as it mangles any previous 0's and 1's on the drive.
 
