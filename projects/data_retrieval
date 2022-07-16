@@ -9,7 +9,7 @@ Purchase hard drive for cheap from ebay or gumtree and attempt to retrieve infor
 
 May also be performed on a drive I purchase and try and clear myself without utilizing shred butttttt, may be less effective as I have more knowledge on data destruction than typical users. Hm, further investigation required.
 
-Unsure what application I will use to accomplish this as most people don't understand what data destruction is and how to utilize GNU shred, which just mangles any previous 0's and 1's on the drive.
+To ensure data is destroyed utilization of GNU shred is a requirement as it mangles any previous 0's and 1's on the drive.
 
 Perhaps purchasing from an ebay advertisement that doesn't display drive SMART data, as less likely to run into proper data destruction.
 
