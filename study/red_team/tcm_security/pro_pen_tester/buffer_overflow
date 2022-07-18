@@ -1,0 +1,68 @@
+==============================================================
+buffer overflow
+==============================================================
+
+All about overwriting EIP.
+==============================================================
+Commands
+==============================================================
+Prepare immunity debugger as well
+
+==============================================================
+Spiking
+==============================================================
+Refer to relevant .spk script in scripts
+
+generic_send_tcp 192.168.1.100 9999 <script>.spk 0 0
+
+use trun spike instead
+vuln server crashes
+
+refer to registers on immunity debugger on vulnserver
+
+Look at EAX, EAP, EIP. All are now replaced with A's.
+==============================================================
+fuzzing
+==============================================================
+after sending first script for fuzzing:
+
+/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 3000
+
+fuzzing -
+
+==============================================================
+overwriting the EIP
+==============================================================
+Trying to determine how many bytes it takes to overflow the EIP
+
+perform next command after sending through the other script:
+
+/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 3000 -q 3864337
+
+after overwriting the EIP, you now control it as you have manipulated the EIP to display 42424242
+
+=================================================================
+finding bad characters
+=================================================================
+
+refer to relevant script
+
+Refer back to immunity debugger
+
+and you dont see a change in the EIP, instead look at the hexdump
+
+refer to 01, 02, 03, 04, etc.
+
+looking for "FF", nothing out of place
+
+There are presently no chars out of place.
+
+make sure to look for things out of the ordinary in shellcode
+
+write down the numbers
+
+==============================================================
+finding the right module
+==============================================================
+
+Looking for a dll inside a program without protection. Tool: Monamodules corelan github.
