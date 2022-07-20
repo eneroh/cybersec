@@ -1,0 +1,119 @@
+Active Directory uses Kerberos tickets to authenticate
+
+95% of fortune 1000 companies use it to manage their infrastucture
+
+Can be exploited without ever attacking pachable exploits. Just by abusing features, trusts, components and more.
+========================================================================
+Domain Controller
+========================================================================
+AD DS Server Role installed and promoted to domain controller
+
+- Host a copy of the AD DS directory store
+
+- Provide Authentication and auth services
+
+- Replicate updates to other DC's
+
+- Allow administrative access to manage user accounts and network resources
+
+========================================================================
+AD DS Data Store
+========================================================================
+Contains database files and processes that store and manage directory info for users, services and apps
+
+*IMPORTANT* Password hashes for all users
+
+- Consists of the ntds.dit file
+
+- Is stored by default in the %SystemRoot%\NTDS folder on all dc's
+
+- Is accessible only through the dc processes and protocols.
+
+=======================================================================
+Logical AD Components
+=======================================================================
+
+AD DS Schema
+
+Contains definitions of every object that can be created in AD
+
+Enforces rules on object creation
+=======================================================================
+Domains
+=======================================================================
+Used to link users/devices/sites together
+
+- Administrate boundaries for policies to groups of objects
+
+- Replicate data between DC's
+
+- Limit scope of access to resources
+
+=======================================================================
+Trees
+=======================================================================
+Hierachy of domains in AD DS
+
+- Share a namespace with parent domain (subdomain)
+
+- Can have additional child domains
+
+- Create a two-way trust with other domains
+
+=======================================================================
+Forests
+=======================================================================
+
+A collection of one or more domain trees
+
+- Share a schema (rulebook)
+
+- Share a common config partiiton
+
+- Share a common global catalog to enable searching
+
+- Enable trusts between domains in forest
+
+- Share the enterprise admins and schema admins groups
+
+========================================================================
+Organisational units (OU)
+========================================================================
+
+Contain users, groups, computers and other OU.
+
+- REpresent your org hieracrchically and logically
+
+- Manage a collection of objects
+
+- Delete perms to groups of objects
+
+- Apply policies
+
+========================================================================
+Trusts
+========================================================================
+
+Mechanism to gain access to resources in another domain
+
+Directory - flows from trusting domain to trusting domain
+
+Transitive - Trusts everything inside of both trusting domains, extends to other domain's trusts
+
+========================================================================
+Objects
+========================================================================
+
+- User
+
+- Contacts
+
+- Groups
+
+- Printers
+
+- Computers
+
+- Shared Folders
+
+- Inetorgperson
