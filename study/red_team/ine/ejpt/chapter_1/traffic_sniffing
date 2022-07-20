@@ -1,0 +1,13 @@
+===============================================================
+Traffic Sniffing
+===============================================================
+
+By using Wireshark, you are able to see user credentials in a prompt in cleartext over http.
+
+> In Wireshark
+
+> Right click on packet and select "Follow TCP Stream"
+
+**look specifically for a POST request
+
+Successfully passed quiz 5/5

@@ -1,0 +1,152 @@
+====================================================================================================
+Networking
+====================================================================================================
+
+Protocols -
+How computers communicate within a network.
+
+You can utilize protocols to exploit devices.
+
+Communication between 2 devices is done through "packets".
+
+Packets -
+Streams of bits as electric signals used to data transmission. Typically via ethernet.
+
+data/bits/zeros and ones
+
+With every packet is the following:
+
+Header and payload
+
+Header typically contains the host information.
+
+Payload contains the content or information like an email message or file to download.
+
+=====================================================================================================
+ISO/OSI model
+=====================================================================================================
+
+Is widely referred to in I.T. networking.
+
+7 layers.
+
+All
+People
+Seem
+To
+Need
+Data
+Processing
+
+Application
+Presentation
+Session
+Transport
+Network
+Data Link
+Physical
+
+=====================================================================================================
+TCP/IP
+=====================================================================================================
+
+Has 4 layers
+
+ATND
+
+Application
+Transport
+Network
+Data link
+
+upper protocol packet is the header
+bottom is the payload (also referred to as "encapsulation")
+
+=====================================================================================================
+Encapsulation
+=====================================================================================================
+
+During encapsulation every protocol adds its own header to the packet, treating it as a payload.
+
+This happens to every packet sent by a host.
+
+The receiving end does the same but in reverse order.
+
+=====================================================================================================
+IP
+=====================================================================================================
+
+IP stands for Internet Protocol
+
+The Internet layer or TCP/IP a.k.a Transmission Control Protocol/Internet Protocol
+
+IP is in charge of deliverying datagrams (IP packets are called datagrams) to the hosts involved in the communication and it uses IP addresses to identity a host.
+
+Any host on a network, in a private or on the internet is identified by a unique IP address.
+
+Typically IPv4.
+
+4 bytes or octets; a byte consists of 8 bits
+
+73.5.12.132
+
+1st.2nd.3rd.4th
+
+Some addresses are reserved for special purposes
+
+From 0 to 255
+
+=====================================================================================================
+Reserved IPv4 Addresses
+=====================================================================================================
+
+0.0.0.0 - 0.255.255.255
+127.0.0.0 - 127.255.255.255
+192.168.0.0 - 192.168.255.255
+
+=====================================================================================================
+IP/Mask
+=====================================================================================================
+
+You need to know the subnet mask of a network to communicate as well.
+
+255.255.255.0
+
+CIDR example
+
+Compare binary of ip and mask to get network and you can build off of that.
+
+Network prefix
+
+The latter is classless Inter-Domain Routing (CIDR) notation.
+
+reverse network binary numbers but perform same equation for host information
+
+=====================================================================================================
+IPv6
+=====================================================================================================
+
+IPv6 headers are bigger
+
+::1/128 is loopback
+::FFFF:0:0/96 are IPv4 mapped addresses
+
+IPv6 can be split in half (64 bits each) into a network part and device part
+
+=====================================================================================================
+Routing
+=====================================================================================================
+
+Routing table displays what a valid path to follow to communicate with another device/service.
+
+Routing tables are kept by hosts not routers.
+
+ip route - linux
+route print - windows
+netstat -r - macos
+
+====================================================================================================
+Link Layer Devices and Protocols
+====================================================================================================
+
+
