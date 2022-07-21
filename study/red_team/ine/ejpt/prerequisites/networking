@@ -149,4 +149,77 @@ netstat -r - macos
 Link Layer Devices and Protocols
 ====================================================================================================
 
+Forwards frames (layer 2 packets) on a local network
 
+Work with layer network addresses: MAC addresses.
+
+====================================================================================================
+Medic Access Control (MAC)
+====================================================================================================
+
+Also referred to as a "Physical address"
+
+Hexadecimal, 48 bit (6 bytes)
+
+0-9a-f
+
+ipconfig - win
+ifconfig - mac
+ip a - linux
+
+Every device on a network has a MAC and ip address.
+
+Special type of MAC: Broadcast MAC. A frame with this broadcast address, gets delivered to all devices on the local network.
+
+====================================================================================================
+Switches
+====================================================================================================
+
+Switches work using MAC addresses. A forwarding table is necessary to bind to an interface.
+
+Content Address Memory is another name for a forwarding table.
+
+====================================================================================================
+Forwarding Tables
+====================================================================================================
+
+TTL is another item that appears in a forwarding table: MAC, Interface, TTL
+
+Cam table has a finite size
+
+====================================================================================================
+Content Table Population
+====================================================================================================
+
+Switches inspect the header of every packet they receive, this is used to identify new hosts/devices.
+
+Switches are less complex than routers.
+
+Source MAC Address is compared to CAM table
+
+====================================================================================================
+Address Resolution Protocol (ARP)
+====================================================================================================
+
+To communicate between two devices ARP requires the IP and MAC address to deliver the proper packet.
+
+You wouldn't be able to do anything without ARP.
+
+ARP primarily requires the MAC address
+
+Absolutely vital in all networks.
+
+ARP request launched via device and it receives the destination ARP info via the switch.
+
+arp -a - win
+
+arp - mac
+
+ip neighbour - linux
+
+
+====================================================================================================
+Hubs
+====================================================================================================
+
+Hubs are irrelevant but used to send packets to all devices on the network, messy.
