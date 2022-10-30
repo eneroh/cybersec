@@ -1,5 +1,7 @@
 ffuf commands
 
+<pentesting fundamentals - Authentication Bypass> [big deal]
+
 What is ffuf?
 ffuf fuzz faster u fool. Fuzzing is a technique for locating implementation bugs by using malformed/semi-malformed data injection in an automated fashion.
 
