@@ -105,3 +105,9 @@ Immunity debugger
 Subdomain enum
 ===================
 ffuf
+
+===================
+Steganography (hiding things inside images)
+===================
+stegextract
+steghide
