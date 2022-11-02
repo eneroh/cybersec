@@ -1,0 +1,9 @@
+base64_commands
+
+Authentication bypass
+
+Base64 decode
+echo "VEhNe0JBU0U2NF9FTkNPRElOR30=" | base64 -d
+
+Base64 encode
+echo '{"id":1,"admin":true}' | base64  
