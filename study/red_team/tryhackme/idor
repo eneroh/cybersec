@@ -1,0 +1,15 @@
+=== IDOR - insecure direct object reference ===
+
+A type of access control vulnerability
+
+--- When does IDOR typically occur? ---
+When a web server receives user input to retrieve objects (files, data, documents) without sanitising the inputs. Validation server side is required to alleviate this.
+
+--- Examples ---
+Example one is a shopping cart invoice link inside an email. You can view other people\'s orders by simply changing the order number via the URL.
+
+https://onlinestore.thm/order/XXXX/invoice
+
+This leaks users full name, address and what they ordered with quantities. It may also leak payment details depending on how much information is present on the invoice/document retrieved.
+
+Very dangerous indeed.
