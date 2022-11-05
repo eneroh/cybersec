@@ -23,5 +23,5 @@ run command for sysinfo for auditing:
 win+r
 msinfo32.exe
 
-taskman shortcut for auditing
+taskman shortcut for auditing:
 ctrl+shift+esc
