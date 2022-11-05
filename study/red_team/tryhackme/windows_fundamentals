@@ -23,5 +23,13 @@ run command for sysinfo for auditing:
 win+r
 msinfo32.exe
 
+run command for resource monitor for auditing:
+win+r
+resmon.exe
+
+run command for registry editor for auditing:
+win+r
+regedt32.exe // regedit
+
 taskman shortcut for auditing:
 ctrl+shift+esc
