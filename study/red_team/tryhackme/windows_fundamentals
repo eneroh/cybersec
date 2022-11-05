@@ -31,5 +31,8 @@ run command for registry editor for auditing:
 win+r
 regedt32.exe // regedit
 
+run command for windowsupdate for auditing:
+control /name Microsoft.WindowsUpdate
+
 taskman shortcut for auditing:
 ctrl+shift+esc
