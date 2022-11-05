@@ -4,5 +4,9 @@ run command for auditing:
 win+r
 compmgmt.msc
 
+additional run command for auditing:
+win+r
+msconfig
+
 taskman shortcut
 ctrl+shift+esc
