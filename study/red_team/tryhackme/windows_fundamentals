@@ -1,40 +1,38 @@
 windows_fundamentals
 
-run command for auditing:
 win+r
+
+run command for auditing:
 compmgmt.msc
 
 additional run command for auditing:
-win+r
 msconfig
 
 license details:
 located in msconfig > tools > About Windows
 
 run command for control panel for auditing:
-win+r
 control.exe
 
 run command for UAC for auditing:
-win+r
 C:\Windows\System32\UserAccountControlSettings.exe
 
 run command for sysinfo for auditing:
-win+r
 msinfo32.exe
 
 run command for resource monitor for auditing:
-win+r
 resmon.exe
 
 run command for registry editor for auditing:
-win+r
 regedt32.exe // regedit
 
 run command for windowsupdate for auditing:
 control /name Microsoft.WindowsUpdate
 
 check latest updates via Windows Update > View Update History
+
+run command for WF.msc for auditing:
+WF.msc
 
 taskman shortcut for auditing:
 ctrl+shift+esc
