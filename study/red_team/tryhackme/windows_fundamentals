@@ -15,5 +15,9 @@ run command for control panel:
 win+r
 control.exe
 
+run command for UAC:
+win+r
+C:\Windows\System32\UserAccountControlSettings.exe
+
 taskman shortcut
 ctrl+shift+esc
