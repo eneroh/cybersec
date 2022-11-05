@@ -34,5 +34,7 @@ regedt32.exe // regedit
 run command for windowsupdate for auditing:
 control /name Microsoft.WindowsUpdate
 
+check latest updates via Windows Update > View Update History
+
 taskman shortcut for auditing:
 ctrl+shift+esc
