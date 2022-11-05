@@ -11,5 +11,9 @@ msconfig
 license details:
 located in msconfig > tools > About Windows
 
+run command for control panel:
+win+r
+control.exe
+
 taskman shortcut
 ctrl+shift+esc
