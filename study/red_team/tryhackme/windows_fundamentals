@@ -11,13 +11,17 @@ msconfig
 license details:
 located in msconfig > tools > About Windows
 
-run command for control panel:
+run command for control panel for auditing:
 win+r
 control.exe
 
-run command for UAC:
+run command for UAC for auditing:
 win+r
 C:\Windows\System32\UserAccountControlSettings.exe
 
-taskman shortcut
+run command for sysinfo for auditing:
+win+r
+msinfo32.exe
+
+taskman shortcut for auditing
 ctrl+shift+esc
