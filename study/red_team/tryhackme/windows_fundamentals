@@ -31,7 +31,7 @@ control /name Microsoft.WindowsUpdate
 
 check latest updates via Windows Update > View Update History
 
---- run command for WF.msc for auditing: ---
+--- run command for Windows Firewall for auditing: ---
 WF.msc
 
 --- taskman shortcut for auditing: ---
