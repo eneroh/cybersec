@@ -1,14 +1,11 @@
-=====================================
-Staged vs non-staged payloads
-=====================================
+=== Staged vs non-staged payloads ===
 Used to get a shell on another machine
 
 Terminal access
 
 Difference is: separator is _ or / in metasploit
-=====================================
-non-staged
-=====================================
+
+--- Non-staged ---
 Sends exploit shellcode all at once
 
 Larger in size and won't always work
@@ -16,9 +13,7 @@ Larger in size and won't always work
 Example:
 windows/meterpreter_reverse_tcp
 
-=====================================
-Staged
-=====================================
+--- Staged ---
 Sends payload in stages
 
 Can be less stable
