@@ -1,15 +1,13 @@
-====================================================================================================
-Networking
-====================================================================================================
+=== Networking ===
 
-Protocols -
+--- Protocols ---
 How computers communicate within a network.
 
 You can utilize protocols to exploit devices.
 
 Communication between 2 devices is done through "packets".
 
-Packets -
+--- Packets ---
 Streams of bits as electric signals used to data transmission. Typically via ethernet.
 
 data/bits/zeros and ones
@@ -22,10 +20,7 @@ Header typically contains the host information.
 
 Payload contains the content or information like an email message or file to download.
 
-=====================================================================================================
-ISO/OSI model
-=====================================================================================================
-
+--- ISO/OSI model ---
 Is widely referred to in I.T. networking.
 
 7 layers.
@@ -46,10 +41,7 @@ Network
 Data Link
 Physical
 
-=====================================================================================================
-TCP/IP
-=====================================================================================================
-
+--- TCP/IP ---
 Has 4 layers
 
 ATND
@@ -62,20 +54,14 @@ Data link
 upper protocol packet is the header
 bottom is the payload (also referred to as "encapsulation")
 
-=====================================================================================================
-Encapsulation
-=====================================================================================================
-
+--- Encapsulation ---
 During encapsulation every protocol adds its own header to the packet, treating it as a payload.
 
 This happens to every packet sent by a host.
 
 The receiving end does the same but in reverse order.
 
-=====================================================================================================
-IP
-=====================================================================================================
-
+--- IP ---
 IP stands for Internet Protocol
 
 The Internet layer or TCP/IP a.k.a Transmission Control Protocol/Internet Protocol
@@ -96,17 +82,13 @@ Some addresses are reserved for special purposes
 
 From 0 to 255
 
-=====================================================================================================
-Reserved IPv4 Addresses
-=====================================================================================================
+--- Reserved IPv4 Addresses ---
 
 0.0.0.0 - 0.255.255.255
 127.0.0.0 - 127.255.255.255
 192.168.0.0 - 192.168.255.255
 
-=====================================================================================================
-IP/Mask
-=====================================================================================================
+--- IP/Mask ---
 
 You need to know the subnet mask of a network to communicate as well.
 
@@ -122,10 +104,7 @@ The latter is classless Inter-Domain Routing (CIDR) notation.
 
 reverse network binary numbers but perform same equation for host information
 
-=====================================================================================================
-IPv6
-=====================================================================================================
-
+--- IPv6 ---
 IPv6 headers are bigger
 
 ::1/128 is loopback
@@ -133,9 +112,7 @@ IPv6 headers are bigger
 
 IPv6 can be split in half (64 bits each) into a network part and device part
 
-=====================================================================================================
-Routing
-=====================================================================================================
+--- Routing ---
 
 Routing table displays what a valid path to follow to communicate with another device/service.
 
@@ -145,18 +122,13 @@ ip route - linux
 route print - windows
 netstat -r - macos
 
-====================================================================================================
-Link Layer Devices and Protocols
-====================================================================================================
+--- Link Layer Devices and Protocols ---
 
 Forwards frames (layer 2 packets) on a local network
 
 Work with layer network addresses: MAC addresses.
 
-====================================================================================================
-Medic Access Control (MAC)
-====================================================================================================
-
+--- Medic Access Control (MAC) ---
 Also referred to as a "Physical address"
 
 Hexadecimal, 48 bit (6 bytes)
@@ -171,36 +143,24 @@ Every device on a network has a MAC and ip address.
 
 Special type of MAC: Broadcast MAC. A frame with this broadcast address, gets delivered to all devices on the local network.
 
-====================================================================================================
-Switches
-====================================================================================================
-
+--- Switches ---
 Switches work using MAC addresses. A forwarding table is necessary to bind to an interface.
 
 Content Address Memory is another name for a forwarding table.
 
-====================================================================================================
-Forwarding Tables
-====================================================================================================
-
+--- Forwarding Tables ---
 TTL is another item that appears in a forwarding table: MAC, Interface, TTL
 
 Cam table has a finite size
 
-====================================================================================================
-Content Table Population
-====================================================================================================
-
+--- Content Table Population ---
 Switches inspect the header of every packet they receive, this is used to identify new hosts/devices.
 
 Switches are less complex than routers.
 
 Source MAC Address is compared to CAM table
 
-====================================================================================================
-Address Resolution Protocol (ARP)
-====================================================================================================
-
+--- Address Resolution Protocol (ARP) ---
 To communicate between two devices ARP requires the IP and MAC address to deliver the proper packet.
 
 You wouldn't be able to do anything without ARP.
@@ -217,9 +177,5 @@ arp - mac
 
 ip neighbour - linux
 
-
-====================================================================================================
-Hubs
-====================================================================================================
-
+--- Hubs ---
 Hubs are irrelevant but used to send packets to all devices on the network, messy.
