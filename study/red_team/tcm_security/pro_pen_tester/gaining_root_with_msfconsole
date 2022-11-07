@@ -6,7 +6,7 @@ msfconsole
 
 > search trans2open
 
-> use 1 [[because it's a linux machine, not a bsd, macos or solaris based device
+> use 1 [[because it's a linux machine, not a bsd, macos or solaris based device]]
 
 > options
 
