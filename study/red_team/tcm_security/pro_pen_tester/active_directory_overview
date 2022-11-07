@@ -1,11 +1,11 @@
+=== active directory overview ===
 Active Directory uses Kerberos tickets to authenticate
 
 95% of fortune 1000 companies use it to manage their infrastucture
 
 Can be exploited without ever attacking pachable exploits. Just by abusing features, trusts, components and more.
-========================================================================
-Domain Controller
-========================================================================
+
+--- Domain Controller ---
 AD DS Server Role installed and promoted to domain controller
 
 - Host a copy of the AD DS directory store
@@ -16,9 +16,7 @@ AD DS Server Role installed and promoted to domain controller
 
 - Allow administrative access to manage user accounts and network resources
 
-========================================================================
-AD DS Data Store
-========================================================================
+--- AD DS Data Store ---
 Contains database files and processes that store and manage directory info for users, services and apps
 
 *IMPORTANT* Password hashes for all users
@@ -29,18 +27,14 @@ Contains database files and processes that store and manage directory info for u
 
 - Is accessible only through the dc processes and protocols.
 
-=======================================================================
-Logical AD Components
-=======================================================================
-
+--- Logical AD Components ---
 AD DS Schema
 
 Contains definitions of every object that can be created in AD
 
 Enforces rules on object creation
-=======================================================================
-Domains
-=======================================================================
+
+--- Domains ---
 Used to link users/devices/sites together
 
 - Administrate boundaries for policies to groups of objects
@@ -49,9 +43,7 @@ Used to link users/devices/sites together
 
 - Limit scope of access to resources
 
-=======================================================================
-Trees
-=======================================================================
+--- Trees ---
 Hierachy of domains in AD DS
 
 - Share a namespace with parent domain (subdomain)
@@ -60,10 +52,7 @@ Hierachy of domains in AD DS
 
 - Create a two-way trust with other domains
 
-=======================================================================
-Forests
-=======================================================================
-
+--- Forests ---
 A collection of one or more domain trees
 
 - Share a schema (rulebook)
@@ -76,10 +65,7 @@ A collection of one or more domain trees
 
 - Share the enterprise admins and schema admins groups
 
-========================================================================
-Organisational units (OU)
-========================================================================
-
+--- Organisational units (OU) ---
 Contain users, groups, computers and other OU.
 
 - REpresent your org hieracrchically and logically
@@ -90,9 +76,7 @@ Contain users, groups, computers and other OU.
 
 - Apply policies
 
-========================================================================
-Trusts
-========================================================================
+--- Trusts ---
 
 Mechanism to gain access to resources in another domain
 
@@ -100,10 +84,7 @@ Directory - flows from trusting domain to trusting domain
 
 Transitive - Trusts everything inside of both trusting domains, extends to other domain's trusts
 
-========================================================================
-Objects
-========================================================================
-
+--- Objects ---
 - User
 
 - Contacts
