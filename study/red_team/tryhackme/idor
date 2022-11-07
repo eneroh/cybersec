@@ -1,5 +1,4 @@
 === IDOR - insecure direct object reference ===
-
 A type of access control vulnerability
 
 --- When does IDOR typically occur? ---
