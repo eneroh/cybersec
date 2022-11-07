@@ -1,7 +1,4 @@
-===============================================================
-Traffic Sniffing
-===============================================================
-
+=== Traffic Sniffing ===
 By using Wireshark, you are able to see user credentials in a prompt in cleartext over http.
 
 > In Wireshark
