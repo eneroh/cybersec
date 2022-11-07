@@ -1,10 +1,68 @@
 === Tools ===
 
+--- Active Directory Hacking ---
+kerbrute
+getnpusers.py via impacket
+
+--- Domain/Directory scanner/enumeration (Attack surface mapping) ---
+crt.sh
+Tomnomnom httpprobe
+gobuster
+ffuf
+
+--- Email Exploitation ---
+hunter.io
+breach-parse
+
+--- Exploit Development ---
+Immunity debugger
+
+--- General Hacking ---
+seclists/wordlists
+metasploit/msfconsole
+smbclient
+
+--- Linux Security Bypass ---
+GTFOBins.github.io
+
+--- Malware Analysis ---
+Off-network/Isolated virtualised environment
+
 --- Network/port scanner (Attack surface mapping) ---
 nmap
 wireshark
 OWASP Amass
 masscan
+
+--- Notetaking ---
+Cherrytree
+Obsidian
+
+--- OSINT (Open Source Intelligence) [Recon] ---
+Whatsmyname.app
+
+--- Password/decryption ---
+john the ripper
+hashcat
+
+--- Privilege Escalation ---
+WinPeas
+LinPeas
+
+--- Reverse engineering ---
+Ghidra
+
+--- Reverse shell [Exploitation] (Gain access to remote machine using program) ---
+netcat
+reverseshell docs (wordlists/seclists)
+
+--- Steganography (hiding things inside images) ---
+stegextract
+steghide
+
+--- Vulnerability scanner (Attack surface mapping) ---
+nikto
+nessus
 
 --- Web applicaton Hacking ---
 zaproxy
@@ -13,63 +71,5 @@ builtwith.com
 wappalyzer
 whatweb
 
---- Domain/Directory scanner/enumeration (Attack surface mapping) ---
-crt.sh
-Tomnomnom httpprobe
-gobuster
-ffuf
-
---- Vulnerability scanner (Attack surface mapping) ---
-nikto
-nessus
-
---- Password/decryption ---
-john the ripper
-hashcat
-
---- Email Exploitation ---
-hunter.io
-breach-parse
-
---- General Hacking ---
-seclists/wordlists
-metasploit/msfconsole
-smbclient
-
---- Reverse shell [Exploitation] (Gain access to remote machine using program) ---
-netcat
-reverseshell docs (wordlists/seclists)
-
 --- WiFi Hacking ---
 aircrack-ng
-
---- OSINT (Open Source Intelligence) [Recon] ---
-Whatsmyname.app
-
---- Notetaking ---
-Cherrytree
-Obsidian
-
---- Reverse engineering ---
-Ghidra
-
---- Malware Analysis ---
-Off-network/Isolated virtualised environment
-
---- Active Directory Hacking ---
-kerbrute
-getnpusers.py via impacket
-
---- Linux Security Bypass ---
-GTFOBins.github.io
-
---- Privilege Escalation ---
-WinPeas
-LinPeas
-
---- Exploit Development ---
-Immunity debugger
-
---- Steganography (hiding things inside images) ---
-stegextract
-steghide
