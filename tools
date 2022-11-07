@@ -1,113 +1,75 @@
-==================
-Network/port scanner (Attack surface mapping)
-===================
+=== Tools ===
+
+--- Network/port scanner (Attack surface mapping) ---
 nmap
 wireshark
 OWASP Amass
 masscan
 
-==================
-Web applicaton Hacking
-==================
+--- Web applicaton Hacking ---
 zaproxy
 burpsuite
 builtwith.com
 wappalyzer
 whatweb
 
-===================
-Domain/Directory scanner (Attack surface mapping)
-===================
+--- Domain/Directory scanner/enumeration (Attack surface mapping) ---
 crt.sh
 Tomnomnom httpprobe
 gobuster
+ffuf
 
-===================
-Vulnerability scanner (Attack surface mapping)
-===================
+--- Vulnerability scanner (Attack surface mapping) ---
 nikto
 nessus
 
-===================
-Password/decryption
-===================
+--- Password/decryption ---
 john the ripper
 hashcat
 
-===================
-Email Exploitation
-===================
+--- Email Exploitation ---
 hunter.io
 breach-parse
 
-===================
-General Hacking
-===================
+--- General Hacking ---
 seclists/wordlists
 metasploit/msfconsole
 smbclient
 
-===================
-Reverse shell [Exploitation] (Gain access to remote machine using program)
-===================
+--- Reverse shell [Exploitation] (Gain access to remote machine using program) ---
 netcat
 reverseshell docs (wordlists/seclists)
 
-===================
-WiFi Hacking
-===================
+--- WiFi Hacking ---
 aircrack-ng
 
-===================
-OSINT (Open Source Intelligence) [Recon]
-===================
+--- OSINT (Open Source Intelligence) [Recon] ---
 Whatsmyname.app
 
-===================
-Notetaking
-===================
+--- Notetaking ---
 Cherrytree
 Obsidian
 
-===================
-Reverse engineering
-===================
+--- Reverse engineering ---
 Ghidra
 
-===================
-Malware Analysis
-===================
+--- Malware Analysis ---
 Off-network/Isolated virtualised environment
 
-===================
-Active Directory Hacking
-===================
+--- Active Directory Hacking ---
 kerbrute
 getnpusers.py via impacket
 
-===================
-Linux Security Bypass
-===================
+--- Linux Security Bypass ---
 GTFOBins.github.io
 
-===================
-Privilege Escalation
-===================
+--- Privilege Escalation ---
 WinPeas
 LinPeas
 
-===================
-Exploit Development
-===================
+--- Exploit Development ---
 Immunity debugger
 
-===================
-Subdomain enum
-===================
-ffuf
-
-===================
-Steganography (hiding things inside images)
-===================
+--- Steganography (hiding things inside images) ---
 stegextract
 steghide
