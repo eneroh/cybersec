@@ -1,38 +1,39 @@
 === windows_fundamentals ===
+Used for computer auditing
 
 --- win+r ---
 
---- run command for auditing: ---
+--- Computer management ---
 compmgmt.msc
 
---- additional run command for auditing: ---
+--- Microsoft config ---
 msconfig
 
---- license details: ---
+--- Licensing details ---
 located in msconfig > tools > About Windows
 
---- run command for control panel for auditing: ---
+--- Control panel ---
 control.exe
 
---- run command for UAC for auditing: ---
+--- User access control ---
 C:\Windows\System32\UserAccountControlSettings.exe
 
---- run command for sysinfo for auditing: ---
+--- System Information ---
 msinfo32.exe
 
---- run command for resource monitor for auditing: ---
+--- Resource monitor ---
 resmon.exe
 
---- run command for registry editor for auditing: ---
+--- Registry editor ---
 regedt32.exe // regedit
 
---- run command for windowsupdate for auditing: ---
+--- Windows update ---
 control /name Microsoft.WindowsUpdate
 
 check latest updates via Windows Update > View Update History
 
---- run command for Windows Firewall for auditing: ---
+--- Windows firewall ---
 WF.msc
 
---- taskman shortcut for auditing: ---
+--- Task manager ---
 ctrl+shift+esc
