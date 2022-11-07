@@ -1,5 +1,4 @@
-Gather versioning info for server/device
-nmap, wappalyzer etc.
-Google app & version for potential vulnerabilities
-searchsploit, github even, cve for red (critical)
-Open a testing environment and try to exploit device/service/server
+=== Researching vulnerabilities ===
+- Gather versioning info for server/device using nmap, wappalyzer etc.
+- Google app & version for potential vulnerabilities using searchsploit, github even, cve for red (critical)
+- Open a testing environment and try to exploit device/service/server
