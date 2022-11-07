@@ -13,6 +13,7 @@ https://github.com/enaqx/awesome-pentest
 --- Learning ---
 https://play.picoctf.org/login
 https://www.cbtnuggets.com/blog/training/exam-prep/how-to-prepare-for-a-capture-the-flag-hacking-competition
+https://portswigger.net/web-security
 
 --- Important ---
 https://tryhackme.com
@@ -39,6 +40,11 @@ https://github.com/GTFOBins/GTFOBins.github.io
 https://github.com/robertdavidgraham/masscan
 https://github.com/heltonWernik/OpenLuck
 https://github.com/corelan/mona
+https://www.asciitohex.com/
+https://29a.ch/photo-forensics/#strings
+
+--- Writeups [Understand how others make their reports, use it to build upon your own] ---
+https://infosecwriteups.com/tagged/hackerone
 
 --- Websites ---
 https://github.com/WebGoat/WebGoat/releases
