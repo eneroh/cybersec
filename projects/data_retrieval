@@ -1,6 +1,4 @@
-===============================================
-Data Retrieval Project
-===============================================
+=== Data retrieval project ===
 Project time: 24-48 hours, as disk scanning may take a while depending.
 
 Idea:
@@ -20,9 +18,8 @@ smartmontools
 gnu shred
 dderescue
 testdisk
-===============================================
-Procedure
-===============================================
+
+--- Procedure ---
 Step 1:
 Locate and purchase drive from ebay.
 
@@ -34,7 +31,6 @@ Begin data retrieval using testdisk, dderescue/other applications that may be re
 
 Step 4:
 Observe results.
-===============================================
-Conclusion
-===============================================
+
+--- Conclusion ---
 Pending
