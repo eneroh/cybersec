@@ -1,0 +1,70 @@
+=== phishing ===
+Social engineering with a touch of spoofing
+* Often delivered by email, text etc.
+* Can be done very well
+
+--- Dont be fooled ---
+* Check the URL
+* Look for anything suspicious: spelling, fonts, images
+
+--- Tricks and misdirection ---
+* Digital slight of hand
+
+--- Typosquatting ---
+* URL hijacking https://goggle.com
+* Prepending https://ggoogle.com
+
+--- Pretexting ---
+* Lying to get info
+* Attacker is a character in a situation
+“Hi we are paypal and you are paying for another item, we will take payment...”
+
+--- Pharming ---
+Redirection of a legit website to a bogus site
+* Poisoned DNS or client vulns
+
+Combine pharming with phishing
+
+--- Pharming ---
+Harvest large groups of people
+
+--- Phishing ---
+Collect access credentials
+
+--- Difficult for anti-malware software to stop ---
+* Everything appears legitimate to user
+
+--- Vishing ---
+Voice phishing over the phone or voicemail
+* Caller ID spoofing is common
+* Fake security checks or bank updates
+
+--- Smishing ---
+SMS phishing done via text message
+* Spoofing
+* Forwards links or asks for personal info
+
+--- Reconnaissance ---
+* Gather info on victim
+
+--- Background info ---
+* Lead generation sites
+* Social media i.e. LinkedIn, Facebook, Instagram
+* Corporate web site
+
+--- Attacker builds a believable pretext ---
+* Where you work
+* Where you bank
+* Recent financial transactions
+* Family and friends
+
+--- Spear phishing ---
+Targeted phisyhing with inside information
+* Makes the attack more believable
+
+Spear phishing the CEO is “whaling”
+* Targeted phishing with the possibility of a large catch
+* The CFO is commonly speared
+
+These executives have direct access to the corporate bank account
+* The attacks would love to have those credentials

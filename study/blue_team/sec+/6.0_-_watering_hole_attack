@@ -1,0 +1,25 @@
+=== watering hole attack ===
+An attack on a third party (vendor, food, industrial) and have them place the vulnerability into the business/person unknowingly typically
+
+A really secure network
+* No one picking up a USB flash drive from a parking lot
+* Not clicking on phishing emails or attachments
+* Reconnaisance and research
+
+--- Executing the watering hole attack ---
+Determine the best target for the victim groups
+* Educated guess - local coffee or food shop
+* Industry related sites
+* Infect site or email attachments
+* Infect all visitors when only focused on specific person/s
+
+--- Focusing on money ---
+* Banks
+* Visiting site would download malicious javascript files but to specific ip addresses of banks and financial institutions
+* Was discovered however
+
+--- Protecting against watering hole attack ---
+* Watch the watering hole
+* Layered defence
+* Firewall and IPS, look at network traffic
+* Anti-virus/anti-malware signature updates

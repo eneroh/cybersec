@@ -1,0 +1,33 @@
+=== other social engineering attacks ===
+
+--- Tailgating ---
+Use an authorised person to gain unauthorised access to a building
+* Not an accident
+* Blend in with clothing (vendor)
+* Temporarily take up smoking
+* Bringing food or treats so people keep door open
+* Last security piece before entering sensitive area
+
+--- Protect against tailgating ---
+* Visitor policy
+* 1 scan, 1 person
+* Access control vestibule/airlock
+* Dont be afraid to ask - who you are and why you are here
+
+--- Invoice scam ---
+* Starts with spear phishing
+* Attacker sends a fake invoice
+* Domain renewals, toner cartridges etc.
+* From spoofed verison of ceo email
+* Accounting pays the invoice
+* Might also include link to pay
+
+--- Credential harvesting ---
+Collect login credentials
+Password harvesting
+
+* There are a lot of stored credentials on your computer i.e. Chrome, firefox, windows credential manager etc.
+* Malicious MS Word macro, gather creds then send off email to attacker
+
+--- Protect against Credential harvesting ---
+* Anti-virus/anti-malware

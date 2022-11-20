@@ -1,0 +1,18 @@
+=== spam ===
+Unsolicited messages
+
+--- Locations ---
+* Email, forums etc.
+* Spam over instant messaging (SPIM)
+* Various content - Commercial advert, non-commercial, phishing
+* Significant technology issue
+* Security concerns, resource utils, storage costs, manage the spam (filters)
+
+--- Protect against spam ---
+* Mail gateways - Stop it at the gateway before it reaches the user
+* On-site or cloud-based
+* Whitelist senders
+* SMTP standards checking - Block emails that don't comply with RFC standards
+* rDNS - confirm that the ip address is the same from the domain name
+** Tarpitting - Intentionally slow down the server conversation
+* Recipient filtering - Block all email not addressed to a valid email address
