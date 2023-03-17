@@ -1,0 +1,31 @@
+=== common attacks and mitigations ===
+-->- Distributed denial of service (DDoS) ---
+--> Botnets
+> Network/app flooding
+> low and slow attacks
+> Mitigation
+  - Throttling
+  - Blockhole routing
+-->- URL hijacking/redirecting ---
+> Stems from typo in url
+> Tainted search results to redirect to malicious site
+> Typosquatting
+--- Session replay attacks ---
+> Attacker takes over user session
+> Cookies
+> URL
+> HTML form field
+> Cookie mitigations
+  - Set HTTPOnly flag
+  - Disallows javascript cookie access
+-->- Pass the hash attacks ---
+--> Take advantage of password hashes
+--> Attacker compromises system with user login session
+> Uses hash to gain access to other network resources
+-->- Managed security service provider (MSSP) ---
+> Security as a service (SECaaS)
+--> Security outsourcing
+  - 24x7 remote security monitoring
+  - Vuln assessments
+  - Pen tests
+  - Report generation

@@ -1,0 +1,17 @@
+=== security constraints for dedicated systems ===
+--- Mobile device constraints ---
+--> CPU
+  --> Limited power and cryptography
+  --> Elliptic curve cryptography (ECC)
+> Battery
+  - Limited power duration
+> Limited transmission range
+> Limited device access
+  - Rooting (android)
+  - Jailbreaking (apple)
+--> Unable to patch firmware
+  - Embedded and IoT
+> Unable to change default creds
+--> Mitigation
+  - Replace device
+  - Isolated network

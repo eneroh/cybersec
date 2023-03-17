@@ -1,0 +1,13 @@
+=== Third party risk management ===
+> Measurement systems analysis (MSA) can identify supply chain improvements
+  - Quality assurance
+> Data loss prevention (DLP) systems
+  - Reducce intentional/unintential sensitive data exfil
+--- Supply chain security risks ---
+> Hardware and software vendors
+  - End-of-service life means no more patches or support
+> Cloud service providers security compliance
+> Contractors
+  - Data privacy notices
+> Company mergers and system linking
+> Software developers using third party components

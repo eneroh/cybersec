@@ -1,0 +1,19 @@
+=== identification, authentication and authorization ===
+
+--- Multi-factor authentication ---
+> Using more than one factor of authentication
+--> Factors
+  - Something you know
+  - Something you have
+  - Something you are
+
+--- Authentication attributes ---
+> Something you do
+> Something you exhibit
+> Someone you know
+> Somewhere you are
+
+--> IMPORTANT
+--> Identification is claiming an identity
+--> Authentication is proving that identity
+--> Authorization is permitting specific actions once a user has been authenticated

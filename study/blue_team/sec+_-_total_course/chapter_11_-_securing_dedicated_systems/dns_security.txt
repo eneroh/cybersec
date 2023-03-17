@@ -1,0 +1,21 @@
+=== DNS Security ===
+--- Common secure protocols ---
+--> DNS
+  --> TCP/UDP port 53
+  - Domain hijacking
+  - URL redirection
+  - Cache poisoning
+  --> Domain name system security extensions (DNSSEC)
+    ~ All DNS zones have certs
+--> Simple network management protocol (SNMP)
+  --> UDP port 161/162
+  - V1,2,3
+  --> V3 is the best
+--> Secure shell (SSH)
+  --> TCP 22
+--> Secured file transfer protocol/FTP over ssl (FTPS)
+  --> TCP port 990
+--> SSH FTP (STFP)
+  --> UDP port 22
+--> Secure Real-Time Transport Protocol (SRTP)
+  --> UDP Port 5004

@@ -1,0 +1,17 @@
+=== Social engineering ===
+--> Trickery, deception
+  - Pretexting
+    ~ Coming up with a believable story
+> Hoaxes
+--> Victims divulge sensitive info
+  - Email, messaging, social engineering
+  - Phone
+--- Social engineering ---
+> Believable
+--> Intimidation
+--> Trust/familiarity
+--> Authority
+--- Physical Social Engineering ---
+> Dumpster diving
+> Shoulder surfing
+> Targeting

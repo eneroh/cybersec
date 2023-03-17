@@ -1,0 +1,22 @@
+=== weak configurations ===
+> On-premises vs cloud sols
+> Open perms
+  - Open wireless networks
+  - Guest user accounts
+  - No intruder lockout settings
+  - Too many file or app perms
+> Linux root accounts
+--- Insecure Cryptographic solutions ---
+> Wifi = Wired Equivalent Privacy (WEP)
+  - WPA2 or WPA3
+> Digital encryption standard (DES)
+  - Use AES
+> Secure Sockets Layer (SSL)
+  - Use TLS
+--> Transport layer security (TLS)
+  --> Secure versions: 1.2 and 1.3
+--- Change default settings ---
+> IP address
+> Open port numbers
+> Web server root filesystem location
+> Username and password policies

@@ -1,0 +1,4 @@
+=== trust models ===
+> Self-signed certificates - wireless networks, internal services
+> Web of trust - For emails in particular - Not very well used, annoying
+> PKI (public key infrastructure) - Certificate Authority (CA) and intermediate CAs

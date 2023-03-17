@@ -1,0 +1,27 @@
+=== Mobile device management and hardening ===
+-->- Mobile device provisioning ---
+--> BYOD
+--> CYOD (choose)
+--> Corporate owned personally enabled (COPE)
+  - Personal and business use
+  - Corporate and personal boundaries
+-->- Subscriber identity mobile (SIM) cards ---
+--> Authenticates device to carrier network
+> Contains
+  - Carrier subscription data
+  - Sim card serial number
+  - Phone number
+> Carrier unlock
+--- Mobile device hardening ---
+> Reduce the attack surface
+> Management at scale
+  --> MDM
+  - Mobile application management (MAM)
+    ~ Sideloading
+  - Geofencing
+  - SE Android
+> Unified endpoint management (UEM)
+> Authentication
+> Full device encryption
+> Micro sd hardware security module (HSM)
+  - Cryptographic operations

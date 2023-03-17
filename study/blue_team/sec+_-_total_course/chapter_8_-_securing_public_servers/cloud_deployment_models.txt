@@ -1,0 +1,28 @@
+=== Cloud deployment models ===
+--- Cloud computing ---
+> Running IT services on someone elses network
+> Thin vs thick client
+> Fog/edge computing
+  - Reduce network latency
+  - Storage/compute at network perimeter
+--- Cloud computing characteristics ---
+> Pooled resources
+> Broad access
+> Self-service provisioning
+> Rapid elasticity
+> Metered usage
+-->- Public cloud ---
+> Anybody can sign up
+> Cloud tenant isolation
+> Ongoing monthly expenses (OPEX)
+> Shared IT responsibility depending on service
+-->- Private cloud ---
+> Cloud owned by a single org
+> Requires an upfront capital investment (CAPEX)
+> Org takes full responsibility
+-->- Hybrid cloud ---
+> Combines public and private
+> Redundancy
+> Disaster recovery
+-->- Community cloud ---
+> Government cloud

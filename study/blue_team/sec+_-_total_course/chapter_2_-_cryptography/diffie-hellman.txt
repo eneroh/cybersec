@@ -1,0 +1,14 @@
+=== Diffie-Hellman ===
+> Asymmetric algorithm
+> Methodology for 2 parties to come up with the same session key
+--- Diffie-Hellman Groups ---
+Group 1 768-bit modulus
+Group 2 1024-bit modulus
+Group 5 1536-bit modulus
+Group 14 2048-bit modulus
+Group 19 256-bit elliptic curve
+Group 20 384-bit elliptic curve
+Group 21 521-bit elliptic curve
+--> Very large keys
+--> Key exchange agreement
+--> Groups assist in determining the key structure (size and type)

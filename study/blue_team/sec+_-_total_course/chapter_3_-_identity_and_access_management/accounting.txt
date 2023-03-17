@@ -1,0 +1,9 @@
+=== accounting ===
+> Auditing
+--> Track activity
+--> Separate user accounts for each user
+> Types of auditing
+  - Resource access
+  - Failed logon attempts
+  - Changes to files/database records
+--> Event logs can be used to spot malicious activity

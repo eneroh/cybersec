@@ -1,0 +1,29 @@
+=== Internet of things ===
+--> Computing device connected to the internet
+> May have a web server
+> Security implications
+  --> Update firmware
+  --> Change default creds
+  - Network isolation
+--- IOT Devices ---
+> Smart light bulbs
+> Medical devices
+> Video surveillance systems
+--- Modern vehicle security ---
+> Bluetooth
+> Cellular
+> Wifi hotspot
+> Security implications
+  - Systems can be hacked
+> Vehicle key fobs
+  - Firmware can be vuln
+-->- Zigbee Network Protocol ---
+> Smart home wireless networking
+> 128-bit AES encryption
+> Does not use TCP/IP
+> Smart home IoT devices
+> Security implications
+  - Update firmware
+  - Change default serttings
+  - Harden devices
+  - Network isolation

@@ -1,0 +1,42 @@
+=== Web application security ===
+> For web apps and devs
+> Harden public and private web apps
+--- Injection attacks ---
+> Malicious user input is accepted by the web application
+> Types
+  - Structured query language (SQL)
+  - Lightweight directory access protocol (LDAP)
+  - Extensible markup language (XML)
+> Mitigation
+  - Sanitize user inputs
+--- Secure coding ---
+> Software development security best practices
+  - Input validation
+  - Secure web browser cookies
+  - HTTP headers
+  - Code signing
+  - Use trusted components and APIs
+-->- Continuous integration and continuous delivery (CI/CD) ---
+> Automate dev code changes
+> Test for quality assurance
+> Send update notifications to users for code version control
+> Security issues
+  - Attackers could make changes and inject code into the update
+--- Infrastructure as code (IaC) ---
+> VM Templates
+> Cloud Templates
+> Rapid and consistent provisioning/deprovisioning
+  - Use for sandbox testing
+> Security issues
+  - Attackers could modify templates
+--- Software testing ---
+> Static testing
+  - Code review
+  - Manually scanning code
+> Dynamic testing
+  - Observe runtime behavior
+> Fuzzing
+  - Provide app with unexpected data
+--> OWASP top 10 lists the most common web application attacks
+--> CI/CD combines software dev and management activities
+--> Secure coding is vital

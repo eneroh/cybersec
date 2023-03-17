@@ -1,0 +1,17 @@
+=== environmental controls ===
+--- Server room airflow management ---
+> Keep incoming cool air separated from outgoing warmer air
+--> Draw in cool air
+--> Draw hot air outgoing
+> Containment panels/curtains
+  - Prevent cool and warm air from mixing
+> Blanking panels
+  - Fill empty rack slots to direct airflow
+--- Environmental monitoring ---
+> Sensors
+  - Temp
+  - Pressure
+  - Humidity
+  - Noise
+  - Proximity
+> Monitoring software

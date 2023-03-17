@@ -1,0 +1,44 @@
+=== authentication methods ===
+> Username/password
+  - something you know and can be guessed
+> Security risk, common passwords commonly used
+> Mitigation to use different passwords for each resource
+
+--> Password vaults/managers
+  --> Master key
+
+--> One time password (OTP)
+  - Unique password generated for single use
+  --> Time based OTP (TOTP)
+    ~ Valid for short period of time
+  - Push notifications (software based)
+    ~ Phone call
+	~ SMS text
+	~ Email
+
+--> HMAC based one time password (HOTP)
+  - HMAC encrypts a hash to ensure authenticity
+  
+> Certificate based authentication
+  - PKI certs are issued by a trusted authority to an individual entity
+    ~ Device, vpn, app access
+	~ Can be a smart card
+
+--- SSH Public Key Authentication ---
+> Public key stored on server
+> Private key stored on admin device
+> User/password as well as private key required
+
+-->- Biometrics ---
+> Fingerprint
+> Retina
+> Iris
+> Facial
+> Voice
+> Vein
+> Gait analysis
+> Efficacy
+  - False acceptance
+  - False rejection
+  - Crossover error rate
+  

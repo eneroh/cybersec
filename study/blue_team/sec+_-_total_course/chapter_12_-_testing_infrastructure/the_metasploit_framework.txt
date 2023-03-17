@@ -1,0 +1,9 @@
+=== the metasploit framework ===
+> Cross platform
+> Armitage GUI
+> Metasploitable (Rapid7 download)
+> Keep exploits up to date with msfupdate
+> Payloads
+--- Mitigation ---
+> Black hole routing
+--> Metasplot usage is for exploiting vulns

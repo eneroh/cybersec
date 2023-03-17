@@ -1,0 +1,36 @@
+=== Threats analysis and mitigations actions ===
+--- Cyber kill chain analysis ---
+--> Trace steps taken for a successful compromise/data exfil event
+> Security compromise knowledge can help prevent future breaches
+--- Cyber kill chain analysis ---
+> Recon
+> Intrusion
+> Exploitation
+> Privilege escalation
+> Lateral movement
+> Obfuscation/anti-forensics
+> Denial of service (DOS)
+> Exfiltration
+-->- MITRE ATT&CK Framework ---
+--> Used for post-compromise id and analysis
+  - Threat detection
+  - What was done and how was it done?
+> Identify attacker techniques
+> Mitigation
+  - Modify existing firewall, IDS, IPS alert rules
+  - Deploy honeypot traps
+--- The diamond model of intrusion analysis ---
+--> Shows how malicious actors (adversaries) use exploits over an infrastructure against victims
+> Stems from use of honeypots
+
+> Adversary
+> Victim
+> Infra
+> Capabilities
+-->- Security orchestation, automation and response (SOAR) ---
+--> Automate incident response using playbooks
+  - Firewall rules, content filters
+  - Application allow/deny lists
+  - Revoke certs
+> Reduce incident response time
+ 

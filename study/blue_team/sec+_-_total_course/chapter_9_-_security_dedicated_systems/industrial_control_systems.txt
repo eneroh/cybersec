@@ -1,0 +1,24 @@
+=== industrial control system (ICS) ===
+-->- Programmable logic controller (PLC) ---
+> Sensors
+> Valves
+> Robots, actuators
+> Has an ip address
+> Vendors
+  - Siemens
+  - Allen-Bradley
+> Security implications
+  - Firmware updates
+-->- Real time operating system (RTOS)
+--> Used with PLCs
+> Examples
+  - RTLinux
+  - VxWorks
+> Security implications
+  - Firware updates
+  - Network isolation
+-->- Supervisory control and data acquisition (SCADA) ---
+--> Collection of industrial control system (ICS) devices focused on specific tasks
+  - Manufacturing, water, oil, power
+> Dispersed over a WAN
+--> Using a wan, scada connects using RTUs (remote terminal units)

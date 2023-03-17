@@ -1,0 +1,22 @@
+=== Data destruction ===
+> Paper, film, magnetic tape
+  - Burning
+  - Pulping
+  - Shredding
+--- Digital data destruction ---
+> Failed or decommissioned storage devices
+> Storage device end-of-life policies
+  - Reuse? Donate? Destroy?
+  - Update asset inventory
+--- Digital media sanitization ---
+--> Ensures sensitive data cannot be recovered
+> Data is still recoverable
+  - Deleted files, repartitioned, reformatted drives
+> Disk wiping tools
+  - SSD and HDD
+    ~ Multiple pass disk overwrites
+  - HD Only
+    ~ Degaussing
+> Cryptographic erasure
+  - Destroy storage media decryption key
+  - Self-encrypting drives (SEDs)

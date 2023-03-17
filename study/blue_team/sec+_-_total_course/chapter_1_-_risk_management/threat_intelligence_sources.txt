@@ -1,0 +1,37 @@
+=== Threat Intelligence Sources ===
+
+> Facilitate risk management
+> Hardening can reduce incident response time
+> Provide cybersecurity insight
+  - Adversary tactics, techniques and procedures (TTP)
+  - Threat maps
+	Geographical representations of malware outbreaks
+
+> Closed/proprietary
+> OSINT 
+  - Government reports
+  - Media reports
+  - Academic reports
+  
+> Google hacking database <intitle:"Web user login>
+
+> File/code repositories
+
+> Vulnerability database (Common, Vulnerabilities and Exposures) [CVE]
+
+> Dark web/dark net
+  - Tor network, tor web browser
+  - Encrypted anonymous connections
+  - Not indexed
+  - Tor encryption and anonymity
+
+> Automated Indicator Sharing (AIS)
+  - Exchange of cybersecurity intellgience (CI) between entities
+  - Structured Threat Information eXpression (STIX)
+    ~ A form of AIS
+	~ Data exchange format for cybersecurity intelligence
+
+> Trusted Automated eXchange of Intelligence Information (TAXII)
+  - Like RSS feed for threats
+  - Consists of TAXII servers and clients
+  - Real-time cyber intelligence feeds

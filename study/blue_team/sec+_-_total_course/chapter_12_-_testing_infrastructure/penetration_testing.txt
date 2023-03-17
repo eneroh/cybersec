@@ -1,0 +1,26 @@
+=== Penetration testing ===
+--> Attempt to exploit vulnerabilities
+> Invasive/active compared to vulnerability assessments
+--> Pen tester must sign non disclosure agreement (NDA)
+> Normally triggers IDS/IPS alerts
+> Known (white box)
+> Unknown (black box)
+> Parially known (gray box)
+> Bug bounty
+  - Offered by vendors for zero day vulns
+-->- Penetrationm testing exercise ---
+--> Red team
+  - Attackers
+--> Blue team
+  - Defenders
+--> White team
+  - Manages red and blue team engagements
+--> Purple team
+  - Red and blue team, transfer of knowledge
+--- Pen testing process ---
+--> Rules of engagement
+> Discovery enum
+> Vuln id and exploitation
+> Priv esc, backdoors, pivoting, lateral movement
+> Cleanup
+> Report findings

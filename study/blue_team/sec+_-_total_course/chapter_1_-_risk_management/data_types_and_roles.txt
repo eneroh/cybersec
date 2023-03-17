@@ -1,0 +1,39 @@
+=== data types and roles ===
+--- Data classification ---
+--> assigns labls to data to facilitate management
+> Government/military classification
+  - Top secret
+  - Secret
+  - Confidential
+> Standard classification
+  - PII (Personally identifiable info)
+  - PHI (protected health info)
+  - Proprietary
+  - Public/private
+  - Critical
+  - Financial
+--- Data privacy standards ---
+> Ensure data privacy and breach nofitication
+> Levy fines
+> Protect intellectual property (IP)
+--> HIPPA (Health insurance portability and accountability act)
+--> PCI DSS (Payment Card Industry Data Security Standard)
+  - Cardholder information
+--> GDPR (General Data Protection Regulation)
+  - Protects EU citizens' data regardless of location
+--- Data classification tools ---
+> Any method of applying metadata
+  - Cloud resource tagging
+--- Data roles and responsibilities --- [IMPORTANT]
+--> Owner [[IMPORTANT]]
+  - Legal owner
+  - Set policies on how data is managed
+> Controller
+  - Data comliance with applicable regulations
+> Processor
+  - Handles data in relation to privacy guidelines
+--> Custodian/steward [[IMPORTANT]]
+  - Responsible for managing data (perms, backup) alignment with data owner policies
+> Data privacy officer (DPO)
+  - Ensures data privacy regulation compliance such as with GDPR
+  - 

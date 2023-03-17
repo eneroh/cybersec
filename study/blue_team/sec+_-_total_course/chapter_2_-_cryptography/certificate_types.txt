@@ -1,0 +1,3 @@
+=== certificate types ===
+--> Digital certificates store a public key with a digital signature, person info about the resources and a second digital signature from a trusted third party
+--> Digital certs come in many forms including web (Digital Validation, Extended Validation, wildcard and subject alternative name [SAN]), email, code-signing, machine/computer and user

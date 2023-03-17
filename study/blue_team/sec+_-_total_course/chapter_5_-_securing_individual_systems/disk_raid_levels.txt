@@ -1,0 +1,30 @@
+=== disk RAID levels ===
+--- Redundant array of inexpensive disks (RAID) ---
+> Groups disks together to work as one
+  - Better performance
+  - High availability
+> Hardware RAID controller
+> Software RAID
+  - Slower, less reliable
+--- Storage area network (SAN) ---
+> Storage from network
+> Looks like a local set of disks
+> HBA (Host bus array) required for SAN
+-->- RAID 0 ---
+> Striping
+> INCREASED DISK PERF
+> Across 3 disks
+> Lose everything without redundancy
+-->- RAID 1 ---
+> Mirroring
+> Have 1 backup
+-->- RAID 5 ---
+> Parity
+> INCREASED DISK PERF
+> Error recovery, rebuilding
+> Striping as well
+-->- RAID 6 ---
+> 2 disk failures
+--- RAID 10 ---
+> Mirroring then striped
+> 4 disks

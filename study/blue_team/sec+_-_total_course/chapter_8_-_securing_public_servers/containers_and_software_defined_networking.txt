@@ -1,0 +1,15 @@
+=== containers and software defined networking ===
+-->- application containers ---
+--> App components are managed as a single unit
+> Microservices/API
+  - App component decoupling
+> Accessed over the networking
+-->- Software defined network (SDN) ---
+> Facilitates network management
+  - Cmd
+  - GUI
+--> Hide underlying network config complexities
+  - Vnets
+  - Subnets
+  - VPNs
+--> Faster than vms

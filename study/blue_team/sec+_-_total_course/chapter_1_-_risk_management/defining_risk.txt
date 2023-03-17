@@ -1,0 +1,34 @@
+=== Defining risk ===
+
+--- Risk ---
+The likelihood a threat actor taking advantage of a vulnerability by using a threat against an IT asset
+
+--- Asset ---
+Anything that has value as a part of I.T. infrastrucure
+
+--- Likelihood ---
+The probability of assets being damaged over time
+
+--- Threat actor ---
+Anyone or anything with the motive and resources to attack another's I.T. infrastructure
+
+--- Threat actors ---
+> Hackers
+> Hacktivists
+> Script kiddies
+> Insiders
+> Competitors
+> Shadow IT
+> Criminal syndicates
+> State actors
+> Advanced persistent threat (APT)
+
+--- Vulnerability ---
+Weakness inherit in the protection of an asset
+
+--- Threat/exploit ---
+An action by a threat actor that can be used on a vulnerability to attack an asset
+
+--- Remediation ---
+Let's make decisions on what we are going to do
+

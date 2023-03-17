@@ -1,0 +1,41 @@
+=== Security controls ===
+
+> Solution that mitigates threat i.e. malware scanner mitigates malware infections
+
+> Implemented differently based on platform/vendor/user
+
+--- Security Control Categories ---
+> Managerial/administrative
+
+> Operational
+
+> Technical
+
+> Physical
+  - 1 way/person entries
+  
+> Detective
+  - Logs analysis
+  
+> Corrective
+  - Patching known vulns
+  
+> Deterrent
+  - Logon warning
+  
+> Compensating
+  - IoT devices [VLANs]
+  
+--- Cloud Security Control Documents ---
+> Cloud Security Alliance (CSA)
+  - Cloud controls matrix (CCM)
+  
+--- Security Controls Documents ---
+PCI DSS
+
+--- Risk example  ---
+
+> Risk
+> Attack vector
+> Mitigation through security controls
+

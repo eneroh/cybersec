@@ -1,0 +1,31 @@
+=== Risk assessments and treatments ===
+
+--- Risk assessment ---
+> Prioritization of threats against assets and figuring out what to do
+> Applicable to:
+  - Entire org
+  - Single project/department
+> Targets
+  - Servers
+  - Legacy systems
+  - IP
+  - Software licensing
+  
+--- Risk assessment process ---
+> Risk awareness
+  - Cybersecurity intell sources
+> Evaluate security control, current and residual
+> Implement security controls
+> Periodic review
+
+--- Risk types ---
+> Environmental
+> Person made
+> Internal
+> External
+
+--- Risk treatments ---
+> Mitigation/reduction
+> Transference/sharing
+> Avoidance
+> Acceptance

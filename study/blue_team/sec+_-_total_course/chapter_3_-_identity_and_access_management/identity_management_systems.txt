@@ -1,0 +1,12 @@
+=== identity management systems ===
+--- Single sign on (SSO) ---
+> User creds are not reuested after initial auth
+  - OpenID
+  - OAUTH
+-->- Identity federation ---
+> Multiple resources trust a single auth source
+> Centralized trusted identity provider (IdP)
+  - Trusted by resource provider (RP)
+> Security assertion markup language (SAML)
+  - SAML token, digital token that proves identity
+--> SSO limits need to enter creds

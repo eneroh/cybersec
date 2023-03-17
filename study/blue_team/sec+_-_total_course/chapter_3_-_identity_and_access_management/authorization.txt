@@ -1,0 +1,11 @@
+=== authorization ===
+> Based on permissions granted
+> Determines resource perms
+> Can only occur after 
+
+> Resources
+
+--- Accounting/auditing ---
+> Track permissions usage for accountability purposes
+> Who or what accessed which resource, how long and on what date?
+

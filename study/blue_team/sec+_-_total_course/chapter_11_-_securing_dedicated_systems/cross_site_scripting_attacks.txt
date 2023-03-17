@@ -1,0 +1,8 @@
+=== cross site scripting attacks ===
+> XSS
+> Starts with web app that doesnt properly validate or sanitize input
+  --> All user input must be untrusted
+  - Attacker inject malicious code into vulnerable website
+    ~ Javascript is commonly used
+--> Web site visitors unknowingly execute code
+--> Results from improper input validation

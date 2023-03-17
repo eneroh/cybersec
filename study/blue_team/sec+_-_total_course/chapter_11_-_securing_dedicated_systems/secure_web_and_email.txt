@@ -1,0 +1,39 @@
+=== Secure web and email ===
+> Security web apps
+  - Can be accessible internally or externally
+> Hide true web server IP address
+  - Load balancing
+  - Reverse proxying
+  - Network adddress translation (NAT)
+> HTTPS
+  - Enabled on web server
+  - PKI certificate
+  - 443 instead of port 80
+  - TLS
+    ~ use 1.2 or higher
+--- Web app user authentication ---
+> Lightweight directory access protocol over SSL (LDAPS)
+  - Directory service access protocol
+  - Supported by microsoft active directory
+  - Requires PKI certificate
+  - TCP port 636 instead of 389
+> On premises or in the cloud
+--- Simple mail transfer protocol (SMTP) ---
+> Domain reputation
+  - Determines if mail will be received by other SMTP hosts
+> Secure mutipurpose internet mail extensions (S/MIME)
+  - Encrypt and sign emails
+  - PKI Certificate
+--- Email protocols ---
+> SMTP
+  - Email transfer protocol
+> Post office protocol (POP)
+  - Client email retrieval protocol
+> Internet message access protocol (IMAP)
+  - Client email retrieval protocol
+> Each can be secured with a server PKI certificate
+
+--> Public web servers should be placed behind a load balancer, reverse proxy or NAT
+--> HTTPS requires a PKI certificate
+--> S/MIME can encrypt and sign individual email messages
+--> SMTP,POP,IMAP can be secured with a PKI cert

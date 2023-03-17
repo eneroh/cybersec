@@ -1,0 +1,38 @@
+=== Security and the information life cycle ===
+--> Information life cycles consists of: data collection, storage, processing, sharing and archiving then deletion
+> Involved at every phase
+> Data collection
+  - Consent
+> Implementation depends on regulations/standards
+--- Personally identifiable information (PII)---
+> One or more pieces of sensitive info that can be traced back to an individual
+  - SSN
+  - Email
+  - Credit card number
+  - Home address
+  - Web browser cookie
+--- Protected Health Information (PHI) ---
+> One or more pieces of sensitive medical info that can be traced back to an individual
+  - Health insurance plan number
+  - Blood type
+  - Patient medical ailments
+--- Privacy enhancing technologies ---
+> Anonymization
+> GDPR allows anonymized data collection without user consent
+> Anonymised data has limited marketing value
+--- Anonymization techniques --- [[Important]]
+> Pseduo-anonymization
+  - Replace PII with fake identifiers
+> Data minimization
+  - Limited stored/retained sensitive data
+> Tokenization
+  - Digital token that grants access instead of inputting credentials
+> Data masking
+  - Hide sensitie data from unauthed users
+  - Masked out credit card number digits on a receipt
+--- Data soverignty --- [[Important]]
+> Location of data and laws that apply
+  - Where does the data originate?
+  - Where does the data reside?
+  - Laws and regulations that apply?
+  

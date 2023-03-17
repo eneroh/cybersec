@@ -1,0 +1,12 @@
+=== bots and botnets ===
+--> Bot
+  - Single infected device under control
+  - Zombie
+> Botnet
+  - Collection of infected devices under attacker control
+--- Bots ---
+--> Command and control (C2) communication
+  - IDS traffic monitor
+  - Attacks might have directions stored in a DNS TXT record
+  - IDS can detect
+  

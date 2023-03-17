@@ -1,0 +1,27 @@
+=== Gathering digital evidence ===
+-->- Chain of custody ---
+--> Documents evidence acquisition
+  --> Document original state of everything
+  - On premises and the cloud
+  - Tools and techniques used
+  - Date and time stamps
+  --> Evidence collection, tagging, transfer and storage
+--- Common forensic tools ---
+> Create forensic disk images
+  - Linux dd command
+  - FTK images (free download)
+> Analyse disk images, recover data
+  - Autopsy
+  - WinHex
+> RAM memory dumps
+  - Memdump
+  - HELIX
+-->- Order of volatility ---
+Most volatile
+> CPU Registers
+> RAM
+> Temporary files
+> Hard disk
+> Data backups
+> Remote hosts
+Least volatile

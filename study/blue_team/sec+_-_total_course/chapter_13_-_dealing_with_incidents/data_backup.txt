@@ -1,0 +1,25 @@
+=== data backup ===
+--- Data backup considerations ---
+> On premises
+  - Tape
+  - NAS
+  - SAN
+> Offsite
+  - Cloud
+> Compression
+> Encryption
+> Type of backup
+> Virtual machine
+  - Snapshots
+  - Custom images
+--- Full/copy backup ---
+> All data is backed up
+  - Longest time for backups
+  - Shortest time for restore
+> Incremental backup
+  - New/modified data since the last inc backup
+  - Shortest time to backup
+  - Longest to restore
+> Differential backup
+  - New/modified data since last full backup
+  - Quicker to restore than inc, slower than full

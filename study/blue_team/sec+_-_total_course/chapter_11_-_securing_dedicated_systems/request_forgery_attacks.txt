@@ -1,0 +1,10 @@
+=== Request forgery attacks ===
+--> Cross site request forgery (CSRF)
+  - Targets user and unchanging session tokens
+  --> Designed to hijack authenticated sessions between a client and a server
+--> Server side request forgery (SSRF)
+  - Targets web servers
+  --> Designed to have server make HTTP requests to other services
+--> Mitigation
+  --> Harden client devices
+  --> Web application firewall (WAF)

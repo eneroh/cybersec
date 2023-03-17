@@ -1,0 +1,19 @@
+=== Quantative risk assessments ===
+> Based on numeric values
+> Asset value (AV)
+> Exposure factor (EF)
+  - Percentage of asset value loss when negative incident occurs
+> Single loss expectancy (SLE)
+  - How much loss during on negative incident?
+  - Asset value (AV) * exposure value (EF) = single loss expectancy (SLE)
+  - AV * EF = SLE
+  
+  AV / <risk of downtime> 3 hours / 24 hours in a day = EF
+  
+> Annualized rate of occurence (ARO)
+  - Expected number of yearly occurences
+  - 2-3 times per year
+  
+> Annualized loss expectancy (ALE)
+  - Total yearly cost of bad things happening
+  - ALE = SLE X ARO

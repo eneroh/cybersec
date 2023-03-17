@@ -1,0 +1,28 @@
+=== Wifi discovery and attacks ===
+--- wifi discovery and mapping ---
+> War chalking (sidewalk marking)
+> War driving (Scan from in vehicle)
+> War flying (scan using a drone
+--- Malicious WAP targeting ---
+> Rogue access point (unauthed wireless AP)
+> Evil twin
+  - Unauthed wireless ap mimicking valid AP name
+--- Wifi AP beacon frames ---
+> Sent every ~100ms
+> Clients cannot verify beacons
+  - Key not established yet
+  - Easily forged
+> Contains
+  - SSID
+  - Maximum transmit power
+--- Wifi attacks ---
+> Connecting to open WLANs
+> Cracking WEP passphrase
+--> RF signal jamming
+  --> Interference
+  - Wifi channel overlap
+  --> Flood AP with deauthentication (disassociation) packets
+
+--> WLANs can be discovery in proximity due to beacon frames
+--> WEP passphrases are easily cracked
+--> Client to AP handshakes can be captured to perform offline PSK attacks

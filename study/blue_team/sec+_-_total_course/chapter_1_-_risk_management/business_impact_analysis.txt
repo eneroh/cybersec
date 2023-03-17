@@ -1,0 +1,41 @@
+=== business impact analysis ===
+
+--- BIA ---
+> Identifies how negative incidents will impact business processes and sensitive data
+> Prioritize mission-critical processes
+  - Payment processing systems
+  - Customer/patient records
+> Assess risk
+  - Identify sensitive data
+  - Identify single points of failure
+  - Identify security controls and compliance
+> Business impact
+  - Fines
+  - Loss of contracts
+> Reputation
+> Data loss
+  - Breach notification
+  - Escalation requirements
+  - Exfil
+--- Failed component impact --- <<IMPORTANT>>
+> Mean time between failures (MTBF)
+  - Average time between repairable component failures
+  - Software patching
+> Mean time to failure (MTTF)
+  - Average time between non-repairable component failures
+  - Hard disks, switches, routers
+> Mean time to repair (MTTR)
+--- Locating critical resources ---
+> Data discovery and classification
+  - Where is our sensitive ata?
+  - Privacy threshold assessment (PTA)
+    ~ First step before implementing solutions related to sensitive data
+> Impact on sensitive data (Privacy impact assessment) [PIA]
+> Regulatory compliance
+--- Business impact ---
+> Recovery point objective (RPO)
+  - Maximum tolerable amount of data loss
+  - Directly related to backup frequency
+> Recovery time objective (RTO)
+  - Maximum tolerable amount of downtime
+  - Return systems and data to usable state

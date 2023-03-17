@@ -1,0 +1,26 @@
+=== Social engineering attacks ===
+-->- Web site redirection ---
+--> DNS poisoning
+--> URL hijacking
+--> Watering hole attack
+  - Known that a group of users visit
+-->- Adversarial artifial intelligence (AI) ---
+--> Machine learning (ML)
+  - Continous improvement of algorithm functionality over time based on data
+--> Contaminated data means ML functionality could be compromised
+  - Attacks the integrity of decision making
+-->- Spam ---
+--> Mass mailing of unsolicited messages
+  - Promote products/services
+  - Collect info
+  - Infect devices
+  - Trick users into clicking links
+> Spam over intstant messaging (SPIM)
+-->- Phishing ---
+> Social engineering campaigns
+--> Vishing (voice phishing)
+--> Spear phishing
+  --> Target phishing
+  --> Whaling targets high ranking persons
+--> Smishing
+  --> SMS phishing

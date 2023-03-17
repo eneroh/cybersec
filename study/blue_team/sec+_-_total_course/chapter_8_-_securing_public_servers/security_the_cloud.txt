@@ -1,0 +1,36 @@
+=== securing the cloud ===
+-->- Cloud security responsibility ---
+> Hardware
+  - Power
+  - HVAC
+  - Hardware configs
+  - Firmware updates
+> Software
+  - PaaS and SaaS
+--- Cloud tenant security responsibility ---
+> Internet connection to public cloud
+  - Redundant network to the CSP
+> Cross region replication
+  - HA
+--- Cloud security controls ---
+--> Cloud access security broker (CASB)
+  - Enforces security policies when accessing cloud resources
+  - Normally done via proxying
+--> Next generation secure web gateway (SWG)
+  - CASB functionality
+  - Web content filtering
+  - Data loss prevention
+> CSP Firewall solutions
+> Policies
+  - control cloud resource deployment
+  - Assess cloud resource compliance
+--> Data loss prevention
+  - Prevent data exfil
+-->- Cloud monitoring ---
+> Detect abnormalities or sus activity (auditing)
+> Who is deploying VMs?
+> What apps are running?
+> Log reviews are a type of "detective" security control
+> Centralised log repository
+  - Log forwarding
+--> Cloud high availability achieved through replication

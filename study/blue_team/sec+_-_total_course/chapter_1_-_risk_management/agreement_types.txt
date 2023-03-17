@@ -1,0 +1,21 @@
+=== agreement types ===
+--> Interconnection security agreement apply when connecting different entities together
+> Interconnection security agreement (ISA)
+  - Legal review, regulatory compliance
+  - Linking companies, partners, agencies
+  - Vulnerability scans results
+  - Mandatory training/certification
+  - Input from Security professionals
+> Service level agreement (SLA)
+  - Contractual document stating level of service
+  - Guarantee service uptime
+  - Consequenes if SLA is not met
+> Memorandum of understanding (MOU)
+  - Broad terms of agreement between parties
+> Memorandum of agreement (MOA)
+  - Detailed terms between parties
+> Business partnership agreement (BPA)
+  - Legal document
+  - Responsibilities, investment, decision making
+> Non-disclosure agreement (NDA)
+  - Prevent sensitive data disclosure to third parties

@@ -1,0 +1,20 @@
+=== securing endpoints ===
+--- Antivirus/antimalware ---
+> Endpoint detection and response (EDR)
+  - Alarms for detected anomalies or malware infections
+  - Shows up in an SIEM console
+  - Host based firewalls
+--> Host intrusion detection system (HIDS)
+  - Analyse host activity/logs
+  - Detect and alert on anomalies
+  - Monitors sus activity
+--> Next generation firewall
+  - Packet filtering firewall
+  - Deep packet inspection firewall
+  - IDS/IPS
+--> Allow lists
+  - Whitelists
+  - Prevent specific users from doing admin related tasks
+--> Deny lists
+  - Blacklist
+  

@@ -1,0 +1,11 @@
+=== Cryptography basics ===
+--- Obfuscation ---
+> Diffusion
+> Confusion
+--- Encryption/Decryption ---
+> Substition (ROT2, ROT3, ROT5) [Ceaser Cipher]
+--- Cryptanalysis ---
+> Crack the code
+--- Vigenere Cipher ---
+> Using a key, algorithm to add to complexity
+---- Exclusive OR (XOR) ---

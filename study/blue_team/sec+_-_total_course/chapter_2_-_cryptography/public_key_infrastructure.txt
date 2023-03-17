@@ -1,0 +1,8 @@
+=== public key infrastructure ===
+--- x.509 ---
+> Method to query systems that store certificates and also includes standards for constructing digital certificates
+--- Public key cryptography standards (PKCS) ---
+> details on digital certs construction and use
+> Registration authority and CAs identify and authenticate individuals registering for certificates; the middle entities are called intermediate CAs, the entity at the top of the hierarchy is the root CAs
+> Self-signed certs are authorized by the same entity who registers the digital certificate (not to be trusted on external connections)
+> Certificate chaining

@@ -1,0 +1,40 @@
+=== Business continuity and alternate sites ===
+--> Business continuity plan (BCP)
+  - Continuity of operations (COOP)
+  --> Broad scope
+--> Disaster recovery plan (DRP)
+  --> Narrow scope such as a specific server
+--- Planning for disasters ---
+> Organisational policies
+  - Change management
+  - Asset management
+  - Security
+--- Disaster recovery sites ---
+> Site risk assessment
+  - Geographical location
+> Site components
+  - Hardware
+  - Software
+  - Data
+  - Personnel
+> The public cloud is osten used as an alternate site
+-->- Hot site ---
+> Hardware
+> Software
+> Networking in place
+> Up-to-date data
+  - Continuous replication with primary site
+> Personnel
+--> Quickest switchover time, most expensive
+--- Warm Site ---
+> Hardware
+> Software
+> Networking
+> No up to date data
+> Longer switchover time than hot, less expensive than hot
+> Personnel may be present
+--- Cold site ---
+> Basic IT infra
+  - Networking
+> No hardware, software, data, personnel
+> Longer switchover time, cheapest type of recovery site

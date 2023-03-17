@@ -1,0 +1,28 @@
+=== security hardware ===
+> Limit physical access
+> Use vendor/tech diversity
+> Limit USB storage device use
+-->- Security hardware ---
+> Apply firmware patches
+> Use USB data blocker
+-->- Trusted platform module (TPM) ---
+> Boot integrity (compares hash value)
+> Hardware root of trust
+> Disk vol encryption
+--- Failed machine boot ---
+> File corruption
+> Malware
+> Failing disks
+> Misconf
+> Remediation
+  - Boot into live env
+-->- Hardware redundancy ---
+> RAID
+> NIC teaming
+> UPS
+> Power distribution unit (PDU)
+> Dual power supplies
+--- Cloud redunancy ---
+> Network connnection to the cloud
+> Load balancing
+> Cross region storage replication

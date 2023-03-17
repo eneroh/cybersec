@@ -1,0 +1,23 @@
+=== physical security ===
+> IT services rely on underlying hardware
+  - On-premises
+  - Cloud
+> Local access to IT systems is a security risk
+--- Personnel ---
+> Guards
+> Badges
+> Visitor logs
+> Robot sentries
+> Reception
+--- Facility security ---
+> Location
+  - Undisclosed address
+  - Protection from natural disasters
+> Signage
+> Fencing
+> barricades and bollards
+> Industrial camo
+> Motion detection
+--> Encrypt data at rest
+--> Personnel and facility security protect equipment
+--> Air gapped networks are physically disconnected from other networks

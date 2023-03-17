@@ -1,0 +1,33 @@
+=== account management ===
+--- User accounts ---
+> Unique account per user
+> Assign permissions to groups
+> Principle of least privilege
+> User account auditing
+> Disablement
+
+--- Account management ---
+> Rights/privileges
+> Account types
+  - User, device, service
+  - Administrator/root
+  
+--- Account policies ---
+> Employee onboarding
+> Password policies
+  - Complexity
+  - History
+  - Reuse
+> Account lockout
+> Time based
+> Geolocation
+  - Geofencing
+  - Geotagging
+> Impossible travel time
+> Risky login
+
+--> Different roles require different perms
+--> PAssword complexity, history and expiration
+--> Assigning perms to groups is scalable
+--> Geofencing uses the device's physical location to determine resource access
+

@@ -1,0 +1,24 @@
+=== WiFi hardening ===
+--- Extensible auth protocol (EAP) ---
+> IEEE 802.1x RAIDUS
+  - Support id federation
+--> EAP-FAST (flexible auth via secure tunneling)
+  - No certs
+  - Shared secret must be configured on both devices
+--> EAP-TLS
+  - Sever and client side certs
+--> EAP-TTLS
+  - Server certificate
+  - Encapsulates RAIDUS messages
+> Protected RAP
+  - Requires server cert
+  - Encapsulates EAP messages
+--> Change default ap creds
+--> Hide the SSID
+--> Enable MAC filtering
+--> Use WPA3 enterprise
+  --> RADIUS server auth
+> Limit signal emanation
+  - Transmit power levels
+--> Captive portal
+  - Landing page (Free wifi page)

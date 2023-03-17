@@ -1,0 +1,22 @@
+=== hypervisors and virtual machines ===
+--- Hypervisors ---
+> OS that manages virtual machines
+> On premises (full control)
+> Cloud (limited control)
+> type 1
+  - OS itself
+> type 2
+  - Runs as app on top of os
+--- VM vulns ---
+> Same as host hardening
+  - patching
+  - disable unused accounts and services
+> VM sprawl
+  - Unused and forgotten VMs
+> VM escape
+  - Attacks breaks out of VM to hypervisor
+--- VM hardening ---
+> Disable unnecessary components
+> Encrypt VM
+> Use complex passwords/MFA
+> Limit public internet visibility

@@ -1,0 +1,11 @@
+=== data protection ===
+--- Data at rest ---
+> Hard drives
+--- Data in use ---
+> Shoulder surfing
+> Data housed in RAM and being accessed
+--- Data in transit ---
+> Through cables or wireless transmission
+> Sniffing
+> Man in the middle
+> Wireless hacking

@@ -1,0 +1,27 @@
+=== RFID, NFC and bluetooth ===
+--- Radio frequency identifier (RFID) ---
+--> Uses RF comms to track objects w/ RFID tags
+> Range ~5meters (16.5 feet)
+--> Commonly used for inventory control, locating pets and in some passports
+--- Near field communication (NFC) ---
+--> Type of RFID
+--> close range wireless comms
+--> 5cm
+> Common uses
+  --> Payment cards
+  - Smartphone
+  - Read/write NFC tags
+--- Bluetooth ---
+> 802.15.1 standards
+  - 2.4 or 5 GHz frequency range
+> Wireless networking, shorter range than wifi
+  --> Class 1 (100 meters) [usb wifi dongles]
+  --> Class 2 (33 feet) [bluetooth headset]
+--> Devices must be paired together
+--- Bluetooth attacks ---
+--> Bluejacking
+  - Unauthed sending of anonymous messages to another bluetooth device
+--> Bluesnarfing
+  - Data theft from remote devices using bluetooth
+> Mitigation
+  - Disable bluetooth

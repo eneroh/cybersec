@@ -1,0 +1,20 @@
+=== Symmetric block modes ===
+--- Electronic code book (ECB) ---
+> NO ONE USES ECB
+--- Block modes ---
+> Encrypt something then encrypt the next thing
+> Cipher block chaining (CBC)
+  - Initialization vector
+  - XOR
+> Cipher feedback (CFB)
+  - Initialization vector
+  - Encryption then XOR'd
+> Output feedback (OFB)
+  - Initialization vector, encryption then XOR'd
+> Counter (CTR)
+  - Nounce + counter then crypted then XOR'd
+  - Counter gets incremented
+--> ALL ABOVE USE Initialization vector
+--> Ensures output block is unique
+--- Binary block ---
+> Plain text converted into 16-bot, 64-bit or 128-bit binary ciphertext

@@ -1,0 +1,31 @@
+=== Symmetric cryptosystems ===
+--- Symmetric key algorithm ---
+> Blocks
+> Encrypts data in chunks
+> Data encryption standards (DES)
+
+--- Symmetric block algorithms ---
+> DES
+> Block cipher
+> Blowfish
+> Tripe DES (3DES)
+> Defined by:
+  - Key length
+  - Block size
+  - Number of rounds
+> AES (Advanced Encryption Standards)
+  - Amazing, the latest and greatest
+  - Block cipher
+  - 128-bit block size
+  - Key size: 128, 192, 256 bits
+  - Rounds: 10, 12, 14
+--- Symmetric key cryptosystems ---
+> Streaming
+  - Encrypt one bit at a time
+  - Popular in wireless networking
+--- RC4 ---
+Streaming cipher
+1 bit at a time
+1 rounds
+40-2048 bits
+WPA

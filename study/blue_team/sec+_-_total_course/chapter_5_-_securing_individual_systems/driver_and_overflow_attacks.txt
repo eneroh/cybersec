@@ -1,0 +1,17 @@
+=== driver and overflow attacks ===
+--- Driver attacks ---
+--> Driver shimming
+  - Intercept API calls
+--> Driver refactoring
+  - Restructures internal code while maintaining external behavior
+  - Can evade anti-virus
+--> Overflow attacks
+  - Integer attacks
+    ~ Less memory than expected
+	~ Sensitive info disclosure
+	~ App crash
+	~ Remote exploit priv esc
+--> Buffer overflow
+  - Strings
+  - Too much data is read or written compared to allocated memory
+> Apply patches, updates, secure coding

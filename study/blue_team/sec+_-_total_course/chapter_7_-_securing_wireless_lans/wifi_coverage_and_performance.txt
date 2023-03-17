@@ -1,0 +1,16 @@
+=== Wifi coverage and performance ===
+--> Signal strength weakens over distance
+  - Transmission power measured in decibel milliwats (dBm)
+> Higher is better
+> Atmospheric conditions can affect wireless connectivity
+--- Wifi site survey ---
+> Conduct during wifi deployment and troubleshooting
+> Collect wireless stats
+  - Signal strength
+  - Noise
+  - Channel overlapping
+  - Transmission speeds
+> Netspot
+--> WLANs, signal strength, channel usages and security settings
+--> Extended WLAN coverage is possible but ensures channels do not overlap in adjacent cells
+--> Wifi heat maps use colors to indicate areas with strong signal strength as well as dead zones

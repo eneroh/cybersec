@@ -1,0 +1,17 @@
+=== asymmetric cryptosystems ===
+> Symmetric key uses same key to encrypt and decrypt
+> Public key (encrypt)
+> Private key (decrypt)
+--- RSA ---
+> Factoring
+  - 12
+    ~ 1x12
+	~ 2x6
+	~ 3x4
+	~ 4x3
+> Prime number factoring
+  - 
+  
+--- Eliptical curve cryptography (ECC) ---
+> Smaller key, same secrity with increased performance
+> Without the single private key, the information cannot be decrypted

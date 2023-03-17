@@ -1,0 +1,27 @@
+=== common attacks ===
+-->- Zero day Attacks ---
+> Exploit unknown to the vendor and public
+> Zero Day Initiative (ZDI)
+  - Encourages the private reporting of vulns to vendors
+--- Common attacks ---
+> DNS sinkholing
+  - False DNS query
+> Priv esc
+  - Gaining root on system
+> Replay attacks
+--> Pointer/object dereference
+  - Attacker manipulates memory pointers to point to unexpected memory locations
+  - Causes software to crash (DOS attack)
+> Error handling
+  - Improper handling can crash a system
+  - Disclosure of too much info (feedback is sql info)
+> Dynamic link library (DLL) injection
+  - Malicious dll in the file system
+  - Legitimate running processes call malicious code within the DLL
+--> Resource exhaustion
+  - DoS or DDoS
+--> Race conditions
+  - Code runtime phenomenon
+  - Action that might occur before security effect is in effect
+  - Timing based
+  

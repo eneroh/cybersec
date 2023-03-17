@@ -1,0 +1,5 @@
+=== touring certificates ===
+--> Expiration date
+> Expired certs are included in certificate authority's published list called a certificate revocation list (CRL)
+--> P7B files include the certificate and chain certificates, no private key
+--> P12 files include the certificate, chain certificate and the private key

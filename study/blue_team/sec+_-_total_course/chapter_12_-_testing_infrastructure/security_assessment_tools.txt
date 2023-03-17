@@ -1,0 +1,21 @@
+=== Security assessment tools ===
+--> Used by security analysts and malicious actors
+> Recon
+  - General info gathering
+> Inventory
+  - What is on the network?
+> Vulnerability assessment
+  - Are there any weaknesses?
+> Penetration testing
+  > Can we exploit discovered vulns?
+--- Common security tools ---
+> curl
+--> scanless
+  - Port scans
+> dnsenum
+> tcpreplay
+> cuckoo
+> theHarvester
+--> hping3
+  - Allows the creation of spoofed packets
+> metasploit framework

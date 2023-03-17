@@ -1,0 +1,43 @@
+=== Personnel Risk and Policies ===
+> Standard operating procedure (SOP)
+> Mandatory vacation, job rotation
+  - Detection of irregulatiries
+  - Separation of duties (multi-person control)
+    ~ Reduce likelihood of internal fraud
+	~ Does not prevent
+--- Employee/Contractor Hiring ---
+> Social media analysis
+> Web search
+> Background checks
+  - Criminal record
+  - Unpaid fines
+  - Credit checks
+  - Interviews with friends, family, colleagues
+--- User onboarding ---
+> Non-disclosure agreement (NDA)
+  - Proprietary secrets, PII/PHI
+> Security policy awareness
+  - User sign off
+> User account and resource access
+> Issues security badge, smart card
+--- User habits ---
+> Clean desk policies
+> Physical and digital document shredding
+  - Mitigates dumpster diving, data recovery
+> Personally-owned devices
+  - MDM
+  - BYOD
+--- User training ---
+> Ongoing, role-based
+> Computer based training (CBT)
+> Gamification
+  - CTF
+> Phishing campaigns/simulations
+  - Lunch and learn
+  - Can be part of a penetration test
+--- User offboarding ---
+> Termination letter
+> Exit interview
+> Return of equipment
+> Knowledge transfer
+> Account disablement vs deletion

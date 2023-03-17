@@ -1,0 +1,38 @@
+=== network authentication ===
+--- Network authentication protocols ---
+--> Password authentication protocol (PAP)
+  - Outdated
+  - Transmissions in clear text
+--> Microsoft Challenge Handshake Authentication Protocol (MS-CHAPv2)
+  - Outdated
+> Microsoft New Technology LAN manager (NTLM)
+  - Used in workgroup machines
+  - Not salted in NTLM
+  - NTLMv2 hashes are salted
+> Kerberos
+  - Microsoft active directory authentication
+  - Kerberos key distribution center (KDC)
+  - Authentication Service (AS)
+  - Ticket-granting service (TGS)
+  - Ticket-granting ticket (TGT)
+> Extensible auth protocol (EAP)
+  - Network auth framework
+  - TLS transport
+  - Wired and wireless
+> IEEE 802.1x
+  - Port based network access control
+  - Centralised RADIUS server auth
+  - Wired and wireless network edge devices
+    ~ Ethernet switches
+	~ Wifi routers
+	~ VPN appliances
+> Remote access dial in user server (RADIUS)
+  - Centralised auth
+  - RADIUS clients
+    ~ Network switches
+	~ VPN Appliance
+> RADIUS supplicant
+  - RADIUS user
+> Terminal access controller access control system (TACACS)
+> Terminal access controller access control system plus (TACACS+)
+> Extended TACACS (XTACACS)

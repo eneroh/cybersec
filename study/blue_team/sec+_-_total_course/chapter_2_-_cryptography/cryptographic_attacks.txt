@@ -1,0 +1,12 @@
+=== cryptographic attacks ===
+
+--- Attack the key ---
+Salts
+Brute force
+Figuring out the key in order to break in
+
+--- Attack the algorithm ---
+Nearly impossible for most modern standards
+
+--- Attack the implementation ---
+Advantage of the weakness in how the connection is made

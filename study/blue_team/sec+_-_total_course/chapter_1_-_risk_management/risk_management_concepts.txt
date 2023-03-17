@@ -1,0 +1,53 @@
+=== Risk Management Concepts ===
+
+--- Risk vector ---
+> Mission critical I.T. systems
+  - Payments
+  - Emergency
+  
+> Sensitive data
+  - Do we know what we have and where it is?
+  
+> Third party access
+
+--- Physical risk vectors ---
+> Acces control vestibules (man traps)
+> Server room access
+> Limit USB access
+
+--- Risk Management Frameworks (RMFs) ---
+> Center for Internet Security (CIS)
+  - Cybersecurity best practices
+  
+> NIST Risk Management Framework (RMF)/Cybersecurity framework (CSF)
+  - Cybersecurity risk management
+  
+> International organisation for Standardization/International Electrotechnical Commission (ISO/IEC)
+  - 27001/27002/27701/31000
+    ~ I.T. system and information security
+
+> Statement on Standards for Attestation Engagements System and Organisation Controls (SSAE SOC 2)
+  - Financial statement integrity
+  - Internal controls
+  - Type 1 and type 2
+  
+> NIST Special Publication (SP) 800-30, Rev. 1
+  - Guide for conducting risk assessments
+  
+--- Data Privacy Regulations and Standards ---
+> General data protection regulation (GDPR)
+  - Protects EU citizens' private data
+
+> Health Insurance Portability and Accountability Act (HIPAA) [Patient medical info]
+
+> Payment Card Industry Data Security Standard (PCI DSS)
+  - Payment information (cards in particular)
+
+--- Types of security policies ---
+> Acceptable use policy
+  - Apps and devices
+> Resource access policy
+> Account policies
+> Data retention policies
+> Change control policies
+> Asset management policies

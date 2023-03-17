@@ -1,0 +1,37 @@
+=== Connecting to dedicated and mobile systems ===
+--- Mobile device wireless comms ---
+> Global positioning system (GPS)
+> Infrared
+  - Legacy, line of sight
+> Celluar
+> Wifi
+> Bluetooth
+> NFC
+-->- Global position system (GPS) ---
+--> Satellite navigation system for objects on earth
+> Point to multipoint
+--> Triangulation to determine location
+> Security implications
+  - Keep off if not needed
+--- 4th generation cellular (4G) ---
+> Radio frequencies
+  - Narrowband (small range)
+  - Broadband (wide range)
+> 10km
+> Sec implications
+  - OTA firmware updates
+--- 5th generation cellular (5G) ---
+--> Transmission rates 10 Gbps
+> Smaller than 4G (up to 2KM)
+> Base stations use fibre connections
+> Requires capable devices
+--- Wifi direct ---
+--> Peer to peer
+> No router
+> No internet connectivity
+--- Mobile device tethering ---
+--> Share internet connection
+--> Wireless hotspot
+--> Wired
+  - USB tethering
+  - USB OTG

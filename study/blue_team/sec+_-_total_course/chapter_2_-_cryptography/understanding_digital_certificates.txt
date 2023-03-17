@@ -1,0 +1,3 @@
+=== Understanding digital certificates ===
+> Digital signatures verify that the person who sent the public key legitimately owns the private key
+> Digital certificates include verification from a third party to authenticate the owner of the digital signatures

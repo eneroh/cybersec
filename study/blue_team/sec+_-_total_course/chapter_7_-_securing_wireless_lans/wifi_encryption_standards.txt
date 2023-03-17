@@ -1,0 +1,32 @@
+=== Wi-Fi encryption standards ===
+--- Wired Equiv Privacy (WEP) ---
+> 802.11 standards
+--> RC4 standard
+> Began with initialisation vector (IV)
+> IV was the weakness
+
+-->- IEEE 802.11i ---
+--> AES instead of RC4
+> Pre shared key (PSK) instead of IV
+  - WPA Entperise (Raidus Server) authentication
+--> WAPs and network cards couldnt handle AES encryption at the beginning 
+> Wifi protected access (WPA)
+  --> RC4 with PSK or RAIDUS server
+
+--- WPA2 ---
+> AES encryption
+  - RAIDUS and PSK
+  - Counter mode/CBC MAC Protocol
+    - CCMP
+> Can be cracked
+
+-->- WPA3 ---
+> Disallows outdated protocols
+--> Protected management frames (PMF)
+--> No more PSK instead Simultaneous authentication of equals (SAE)
+
+--- Wifi Protect Setup (WPS) ---
+> Must have WPS capable WAPS and devices
+> Press buttons on both router and printer, instead connection (WPA2 encryption connection)
+--> Easy to crack now
+--> Devices no longer include it

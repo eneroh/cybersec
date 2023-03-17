@@ -1,0 +1,31 @@
+=== Access Control Schemes ===
+-->- Credential policies ---
+> Defines who gets access to what
+  - Employees
+  - Contractors
+  - Devices
+  - Service Accounts
+  - Administrator/root accounts
+    ~ PAM (privileged access managment)
+
+-->- Attribute based access control (ABAC) ---
+> Uses attributes to determine permissions
+  - Date of birth or device type
+
+-->- Role based access control (RBAC) ---
+> Role is a collection of related perms
+> Occupants get permissions of the role
+
+-->- Rule based access control (RBAC) ---
+> Conditional access policies
+
+-->- Mandatory access control (MAC) ---
+> Resources are labeled
+> Permission assignments are based on resource labels and security clearance
+
+-->- Discretionary access control (DAC) ---
+> Data custodian sets perms at their discretion
+
+-->- Physical access control ---
+> door locks
+> access cards

@@ -1,0 +1,33 @@
+=== qualitative risk assessment ===
+> Based on subjective opinions regarding:
+  - Threat likelihood
+  - Impact of realized threat
+  
+> Threats are given a severity rating
+
+--- Risk register ---
+> Orgs should have more than 1
+> Centralized list of risks, severities, responsibilities and mitigations
+> Generally considered qualitative
+  - Occasionally includes hard numbers
+  - Severity or impact ratings
+ 
+--- Risk register example ---
+=============================================================================================
+ Risk #  |  Date  |  Title  |  Likelihood  |  Impact  |  Severity  |  Owner  |  Mitigation  | 
+=============================================================================================
+1        | March 5| On prem
+					customer	High       |   Med	  |		High   |  User1  |  Refer to
+					PII data													IRP #425-1
+					exfil	| 
+=============================================================================================
+2
+=============================================================================================
+3
+=============================================================================================
+
+--- Risk Heat Map ---
+> Take risk severity levels and map visually by color
+
+--- Risk Matrix ---
+> Risk heat map minus colors

@@ -1,0 +1,19 @@
+=== Cryptographic methods ===
+--- Encryption/decryption ---
+> Symmetic encryption
+
+--- Session key ---
+> In-band (in a session online) and out-of-band (travel to give person key)
+
+--- Ephemeral key ---
+> Temporary
+> Perfect forward secrecy
+
+--- Asymmetric encryption ---
+> Uses a key pair
+  - Public key (encrypt)
+  - Private key (decrypt)
+> Slow but useful in exchanging session keys
+
+--- Cryptosystems ---
+> Define key properties, communication requirements for the key exchange and the actions taken through the encryption/decryption process

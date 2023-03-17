@@ -1,0 +1,4 @@
+=== Cracking WPA2 ===
+--> WLAN BSSID must be known to attacker
+--> Client MAC address is required for some WLAN attacks
+--> Online or offline dictionary and brute-force attacks can crack WPA PSKs

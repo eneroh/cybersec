@@ -1,0 +1,16 @@
+=== embedded systems ===
+--> Embedded, specialised, mobile
+--> Fixed hardware
+--> Fixed os, specific os
+-->- Types of embedded systems ---
+> SoC
+> Industrial control systems (ICS), Real time operating system (RTOS)
+> Supervisory control and data acquisition (SCADA)
+> Internet of things (IoT)
+> Medical systems
+> In vehicle computing systems
+> Unmanned aerial vehicle (UAV)
+> Smart meter
+> Surveillance systems
+> VoIP
+> Mobile systems

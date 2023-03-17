@@ -1,0 +1,24 @@
+=== Digital forensics ===
+> Applying science to the collection and preservation of evidence for legal use
+> Follow proper evidence gathering and retention procedures
+  - Technological solutions
+  - Interviews of parties related to the sec incident
+--- E-discovery ---
+> Discovery of electronic information
+> On-premises
+> Cloud
+> Investigations
+> Legal hold
+> Freedom of information act
+--- Mobile device forensics ---
+> Prevent wireless comms
+  - Airplane mode
+  - Faraday bag/cage
+> Geolocation GPS tagging
+  - When, where pics and video were taken
+  - Social media posts
+-->- Steganography ---
+--> Hiding in plain sight
+  - A form of obfuscation
+  - Message embedded in a benign picture
+  

@@ -1,0 +1,24 @@
+=== Threats and vulnerabilities ===
+
+--- CIA Triad ---
+
+Confidentiality - 
+Encryption
+
+Integrity -
+Hashing
+
+Availability -
+Uptime to access
+
+--- Attack vectors ---
+> Pathways to gain access to infrastructure
+  - No MFA
+  - No training
+  - No updates
+  - Open ports
+  - USB thumbdrives (stuxnet worm)
+  - Weak confs
+  
+> Supply chain attack
+  - Attacking the vendor to attack the target

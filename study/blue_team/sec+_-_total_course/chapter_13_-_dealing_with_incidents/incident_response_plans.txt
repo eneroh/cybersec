@@ -1,0 +1,36 @@
+=== Incident response plans (IRPs) ===
+--- Indicators of compromise (IoC) ---
+> Suspcious occurence that raises a red flag
+> Examples
+  - Excessive outbound traffic to a single unknown host
+  - Newly detected linux device on a windows network
+  - Log/IDS/IPS alerts
+--- Incident response plan (IRP) ---
+> Proactive preparation for reacting to an attack
+  - Step by step procedures
+  - Documents
+> Response to threats
+  - Detection
+  - Containment
+  - Eradication
+> Contact list
+> When to escalate
+--- IRP Life Cycle ---
+> Periodic review
+> Assign roles
+> Regular training
+> Update the IRP
+--- IRP Process ---
+> Prepare
+> Identify and contain
+> Eradicate
+> Recover
+> Lessons learned
+--- IRP Testing ---
+> Designed to detect, contain and eradicate threats
+> Walkthrough
+> Simulations
+> Tabletop exercises
+--> Incident response plan (IRP) is a proactive way to minimize downtime and impacts caused by secuity events
+--> Incident response tasks include proactive preparation, identitification and containment, eradication and applying lessons learned
+--> IRPs must be reviewed periodically

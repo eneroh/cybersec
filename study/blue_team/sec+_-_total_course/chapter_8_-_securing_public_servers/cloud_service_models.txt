@@ -1,0 +1,35 @@
+=== cloud service models ===
+> Categories of cloud services offerings
+> Shared responsibility
+  - Cloud Service Provider is responsible for hardware
+  - CSP may also be responsible for software configs
+  - CSP may also be responsible for software configs
+-->- Anything as a service (XaaS) ---
+> IT Service that is accessible remotely over a network
+> Run on provider infra
+> Adheres to cloud computing characteristics
+--- Common Cloud Service Models ---
+-->- Infra as a service (IaaS) ---
+> Storage
+> Networking
+> Manually deployed and managed vms
+> Do not expose directly to the internet where possible
+> CSP Responsibility
+  - Hardware
+> Cloud tenant responsibility
+  - VM and storage account deployment, hardening
+-->- Platform as a service (PaaS) ---
+> Databases
+> Software dev tools
+> Underlying vms are managed by provider
+  - Managed service
+  - "Serverless"
+-->- Software as a service (SaaS) ---
+> End user productivity software
+> CSP responsibility
+  - Hardware
+  - VMs
+  - Software installs and patches
+  - Cloud tenant responsibility
+  - Software configs
+  - User provisioning
