@@ -7,9 +7,6 @@ SNAT- Source NAT - Private IP Address
 DDNS - Dynamic Domain Name Services
 Manages external IP address and keeps server/services alive externally
 
-Good communicative abilities?
-Yes, I possess fairly good written and verbal communications
-
 change dns through terminal
 vim /etc/resolv.conf - linux and edit relevant information
 ip set dns “Eternet0” status 8.8.8.8
