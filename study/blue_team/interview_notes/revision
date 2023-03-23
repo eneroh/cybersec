@@ -24,3 +24,7 @@ Determine damage of external ip address: virtustotal - ip address
 MSHTA - mshta.exe microsoft html applications (hta files)
 
 mshta.exe is used to bypass application whitelisting defences and browser security settings
+
+How would you check for last logged in users?
+event viewer - Windows
+command "lastlog" - Linux
