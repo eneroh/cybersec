@@ -60,6 +60,10 @@ reverseshell docs (wordlists/seclists)
 stegextract
 steghide
 
+--- Document Metadata ---
+exiftool (libimage-exiftool-perl)
+pdfinfo
+
 --- Vulnerability scanner (Attack surface mapping) ---
 nikto
 nessus
