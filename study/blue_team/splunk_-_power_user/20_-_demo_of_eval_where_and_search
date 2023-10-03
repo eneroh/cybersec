@@ -1,0 +1,31 @@
+# Episode 20 of Splunk: Zero to Power User
+
+index=_internal
+| eval epoch_time = strptime(_timem, "%s")
+| eval human_readable_time = strftime(epoch_time, "%d/%m/%y %H:%M")"
+| table _time, epoch_time, human_readable_time
+
+index=_internal
+| eval DayofTheYear = strftime(_time, "%j")
+| search DayofTheYear=206
+
+| eval can be used for time
+
+index=web
+| eval status_codes = case((status = 404), "not found", (status == 400), "bad request")", (status == 200), "success")"
+| stats count by status, status_codes
+
+index=web
+| stats count(eval(status == 404)) as "number of not founds"
+
+index=web
+| eval hash = md5(file)
+| table file, hash
+
+index=security
+| table src, user, action
+| where src="64.66.0.20"
+
+index=security
+| table src, user, action
+| where like(src, "64.%")
