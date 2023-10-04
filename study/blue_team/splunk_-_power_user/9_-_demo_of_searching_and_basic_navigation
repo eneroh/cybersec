@@ -1,0 +1,12 @@
+# episode 9 of Splunk: Zero to Power User
+
+index=web bytes<268
+
+
+THESE ARE NOT THE SAME!!
+
+index=web action!=purchase
+
+index=web NOT action=purchase
+
+index=security fail*

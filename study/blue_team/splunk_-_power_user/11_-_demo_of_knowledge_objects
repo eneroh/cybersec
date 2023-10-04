@@ -1,0 +1,10 @@
+# Episode 11 of Splunk: Zero to Power User
+
+index=security action=failure host=web1 eventtype=failed_login user=admin src="87.194.216.51"
+
+> Save as alert
+> Follow Knowledge Object naming convention
+> Set Perms
+> Frequency the search is run
+
+Event Type > New Event Type > Follow instructions

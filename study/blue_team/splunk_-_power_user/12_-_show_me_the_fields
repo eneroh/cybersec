@@ -1,0 +1,13 @@
+# Episode 12 of Splunk: Zero to Power User
+
+What are fields?
+> Key value pairs
+> Searchable by name
+> Ability to search multiple fields at once
+> Created by Splunk or recognised from an add-on
+
+!= vs NOT
+
+Everything that does not contain <field>
+
+Everything that does not contain <field> and where the categoryfield doesn't exist

@@ -1,0 +1,36 @@
+# Episode 10 of Splunk: Zero to Power User
+
+What is a Knowledge Objects?
+Tools to conduct analysis
+
+What are Knowledge Objects?
+> Fields
+> Field extractions
+> Lookup
+> Tag
+> Field alias
+> Data model
+> Saved search
+
+ANYTHING YOU MAKE IS A KNOWLEDGE OBJECT
+
+Knowledge Objects can be sharable, reusable based on perms.
+
+Who manages Knowledge Objects?
+Knowledge Manager
+
+Naming Conventions
+<Group Name>_<Type>_<Description>
+
+SOC_Alert_LoginFailures
+
+Permissions:
+
+> Private
+No one else can see besides you
+
+> This app only
+Object persists in a specific app
+
+> All apps
+Object pesists across all apps globally

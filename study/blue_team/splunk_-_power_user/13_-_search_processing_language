@@ -1,0 +1,38 @@
+# Episode 13 of Splunk: Zero to Power User
+
+ORANGE
+
+Command modifiers
+> OR
+> NOT
+> AND
+> as
+> by
+
+BLUE
+
+The Commands
+> Stats
+> Table
+> Rename
+> Dedup
+> Sort
+> Timechart
+
+GREEN
+
+The Argumnets
+> Limit
+> Span
+
+PURPLE
+
+The functions
+> Tostring
+> Sum
+> Values
+> Min
+> Max
+> Avg
+
+
