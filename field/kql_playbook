@@ -73,3 +73,79 @@ CommonSecurityLogs
 | project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
 MY PRIMARY COMMONSECURITYLOGS SEARCH I USE DAILY
 
+AzureActivity
+| where Caller == "<alphanumeric>"
+
+AzureDiagnostics
+| where userAgent_s contains "<UserAgent>" and clientIP_s == "<IP>"
+| summarize by TimeGenerated, ResourceGroup, Resource, OperationName, requestUri_s, httpStatus_d
+Malformed User Agent query
+
+AADNonInteractiveSignInLogs
+| where UserPrincipalName == "John.Smith@domain.com"
+//| where IPAddress == "<IP>"
+| summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails
+MY PRIMARY AADNONINTERACTIVESIGNINLOGS SEARCH I USE REGULARLY
+
+AsimDnsActivityLogs
+| where DnsQuery contains "<domain.com>"
+| summmarize by TimeGenerated, DnsQuery, DstIpAddr, SrcIpAddr, DvcHostname, EventResult
+Suspicious communication over dns on one endpoint kql query
+
+IdentityInfo
+| where AccountCreationTime between (now(-14d) .. now())
+| summarize by AccountName
+Identity and Access Management Theme KQL query
+Review over the last 2 weeks
+
+SecurityAlert
+| where AlertName contains "Suspected brute-force"
+| summarize arg_max(TimeGenerated,*) by SystemAlertId
+//| project Description
+Display alerts titled Suspected brute force then summarizes them by TimeGenerateed and SystemAlertId
+
+AuditLogs
+| where OperationName startswith "Update"
+| summarize count() by OperationName
+Condiitonal Access Policy Modified related
+
+EmailEvents
+| where SenderIPv4 contains "1.2.3.4"
+Finds emails by ipv4 address
+
+EmailUrlInfo
+| where UrlDomain contains "sample.com"
+| join EmailEvents on NetworkMessageId
+| join UrlClickEvents on NetworkMessageId
+Same combining filters
+This query can be combined with the filters above to locate the link clicks on emails you want
+
+EmailEvent
+| where SenderFromAddress contains "example.com"
+Finds emails based on sender address
+
+EmailEvents
+| where Subject contains "example"
+Finds emails based on subject
+
+UrlClickEvents
+| where NetworkMessageID in ('<alphanumeric>','<alphanumeric>','<alphanumeric>')
+Finds url clicks in a list of message ids
+
+EmailAttachmentInfo
+| where FileName contains "<FileName>"
+| join EmailEvents on NetworkMessageId
+Finds emails where a file with a specific name is attached
+
+DeviceProcessEvents
+| where ProcessCommandLine contains "<FileName>"
+Find events where a file was executed
+
+DeviceEvents
+| where FileName contains "<FileName>"
+Find events where a file was executed
+
+DeviceFileEvents
+| where FileName contains "<FileName>"
+| where ActionType contains "Created"
+Find files matching a file name on endpoints
