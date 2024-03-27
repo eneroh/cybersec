@@ -1,0 +1,75 @@
+kql_playbook
+
+CommonSecurityLogs
+| where DestinationIP == "<IP>"
+Check CommonSecurityLogs for dest. ip
+
+CommonSecuityLogs
+| where DestinationDomainName == "<domain name>"
+Checks CommonSecurityLogs for Dest. domain name
+
+CommonSecurityLogs
+| where SourceIP == "<IP>"
+Chcek CommonSecurityLogs for Source IP
+
+SignInLogs
+| where SigninLogs == "<IP>"
+Check SigninLogs for IP address
+
+SignInLogs
+| where UserPrincipalName == "<User Email>"
+Check SigninLogs for UserPrincipalName
+
+SecurityAlert
+| where AlertName contains "ti map"
+| where tostirng(Entities) !contains "23.227.38."
+| summarize by tostring (Entities)
+Check Security Alert for AlertName containing "Ti map"
+The string does not contain "<ip>"
+Then summarize by entities in string format
+
+SigninLogs
+| where UserPrincipalName =~ "John.Smith@domain.com" and ResultType == "0" //and IPAddress != "<IP>"
+| summarize by TimeGenerated, UserPrincipalName, AppDisplayName, IPAddress, tostring(DeviceDetail)
+
+OfficeActivity
+| where Operation == "New-InboxRule and UserId contains "<User's last name>"
+| summarize by tostring(Parameters) and DeviceAction != "Blocked" and UserId contains "<User's last name>"
+Check OfficeActivity for New-Inbox Rules tied to user's last name, summarize any DeviceAction that was not Blocked, show parameters in string format. Performed on compromised account.
+
+OfficeActivity
+| find "<domain>"
+| summarize by tostring(Parameters)
+
+find <ip/host/whatever>
+To find a field that isn't showing, then use the field that appears
+
+SigninLogs
+| where UserDisplayName == "<Username>"
+| project TimeGenerated, IPAddress, Location, LocationDetails, UserAgent, Status
+Outdated default sign in logs checker
+
+SigninLogs
+| where UserPrincipalName == "John.Smith@domain.com"
+| project TimeGenerated, UserDisplayName, AppDisplayName, IPAddress, Location, LocationDetails, Status, AuthenticationRequirement
+Outdated default sign in logs checks #2
+
+SigninLogs
+| where UserPrincipalName == "John.Smith@domain.com"
+| summarize count by <field>
+
+| project TimeGenerated, UserDisplayName, LocationDetails_string, AppDisplayName, ResourceDisplayName, Status_string
+Add to end of event logs query
+
+SigninLogs
+| where UserPrincipalName == "John.Smith@domain.com"
+//| where IPAddress == "<IP>"
+| summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails
+MY PRIMARY SIGNINLOGS SEARCH I USE DAILY
+
+CommonSecurityLogs
+| where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
+//| where DestinationIP == "<IP>" //and SourceIP == "<IP>"
+| project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
+MY PRIMARY COMMONSECURITYLOGS SEARCH I USE DAILY
+
