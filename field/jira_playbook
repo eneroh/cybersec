@@ -26,3 +26,6 @@ Query for IP that is related to bad threat indicator
 
 assignee = "<colleague>" AND project = <project name> AND status != Closed
 Check colleagues triaging
+
+assignee = currentUser() AND resolutiondate > startOfDay() AND summary !~ "Phish"
+Show your tickets that were resolved today but also removes auto-closing phish alerts from search to be more clear and concise
