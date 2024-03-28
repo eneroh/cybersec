@@ -149,3 +149,23 @@ DeviceFileEvents
 | where FileName contains "<FileName>"
 | where ActionType contains "Created"
 Find files matching a file name on endpoints
+
+SigninLogs
+| where TimeGenerated > ago(30d)
+| where UserPrincipalName == "<Username>"
+//| where IPAddress == "<IP>"
+//| where ResultType contains "53005"
+| summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails, ResultType
+THE ULTIMATE NEW SIGNINLOGS QUERY THAT I USE, incorporates timegen into the query itself
+
+AADNonInteractiveSignInLogs
+| where TimeGenerated > ago(30d)
+| where UserPrincipalName == "<Username>"
+//| where IPAddress == "<IP>"
+//| where ResultType contains "53005"
+| summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails, ResultType
+THE ULTIMATE NEW AADNONINTERACTIVESIGNINLOGS QUERY THAT I USE, incorporates timegen into the query itself. Also has added resulttype for viewing suspicious IPs
+
+IdentityInfo
+| where AccountUPN endswith "<Ext. domain.com>" AND IsAccountEnabled == "true"
+IdentityInfo query that looks for external domain users that are enabled within EntraID for your business
