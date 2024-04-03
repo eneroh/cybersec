@@ -1,4 +1,4 @@
-kql_playbook
+=== kql_playbook ===
 
 CommonSecurityLogs
 | where DestinationIP == "<IP>"
