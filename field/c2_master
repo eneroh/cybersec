@@ -1,9 +1,9 @@
-c2_master
+=== c2_master - sentinel focus ===
 
-Alert associated
+--- alert associated ---
 Network protection blocked a potential c2 connection on one endpoint
 
-Software required for procedure
+--- software required for procedure ---
 Sandboxing tool: Windows sandbox, urlscan.io
 Smartphone/home network
 MS Defender
@@ -11,7 +11,7 @@ MS Sentinel
 IP information gathering tool: abuseipdb, virustotal
 IP VPN proxy checker: ip2proxy.com, ipinfo.io
 
-Procedure
+--- procedure ---
 1. Gather relevant information
 Reviewing the defender alert, seek and note relevant information.
 Device name, ip address, links to pages, services associated, parent processes
@@ -77,7 +77,7 @@ With IPs, domains and urls to block.
 
 You have successfully performed a c2 investigation to the level of a master.
 
-Remediation:
+--- Remediation ---
 1. Network intrusion prevention systems can be utilized to mitigate this activity.
 2. Restricting web based content through web proxies. Preventing the use of unauthorised external services.
 3. Continued monitoring of network traffic
