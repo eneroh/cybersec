@@ -76,3 +76,9 @@ Present your findings in a clear and concise manner.
 With IPs, domains and urls to block.
 
 You have successfully performed a c2 investigation to the level of a master.
+
+Remediation:
+1. Network intrusion prevention systems can be utilized to mitigate this activity.
+2. Restricting web based content through web proxies. Preventing the use of unauthorised external services.
+3. Continued monitoring of network traffic
+Block the associated traffic, domains, urls, ips
