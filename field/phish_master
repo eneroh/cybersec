@@ -106,3 +106,4 @@ Remediation
 3. User training - Train users to be suspicious about certificate errirs abd phishing emails
 4. Continued monitoring of application logs, network traffic, files, services etc.
 5. Software configuration - Use anti-spoofing and email auth mechanisms to filter messages based on validity checks on the sender domain: SPF, DMARC, DKIM
+6. Password reset in case the user knowingly or unknowingly inputted their credentials
