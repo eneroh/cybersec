@@ -66,4 +66,13 @@ Method 2:
 View the html source code within a sandboxed browser
 [works in home network]
 
-Look for relevant javascript files that are tied to the offending ip/domain. Review the souces
+Look for relevant javascript files that are tied to the offending ip/domain. Review the sources
+
+7. Present findings
+Once you have made your determination
+
+Present your findings in a clear and concise manner.
+
+With IPs, domains and urls to block.
+
+You have successfully performed a c2 investigation to the level of a master.
