@@ -294,3 +294,8 @@ and DeviceName == "<device>"
 | sort by Timestamp desc
 | extend Relevance = ifff(Timestamp == selectedTimestamp, "Selected event", ifff(Timestamp < selectedTimestamp, "Earlier event", "Later event"))
 | project-reorder Relevance, RemoteUrl, RemoteIP
+
+AADServicePrincipalSigninLogs
+| where IPAddress == "<IP>"
+| project by TimeGenerated, ServicePrincipalName, Location, ConditionalAccessStatus, IPAddress, LocationDetails, ResultType
+Useful for unusual data center login
