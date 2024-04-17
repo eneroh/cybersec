@@ -56,9 +56,12 @@ IN THIS INSTANCE OF PHISHING SITE, it is a requirement to escalate.
 Follow the incident escalation procedure.
 
 --- remediation ---
-> Block the site entirely, reach out to the user to ensure that the user is aware of their actions.
-> Regular internal phising campaigns for training users in future occurrences
-> Password reset incase user knowingly or unknowingly inputted their credentials
+1. Filter network traffic - block all network traffic not necessary within environment
+2. Network Intrusion Detection and Prevention - Identify traffic patterns indicative of AiTM behavior and mitigate activity at the network level
+3. User training - Train users to be suspicious about certificate errirs abd phishing emails
+4. Continued monitoring of application logs, network traffic, files, services etc.
+5. Software configuration - Use anti-spoofing and email auth mechanisms to filter messages based on validity checks on the sender domain: SPF, DMARC, DKIM
+6. Password reset in case the user knowingly or unknowingly inputted their credentials
 
 --- useful kql queries ---
 EmailEvents
@@ -99,11 +102,3 @@ Find device network events associated with user: “<John.Smith@domain.com>”
 DeviceNetworkEvents
 | where RemoteUrl contains “<google.com>”
 Find device network events associated with url: “<google.com>”
-
-Remediation
-1. Filter network traffic - block all network traffic not necessary within environment
-2. Network Intrusion Detection and Prevention - Identify traffic patterns indicative of AiTM behavior and mitigate activity at the network level
-3. User training - Train users to be suspicious about certificate errirs abd phishing emails
-4. Continued monitoring of application logs, network traffic, files, services etc.
-5. Software configuration - Use anti-spoofing and email auth mechanisms to filter messages based on validity checks on the sender domain: SPF, DMARC, DKIM
-6. Password reset in case the user knowingly or unknowingly inputted their credentials
