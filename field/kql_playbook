@@ -274,3 +274,23 @@ IdentityInfo
 DeviceFileEvents
 | where FileName endswith ".crx"
 Review files for file format: .crx (chrome web extensions)
+
+DeviceNetworkEvents
+| where Timestamp between (ago(5h) .. ago(3h))
+| where DeviceName == ">device.internaldomain>" //and RemoteIP == "<IP>"
+
+let selectedTimestamp = datetime(<time>)
+search in (DeviceNetworkEvents)
+Timestamp between ((selectedTimestamp - 30m) .. (selectedTimestamp + 30m))
+and DeviceName == "<device>"
+| sort by Timestamp desc
+| extend Relevance = ifff(Timestamp == selectedTimestamp, "Selected event", ifff(Timestamp < selectedTimestamp, "Earlier event", "Later event"))
+| project-reorder Relevance
+
+let selectedTimestamp = datetime(<time>)
+search in (DeviceNetworkEvents)
+Timestamp between ((selectedTimestamp - 30m) .. (selectedTimestamp + 30m))
+and DeviceName == "<device>"
+| sort by Timestamp desc
+| extend Relevance = ifff(Timestamp == selectedTimestamp, "Selected event", ifff(Timestamp < selectedTimestamp, "Earlier event", "Later event"))
+| project-reorder Relevance, RemoteUrl, RemoteIP
