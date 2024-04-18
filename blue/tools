@@ -46,6 +46,13 @@ Wireshark
 --- Operational Technology (OT) ---
 Dragos
 
+--- Sandboxing ---
+urlscan.io
+Windows Sandbox
+virtualbox
+vmware
+proxmox
+
 --- Security Information and Event Management (SIEM) ---
 Microsoft Sentinel
 Splunk
