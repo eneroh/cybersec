@@ -1,0 +1,67 @@
+=== Tools ===
+
+--- Code Deobfuscator ---
+https://https://deobfuscate.io/
+
+--- Digital Forensic and Incident Response (DFIR) ---
+Velociraptor
+
+--- Email monitoring ---
+Microsoft Defender
+Splunk via specific index
+
+--- File investigation ---
+https://www.hybrid-analysis.com/
+
+--- Endpoint Detection and Response (EDR) ---
+Microsoft Defender
+Crowdstrike Falcon
+
+--- IP Reputation Gathering ---
+https://virustotal.com
+https://otx.alienvault.com
+https://abuseipdb.com
+
+--- IP VPN/Proxy Checker ---
+https://ip2proxy.com
+https://ipinfo.io
+
+--- Keywords ---
+Ingest
+Digest
+Suppress
+Popped
+Index
+Table
+
+--- Network Tools ---
+https://mxtoolbox.com
+
+--- Network Monitoring ---
+Zscaler - app-based proxy
+
+--- Network Investigation ---
+Wireshark
+
+--- Operational Technology (OT) ---
+Dragos
+
+--- Security Information and Event Management (SIEM) ---
+Microsoft Sentinel
+Splunk
+Rapid7
+
+--- Security Orchestration Automation and Response ---
+Palo Alto
+Splunk
+
+--- Query Languages ---
+CQL - Crowdstrike Query Language
+KQL - Kusto Query Language - Sentinel
+SQL - Structured Query Language - Databases
+SPL - Splunk Processing Language
+
+--- Vulnerability Management ---
+Microsoft Defender
+Tenable Nessus
+Qualys
