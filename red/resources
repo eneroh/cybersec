@@ -1,0 +1,78 @@
+=== Resources ===
+
+--- Red Team Focus ---
+
+--- Basics ---
+https://github.com/DFIRmadness/5pillars/blob/master/5-Pillars.md
+https://deploy-preview-491--privacyguides.netlify.app/#
+https://jhalon.github.io/becoming-a-pentester/
+https://pauljerimy.com/security-certification-roadmap/
+
+--- Databases ---
+https://www.exploit-db.com/
+https://nvd.nist.gov/vuln/search
+https://cve.mitre.org/
+https://hashcat.net/wiki/doku.php?id=example_hashes
+https://haveibeenpwned.com
+
+--- Ebooks ---
+
+--- Frameworks ---
+https://attack.mitre.org/
+
+--- Github ---
+https://github.com/TCM-Course-Resources/Practical-Ethical-Hacking-Resources
+https://github.com/sbilly/awesome-security
+https://github.com/enaqx/awesome-pentest
+
+--- Guides ---
+https://cdn.comparitech.com/wp-content/uploads/2019/07/NIkto-Cheat-Sheet.pdf
+
+--- Important ---
+https://tryhackme.com
+https://www.hackthebox.com/
+
+--- Learning ---
+https://play.picoctf.org/login
+https://www.cbtnuggets.com/blog/training/exam-prep/how-to-prepare-for-a-capture-the-flag-hacking-competition
+https://portswigger.net/web-security
+https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection
+https://github.com/WebGoat/WebGoat/releases
+
+--- OSINT ---
+https://this-person-does-not-exist.com/en
+https://whatsmyname.app
+
+--- Programming ---
+https://www.learnpython.org/
+https://github.com/EbookFoundation/free-programming-books
+https://github.com/EONRaider/blackhat-python3
+https://github.com/EONRaider/violent-python3
+
+--- Tools ---
+https://github.com/danielmiessler/SecLists
+https://github.com/swisskyrepo/PayloadsAllTheThings
+https://github.com/SecureAuthCorp/impacket
+https://github.com/carlospolop/PEASS-ng
+https://github.com/BlackArch/blackarch
+https://github.com/BlackArch/webshells
+https://github.com/lgandx/Responder
+https://github.com/hmaverickadams/breach-parse
+https://github.com/OWASP/Amass
+https://github.com/tomnomnom/httprobe
+https://github.com/GTFOBins/GTFOBins.github.io
+https://github.com/robertdavidgraham/masscan
+https://github.com/heltonWernik/OpenLuck
+https://github.com/corelan/mona
+https://www.asciitohex.com/
+https://29a.ch/photo-forensics/#strings
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#java
+https://overthewire.org/
+https://www.shodan.io/
+https://crackstation.net/
+
+--- Websites ---
+http://phrack.org/issues/7/3.html
+
+--- Writeups [Understand how others make their reports, use it to build upon your own] ---
+https://infosecwriteups.com/tagged/hackerone
