@@ -1,0 +1,10 @@
+splunk_playbook
+
+<pending>
+List all indexes
+
+<query>
+| field <field> <field>
+| table <field> <field>
+| dedup <field> <field>
+More efficient search with honed in results
