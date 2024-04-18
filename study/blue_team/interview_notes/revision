@@ -28,3 +28,6 @@ mshta.exe is used to bypass application whitelisting defences and browser securi
 How would you check for last logged in users?
 event viewer - Windows
 command "lastlog" - Linux
+
+What tool would you use to check the reputation of an internal IP?
+<Trick question>
