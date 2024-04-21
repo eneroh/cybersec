@@ -38,7 +38,7 @@ Method 1:
 Visit the assets tab in the alert itself and then select the device asasociated and then open the device page.
 
 Method 2:
-Place it into the MS Defender search. Within here, select the relevant device.
+Place the device name into the MS Defender search. Within here, select the relevant device.
 
 Visit the timeline tab and input the search field the relevant ip/domain associated with the c2 activity.
 
