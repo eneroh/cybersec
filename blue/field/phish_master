@@ -55,6 +55,8 @@ IN THIS INSTANCE OF PHISHING SITE, it is a requirement to escalate.
 
 Follow the incident escalation procedure.
 
+Congratulations, you have performed a phish investigation to the level of a master.
+
 --- remediation ---
 1. Filter network traffic - block all network traffic not necessary within environment
 2. Network Intrusion Detection and Prevention - Identify traffic patterns indicative of AiTM behavior and mitigate activity at the network level
