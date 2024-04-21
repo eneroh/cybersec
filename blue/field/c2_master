@@ -66,6 +66,9 @@ Method 2:
 View the html source code within a sandboxed browser
 [works in home network]
 
+Method 3:
+Review the site via developer options
+
 Look for relevant javascript files that are tied to the offending ip/domain. Review the sources
 
 7. Present findings
