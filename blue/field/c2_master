@@ -3,13 +3,13 @@
 --- alert associated ---
 Network protection blocked a potential c2 connection on one endpoint
 
---- software required for procedure ---
-Sandboxing tool: Windows sandbox, urlscan.io
-Smartphone/home network
-MS Defender
-MS Sentinel
-IP information gathering tool: abuseipdb, virustotal
-IP VPN proxy checker: ip2proxy.com, ipinfo.io
+--- items required for procedure ---
+> Sandboxing tool: Windows sandbox, urlscan.io
+> Smartphone/home network
+> MS Defender
+> MS Sentinel
+> IP information gathering tool: abuseipdb, virustotal
+> IP VPN proxy checker: ip2proxy.com, ipinfo.io
 
 --- procedure ---
 1. Gather relevant information
