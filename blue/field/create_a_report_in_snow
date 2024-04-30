@@ -1,0 +1,17 @@
+=== create_a_report_in_snow ===
+
+--- Items ---
+> SNow access
+> Report Perms
+
+--- Procedure ---
+1. Open up ServiceNow
+2. In the left hand menu, type in the search box: "Reports" then go to "View/Run"
+3. In the top right, select "Create a report"
+4. Maintain Source type: "Table", Table: "Security Incidents...", choose "Next".
+5. Do not choose a visualisation
+6. In the right hand window, you will see a blank report. You will also see a filter button, select this button.
+7. Choose your filters: Opened > on > Last month and customer is <business name>
+8. From there you have everything need, save
+
+Congratulations, you have successfully created a snow report.
