@@ -1,0 +1,73 @@
+=== ti_master - sentinel focus ===
+
+--- Alerts associated ---
+<insert alerts associated with ti_master>
+
+--- Pre-requisites ---
+1. Understand what a domain or IP entity are
+2. Understand the difference between domain entity vs IP entity
+3. Ensure you are in the correct workplace when performing queries
+
+--- Tables ---
+1. CommonSecurityLogs
+2. Appliance specific logs
+3. ASimDnsActivityLogs
+
+--- Items required for procedure ---
+1. Microsoft Sentinel
+  > Alert analysis, base level investigation via log search
+2. Microsoft Defender
+  > Alert analysis, in-depth investigation via Advanced Hunting search
+3. EntraID
+  > Gathering of relevant user details
+4. IP information gathering tool: AbuseIPDB
+  > IP information gathering security tool
+
+--- Procedure ---
+1. Gather relevant information
+  > From the alert, gather relevant information, especially TimeGenerated, domain or IP depending on the entity.
+2. Using Logs in Microsoft Sentinel, input the following query:
+  CommonSecurityLog
+  | where TimeGenerated > ago(7d)
+  | where DestinationHostName == "<domain>" //and SourceIP == "<SrcIP>"
+  | where DestinationIP == "<IP>" //and SourceIP == "<SrcIP>"
+  | project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
+3. Investigation Phase
+  > Review the TimeGenerated or StartTime of your even tand look for the correlating TimeGenerated in your query results
+4. Deeper Dive Phase
+  > Gather the user's details in MS EntraID, input the user's device into MS Defender device search and then select the device
+5. Device Timeline Scanning
+  > Within the device timeline, you will need to input the relevant domain or ip associated to the original alert. Review the activity, if you want to be more granular lok at the event time WITHOUT the search in place for the domain/IP. Look for what RemoteUrls are visited.
+6. MS Defender Advanced Hunting Stage
+  > Utilizing all the information forumate a query, particularly looking through the table:
+  DeviceNetworkEvents
+  | where DeviceName == "<Device>"
+  | summarize by Timestamp, RemoteIP, RemoteUrl
+
+You may also want to utilize the "Hunt for relevant events" button associated to a particular event within Device Timeline, however this is a more pinpoint, precision style. Where you may also want to be less precise and look for any strange and suspicious RemoteUrl's the user may be visiting.
+7. Make your determination/Present your findings
+  > Make your determination, to escalate or not, that is the question.
+
+If you see suspicious activity, perform the escalation, if yu do not, with all this investigation performed. Do not. There is no mandatory escalation associated to alert.
+
+Recommendations
+1. Block the suspicious IP/Domain and any additional suspicious IP/Domain sighted
+2. Continued monitoring of network traffic
+
+Additional Information
+Threat Intel Deep Dive
+Within Microsoft Sentinel, there is a tab for Threat Intel, here you can input a domain or IP address associated with a recent alert and review.
+
+Useful KQL Queries
+1.
+CommonSecurityLog
+  | where TimeGenerated > ago(7d)
+  | where DestinationHostName == "<domain>" //and SourceIP == "<SrcIP>"
+  | where DestinationIP == "<IP>" //and SourceIP == "<SrcIP>"
+  | project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
+2.
+DeviceNetworkEvents
+  | where DeviceName == "<Device>"
+  | summarize by Timestamp, RemoteIP, RemoteUrl
+
+
