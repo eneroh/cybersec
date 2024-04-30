@@ -299,3 +299,8 @@ AADServicePrincipalSigninLogs
 | where IPAddress == "<IP>"
 | project by TimeGenerated, ServicePrincipalName, Location, ConditionalAccessStatus, IPAddress, LocationDetails, ResultType
 Useful for unusual data center login
+
+AzureDiagnostics
+| where userAgent_s == "<useragent>"
+| project TimeGenerated, clientIP_s, clientIp_s, httpStatusCode_d
+Check AzureDiagnostics for particular Malformed User Agent
