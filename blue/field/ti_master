@@ -50,7 +50,7 @@ You may also want to utilize the "Hunt for relevant events" button associated to
 
 If you see suspicious activity, perform the escalation, if yu do not, with all this investigation performed. Do not. There is no mandatory escalation associated to alert.
 
---- Recommendations ---
+--- Remediation ---
 1. Block the suspicious IP/Domain and any additional suspicious IP/Domain sighted
 2. Continued monitoring of network traffic
 
