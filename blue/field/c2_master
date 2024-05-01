@@ -3,6 +3,9 @@
 --- alert associated ---
 Network protection blocked a potential c2 connection on one endpoint
 
+--- tables ---
+1. DeviceNetworkEvents
+
 --- items required for procedure ---
 > Sandboxing tool: Windows sandbox, urlscan.io
 > Smartphone/home network
@@ -79,6 +82,31 @@ Present your findings in a clear and concise manner.
 With IPs, domains and urls to block.
 
 You have successfully performed a c2 investigation to the level of a master.
+
+--- useful kql queries ---
+1.
+DeviceNetworkEvents
+| where Timestamp between (ago(5h) .. ago(3h))
+| where DeviceName == "<device.internaldomain>" //and RemoteIP == "<IP>"
+| project Timestamp, RemoteUrl, RemoteIP
+
+2.
+let selectedTimestamp = datetime(YYYY-MM-DDHH:mm:ssz);
+search in (DeviceNetworkEvents)
+Timestamp between ((selectedTimestamp - 30m) .. (selectedTimestamp + 30m))
+and DeviceName == "<Device>"
+| sort by Timestamp desc
+| extend Relevance = iff(Timestamp == selectedTimestamp, "Selected event", iff(Timestamp < selectedTimestamp, "Earlier event","Later event"))
+| project-reorder Relevance
+
+3. 
+let selectedTimestamp = datetime(YYYY-MM-DDHH:mm:ssz);
+search in (DeviceNetworkEvents)
+Timestamp between ((selectedTimestamp - 30m) .. (selectedTimestamp + 30m))
+and DeviceName == "<Device>"
+| sort by Timestamp desc
+| extend Relevance = iff(Timestamp == selectedTimestamp, "Selected event", iff(Timestamp < selectedTimestamp, "Earlier event","Later event"))
+| project-reorder Relevance, RemoteUrl, RemoteIP
 
 --- remediation ---
 1. Network intrusion prevention systems can be utilized to mitigate this activity.
