@@ -12,6 +12,7 @@
 1. CommonSecurityLogs
 2. Appliance specific logs
 3. ASimDnsActivityLogs
+4. DeviceNetworkEvents
 
 --- Items required for procedure ---
 1. Microsoft Sentinel
