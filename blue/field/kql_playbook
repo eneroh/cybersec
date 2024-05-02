@@ -1,16 +1,16 @@
 === kql_playbook ===
 
-CommonSecurityLogs
+CommonSecurityLog
 | where DestinationIP == "<IP>"
-Check CommonSecurityLogs for dest. ip
+Check CommonSecurityLog for dest. ip
 
-CommonSecuityLogs
+CommonSecuityLog
 | where DestinationDomainName == "<domain name>"
-Checks CommonSecurityLogs for Dest. domain name
+Checks CommonSecurityLog for Dest. domain name
 
-CommonSecurityLogs
+CommonSecurityLog
 | where SourceIP == "<IP>"
-Chcek CommonSecurityLogs for Source IP
+Chcek CommonSecurityLog for Source IP
 
 SignInLogs
 | where SigninLogs == "<IP>"
@@ -66,11 +66,11 @@ SigninLogs
 | summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails
 MY PRIMARY SIGNINLOGS SEARCH I USE DAILY
 
-CommonSecurityLogs
+CommonSecurityLog
 | where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
 //| where DestinationIP == "<IP>" //and SourceIP == "<IP>"
 | project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
-MY PRIMARY COMMONSECURITYLOGS SEARCH I USE DAILY
+MY PRIMARY COMMONSECURITYLOG SEARCH I USE DAILY
 
 AzureActivity
 | where Caller == "<alphanumeric>"
@@ -178,12 +178,12 @@ SigninLogs/aadnoninteractivesigninlogs query which uses resulttype of 0 (success
 
 All with timegenerated period of 30days, can edit.
 
-CommonSecurityLogs
+CommonSecurityLog
 | where TimeGenerated > ago(7d)
 //| where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
 | where DestinationIP == "<IP>" // and SourceIP == "<IP>"
 | project TimeGenerated, DeviceAction, Activity, DestinationHostName, DestinationIP, DestinationPort, SourceIP, SourcePort, RequestURL, RequestContext, SourceUserName, SourceTranslatedAddress
-The new ultimate commonsecuritylogs query that incorporates timegenerated
+The new ultimate commonsecuritylog query that incorporates timegenerated
 
 CommnSecurityLog
 | where TimeGenerated > ago(7d)
