@@ -7,6 +7,7 @@
 1. Understand what a domain or IP entity are
 2. Understand the difference between domain entity vs IP entity
 3. Ensure you are in the correct workplace when performing queries
+4. Understand Ports
 
 --- Tables ---
 1. CommonSecurityLogs
@@ -33,6 +34,7 @@
   //| where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
   | where DestinationIP == "<IP>" // and SourceIP == "<IP>"
   | project TimeGenerated, DeviceAction, Activity, DestinationHostName, DestinationIP, DestinationPort, SourceIP, SourcePort, RequestURL, RequestContext, SourceUserName, SourceTranslatedAddress
+UNDERSTAND PORTS
 3. Investigation Phase
   > Review the TimeGenerated or StartTime of your even tand look for the correlating TimeGenerated in your query results
 4. Deeper Dive Phase
