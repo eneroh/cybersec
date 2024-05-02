@@ -182,7 +182,7 @@ CommonSecurityLogs
 | where TimeGenerated > ago(7d)
 //| where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
 | where DestinationIP == "<IP>" // and SourceIP == "<IP>"
-| project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
+| project TimeGenerated, DeviceAction, Activity, DestinationHostName, DestinationIP, DestinationPort, SourceIP, SourcePort, RequestURL, RequestContext, SourceUserName, SourceTranslatedAddress
 The new ultimate commonsecuritylogs query that incorporates timegenerated
 
 CommnSecurityLog
