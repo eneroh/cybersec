@@ -30,9 +30,9 @@
 2. Using Logs in Microsoft Sentinel, input the following query:
   CommonSecurityLog
   | where TimeGenerated > ago(7d)
-  | where DestinationHostName == "<domain>" //and SourceIP == "<SrcIP>"
-  | where DestinationIP == "<IP>" //and SourceIP == "<SrcIP>"
-  | project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
+  //| where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
+  | where DestinationIP == "<IP>" // and SourceIP == "<IP>"
+  | project TimeGenerated, DeviceAction, Activity, DestinationHostName, DestinationIP, DestinationPort, SourceIP, SourcePort, RequestURL, RequestContext, SourceUserName, SourceTranslatedAddress
 3. Investigation Phase
   > Review the TimeGenerated or StartTime of your even tand look for the correlating TimeGenerated in your query results
 4. Deeper Dive Phase
@@ -63,9 +63,10 @@ Within Microsoft Sentinel, there is a tab for Threat Intel, here you can input a
 1.
 CommonSecurityLog
   | where TimeGenerated > ago(7d)
-  | where DestinationHostName == "<domain>" //and SourceIP == "<SrcIP>"
-  | where DestinationIP == "<IP>" //and SourceIP == "<SrcIP>"
-  | project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
+  //| where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
+  | where DestinationIP == "<IP>" // and SourceIP == "<IP>"
+  | project TimeGenerated, DeviceAction, Activity, DestinationHostName, DestinationIP, DestinationPort, SourceIP, SourcePort, RequestURL, RequestContext, SourceUserName, SourceTranslatedAddress
+
 2.
 DeviceNetworkEvents
   | where DeviceName == "<Device>"
