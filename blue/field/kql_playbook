@@ -304,3 +304,8 @@ AzureDiagnostics
 | where userAgent_s == "<useragent>"
 | project TimeGenerated, clientIP_s, clientIp_s, httpStatusCode_d
 Check AzureDiagnostics for particular Malformed User Agent
+
+DeviceNetworkEvents
+| where Timestamp > ago(7d)
+| where DeviceName contains "<device>"
+| project Timestamp, DeviceName, ActionType, RemoteIP, RemoteUrl, RemotePort
