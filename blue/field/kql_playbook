@@ -309,3 +309,16 @@ DeviceNetworkEvents
 | where Timestamp > ago(7d)
 | where DeviceName contains "<device>"
 | project Timestamp, DeviceName, ActionType, RemoteIP, RemoteUrl, RemotePort
+Useful for TI Maps, review browsing activity for particular device over 7 day period
+
+DeviceNetworkEvents
+| where Timestamp > ago(7d)
+| where RemoteIP contains "<IP>"
+| project Timestamp, DeviceName, ActionType, RemoteIP, RemoteUrl, RemotePort
+Useful for TI Maps, review browsing activity for particular IP over 7 day period
+
+DeviceNetworkEvents
+| where Timestamp > ago(7d)
+| where RemoteUrl contains "<Url>"
+| project Timestamp, DeviceName, ActionType, RemoteIP, RemoteUrl, RemotePort
+Useful for TI Maps, review browsing activity for particular url/domain over 7 day period
