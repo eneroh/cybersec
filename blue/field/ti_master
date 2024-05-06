@@ -47,6 +47,8 @@ UNDERSTAND PORTS
   | where DeviceName == "<Device>"
   | summarize by Timestamp, RemoteIP, RemoteUrl
 
+Refer to the parent process. If cmd.exe or a specific application then it's applicatin specific, if it's a web browser as a parent process, then it's likely a browser specific issue.
+
 You may also want to utilize the "Hunt for relevant events" button associated to a particular event within Device Timeline, however this is a more pinpoint, precision style. Where you may also want to be less precise and look for any strange and suspicious RemoteUrl's the user may be visiting.
 7. Make your determination/Present your findings
   > Make your determination, to escalate or not, that is the question.
@@ -56,6 +58,8 @@ If you see suspicious activity, perform the escalation, if yu do not, with all t
 --- Remediation ---
 1. Block the suspicious IP/Domain and any additional suspicious IP/Domain sighted
 2. Continued monitoring of network traffic
+3. Activity may be associated with a suspicious add in tied to the user's browser, request a deletion of the add-in/restore the user's browser to factory default
+4. May be c2 behavior, therefore, a review of applications may be necessary. Deletion of suspicious application in add or remove programs may also be recommended
 
 --- Additional Information ----
 Threat Intel Deep Dive
