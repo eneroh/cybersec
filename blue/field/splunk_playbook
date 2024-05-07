@@ -1,6 +1,6 @@
 splunk_playbook
 
-<pending>
+| eventcount summarize=false index=* | dedup index | fields index
 List all indexes
 
 <query>
