@@ -13,3 +13,37 @@ user auth over 7 day period also utilized
 
 user search, captures user_bunit/role info
 
+Email marked as junk/not junk
+index=<mail index> sourcetype=<related sourcetype> user=<user>
+| fillnull value=Missing
+| stats count by _time data P1SenderDomain P2Sender P2SenderDomain Recipients[] SenderIP subject DeliveryMessageInfo.DeliveryReason DeliveryMessageInfo.Desintination
+
+Azure Risky Sign In
+index=<azure index> sourcetype=<related sourcetype> userDisplayName=<user>
+| fillnull value=NULL
+| stats count by _time userDisplayName authenticationDetails{}.authenticationStepResultDetail ipAddress deviceDetail.isCompliant deviceDetail.isManaged
+
+Windows Domain Trust Modification via Windows Event Code
+Event ID 4716
+Trusted domain information was modified by Microsoft Security recommendation - account reported in event is Anonymous logon, password was automatically changed. Event was followed by Event ID 4742. Not suspicious, NFA.
+
+Event ID 4742 is a computer account change. Occurs at same time and is not suspicious.
+
+index=<windows event logs> sourcetype=<related sourcetype> host/machine=<machine> EventID IN (4716 4742)
+| fillnull value=Missing
+| stats count by _time host EventID Caller_User_Name SubjectDomainName
+
+New Inbox Rule
+If pointing to external mail address, escalation necessary.
+
+index=<mail index> sourcetype=<related sourcetype> user=<user> Operation=New-InboxRule
+
+Azure enabled from disabled state
+index=<azure index> targetResources{}.userPrincipalName IN (<UPN> <UPN>) activityDisplayName IN ("Disable account","Enable account")
+| dedup activityDisplayName initiatedBy.user.userPricipalName targetResources{}.userPrincipalName
+| table _time activityDisplayName sourcetype
+
+To check who made changes, it is usually a password reset
+index=<windows event log> user=<user> EventCode IN (4725,4722,4723,4724)
+| fillnull value="Missing"
+| stats count by _time EventCode signature EventData_Xml SubjectUserName TargetUserName
