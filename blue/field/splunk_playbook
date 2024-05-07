@@ -8,3 +8,7 @@ List all indexes
 | table <field> <field>
 | dedup <field> <field>
 More efficient search with honed in results
+
+user auth over 7 day period also utilized
+
+user search, captures user_bunit/role info
