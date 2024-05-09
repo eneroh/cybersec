@@ -322,3 +322,23 @@ DeviceNetworkEvents
 | where RemoteUrl contains "<Url>"
 | project Timestamp, DeviceName, ActionType, RemoteIP, RemoteUrl, RemotePort
 Useful for TI Maps, review browsing activity for particular url/domain over 7 day period
+
+AADNonInteractiveSigninLogs
+| where TimeGenerated > ago(30d)
+| where UserPrincipalName == "<User>"
+//| where IPAddress == "<IP>"
+//| where AppDisplayName == "<App>"
+//| where ResultType contains "53005"
+| summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostirng(MfaDetail), AuthenticationDetails, ResultType
+Useful for failed login alerts
+
+AzureActivity
+| where Caller == "<Caller>"
+| where OperationNameValue has_any ("MICROSOFT.SECURITYINSIGHTS/ALERTRULES/DELETE", "MICROSOFT.SECURITYINSIGHTS/WATCHLISTS/DELETE")
+| project TimeGenerated, OperationNameValue, ResourceGroup, Caller, CallerIpAddress, Type
+Useful for mass cloud resource deletion
+
+DeviceNetworkEvents
+| where RemoteUrl contains "libgen"
+| summarize count() by RemoteUrl
+Displays urls associated to suspicious domain
