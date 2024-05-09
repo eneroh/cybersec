@@ -52,3 +52,15 @@ Tenable OT Security High Severity Detection
 index=<tenable ot index> sourcetype=<related sourcetype> host=<related host>
 | fields _time action category src_user src_ip duser dest_ip dest_port proto
 | table _time action category src_user src_ip duser dest_ip dest_port proto
+
+Review user web traffic over 7 day period
+
+| tstats `summariesonly` fillnull_value="MISSING" count from datamodel=Web where earliest=-7d latest=now Web.user IN ("PLACEHOLDER" "PLACEHOLDER") by _time Web.url Web.src Web.dest Web.action web.user Web.category index sourcetype
+| `drop_dm_object_name(Web)`
+| lookup netblock_tracking_output customer_network as src OUTPUT customer_network as src_customer_network customer_vlan assrc_customer_vlan customer_vrf as src_customer_vrf customer_description as src_customer_description customer_building as src_customer_building customer_site as src_customer_site
+| fillnull src_customer_network src_customer_vlan src_customer_vrf src_customer_description src_customer_building src_customer_site category value="MISSING"
+| eval user=lower(user),src_ip=if(cidrmatch("0.0.0.0/0",src) OR cidrmatch("::/0",src),replace(src,"^::ffff:"),"MISSING"), src_ip_24=if(cidrmatch("0.0.0.0/0",src_ip),src_ip,"MISSING")
+| `convert_24_rex(src_ip_24)`
+| `convert_24_rex(dest_ip_24)`
+| stats count by user src src_customer_description category url action
+
