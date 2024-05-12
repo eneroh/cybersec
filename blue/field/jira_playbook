@@ -1,4 +1,4 @@
-jira_playbook
+=== jira_playbook ===
 
 project = <project name> AND summary ~ "<Alert Name>" AND status != Closed
 Displays all alerts related to "<Alert Name>" on project, with status set as not closed
