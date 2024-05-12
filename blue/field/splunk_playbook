@@ -1,4 +1,4 @@
-splunk_playbook
+=== splunk_playbook ===
 
 | eventcount summarize=false index=* | dedup index | fields index
 List all indexes
