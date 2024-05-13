@@ -1,8 +1,14 @@
 === malformed_user_agent_master ===
 
 --- alert associated ---
+<alert>
 
 --- software required for procedure ---
+MS Defender
+MS Sentinel
+Note taking application
+IP information gathering tool
+IP vpn/proxy checker tool
 
 --- tables ---
 AzureDiagnostics
