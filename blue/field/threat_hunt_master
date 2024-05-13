@@ -2,6 +2,8 @@
 
 Start off with a hypothesis, adversaries are utilizing a vulnerability seen within CVE-XXXX-XXXX.
 
+Out in the wild adversaries are using an exploit to gain access to systems. Is this exploit present within our environment?
+
 Search utilizing queries or your vulnerability management application for this potential attack
 
 Make determination if this is present within environment with your findings collected
