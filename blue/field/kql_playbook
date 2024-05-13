@@ -342,3 +342,9 @@ DeviceNetworkEvents
 | where RemoteUrl contains "libgen"
 | summarize count() by RemoteUrl
 Displays urls associated to suspicious domain
+
+Syslog
+| where TimeGenerated > ago(4d)
+| where SyslogMessage contains "<svc account>"
+| project TimeGenerated, SyslogMessage
+Useful for Multiple RDP connections made by a single system
