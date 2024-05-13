@@ -341,7 +341,11 @@ Useful for mass cloud resource deletion
 DeviceNetworkEvents
 | where RemoteUrl contains "libgen"
 | summarize count() by RemoteUrl
-Displays urls associated to suspicious domain
+Displays urls associated to suspicious domain - ti map related - wider search for activity related to a suspicious domain
+
+DeviceNetworkEvents
+| where DeviceName contains "<Device>"
+| project Timestamp, DeviceName, ActionType, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessVersionInfoInternalFileName
 
 Syslog
 | where TimeGenerated > ago(4d)
