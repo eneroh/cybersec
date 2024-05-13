@@ -1,1 +1,63 @@
+=== reporting_procedure ===
+
+--- rules ---
+number associated activities should be automated
+
+notable analyst investigations are not to be automated
+
+modular reporting structure, delete particular sections quickly
+
+feedback is vital to simplify the process for all parties
+
+--- title page ---
+
+--- preface ---
+automated
+
+--- table of contents ---
+
+--- index of tables ---
+
+--- index of figures ---
+
+--- executive summary ---
+This monthly report provides a point-in-time snapshot of the security posture 
+
+--- key callouts ---
+Input
+
+--- threat landscape ---
+automated
+Cyber Intelligence monthly brief 
+
+--- service improvement ---
+> service improvement summary
+
+--- SIEM - <SIEM PLATFORM> ---
+> Overview
+  - Raw events (% difference from previous month report)
+  - Interesting Security Events (% difference from previous month report)
+  - Analyst Investigations (% difference from previous month report)
+  - Security Incident Count (int difference from previous month report)
+> Sec inc count, serv. inc count, serv. req. count
+> Coverage
+> Coverage by Ingest Volume
+  - Volume of Raw Events
+  - Calculated Volume of Tables Contributing to Security Alerts
+> Coverage by MITRE ATT&CK Tactics and Techniques
+  - Detection rules count
+  - detection rules mapped to mitre att&ck enterprise tactics and techs.
+  - Completeness of Enterprise tactics COUNT OF OF 14 and percentage tied to latest version of mitre att&ck
+> Analyst Investigation
+ID, Severity, Description, MITRE ATT&CK Tactic/s
+Manual activity
+Observations
+Impact
+Remediation/Recommendation
+> top 10 analyst investigation
+> analyst investigation mitre att&ck trends
+
+Input System access over month period
+
+Input Permissions associated to users
 
