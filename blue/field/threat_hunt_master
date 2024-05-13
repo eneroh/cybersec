@@ -1,0 +1,7 @@
+=== threat_hunt_master ===
+
+Start off with a hypothesis, adversaries are utilizing a vulnerability seen within CVE-XXXX-XXXX.
+
+Search utilizing queries or your vulnerability management application for this potential attack
+
+Make determination if this is present within environment with your findings collected
