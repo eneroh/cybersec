@@ -1,0 +1,38 @@
+=== malformed_user_agent_master ===
+
+--- alert associated ---
+
+--- software required for procedure ---
+
+--- tables ---
+AzureDiagnostics
+
+--- procedure ---
+1. Gather relevant information
+Gather relevant information from the alert, specificlly: TimeGenerated and the full useragent in question.
+
+It is important to note that the person utilizing the useragent is not present in the alert information. This is tied to a specific field (X-Forwarded-For)
+
+2. Sentinel Logs Query
+Input custom query:
+
+AzureDiagnostics
+| where useragent_s contains ''
+| project TimeGenerated, clientIP_s, clientIp_s, httpStatusCode_d
+
+3. Gather findings
+Ensure the TimeGenerated or StartTime tie to the event and useragent
+
+Review the HTTPstatus code as well
+
+4. Make determination
+Determine if this instance requires escalation
+
+--- useful kql queries ---
+1
+AzureDiagnotics
+| where useragent_s == '<useragent>'
+| project TimeGenerated, clientIP_s, clientIp_s, httpStatusCode_d
+
+Remediation
+1. Block the Ip address from accessing resource
