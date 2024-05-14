@@ -1,9 +1,10 @@
 === kql_playbook ===
 
+```kql
 CommonSecurityLog
 | where DestinationIP == "<IP>"
 Check CommonSecurityLog for dest. ip
-
+```
 CommonSecuityLog
 | where DestinationDomainName == "<domain name>"
 Checks CommonSecurityLog for Dest. domain name
