@@ -2,39 +2,48 @@
 
 CommonSecurityLog
 | where DestinationIP == "<IP>"
+
 Check CommonSecurityLog for dest. ip
 
 CommonSecuityLog
 | where DestinationDomainName == "<domain name>"
+
 Checks CommonSecurityLog for Dest. domain name
 
 CommonSecurityLog
 | where SourceIP == "<IP>"
-Chcek CommonSecurityLog for Source IP
+
+Check CommonSecurityLog for Source IP
 
 SignInLogs
 | where SigninLogs == "<IP>"
+
 Check SigninLogs for IP address
 
 SignInLogs
 | where UserPrincipalName == "<User Email>"
+
 Check SigninLogs for UserPrincipalName
 
 SecurityAlert
 | where AlertName contains "ti map"
 | where tostirng(Entities) !contains "23.227.38."
 | summarize by tostring (Entities)
+
 Check Security Alert for AlertName containing "Ti map"
-The string does not contain "<ip>"
+The string does not contain ""
 Then summarize by entities in string format
 
 SigninLogs
 | where UserPrincipalName =~ "John.Smith@domain.com" and ResultType == "0" //and IPAddress != "<IP>"
 | summarize by TimeGenerated, UserPrincipalName, AppDisplayName, IPAddress, tostring(DeviceDetail)
 
+Check SigninLogs for specific user, result type and/or not specific ip address
+
 OfficeActivity
 | where Operation == "New-InboxRule and UserId contains "<User's last name>"
 | summarize by tostring(Parameters) and DeviceAction != "Blocked" and UserId contains "<User's last name>"
+
 Check OfficeActivity for New-Inbox Rules tied to user's last name, summarize any DeviceAction that was not Blocked, show parameters in string format. Performed on compromised account.
 
 OfficeActivity
@@ -47,203 +56,81 @@ To find a field that isn't showing, then use the field that appears
 SigninLogs
 | where UserDisplayName == "<Username>"
 | project TimeGenerated, IPAddress, Location, LocationDetails, UserAgent, Status
+
 Outdated default sign in logs checker
 
 SigninLogs
 | where UserPrincipalName == "John.Smith@domain.com"
 | project TimeGenerated, UserDisplayName, AppDisplayName, IPAddress, Location, LocationDetails, Status, AuthenticationRequirement
+
 Outdated default sign in logs checks #2
 
 SigninLogs
 | where UserPrincipalName == "John.Smith@domain.com"
 | summarize count by <field>
 | project TimeGenerated, UserDisplayName, LocationDetails_string, AppDisplayName, ResourceDisplayName, Status_string
+
 Add to end of event logs query
 
 SigninLogs
 | where UserPrincipalName == "John.Smith@domain.com"
 //| where IPAddress == "<IP>"
 | summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails
+
 MY PRIMARY SIGNINLOGS SEARCH I USE DAILY
 
 CommonSecurityLog
 | where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
 //| where DestinationIP == "<IP>" //and SourceIP == "<IP>"
 | project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
+
 MY PRIMARY COMMONSECURITYLOG SEARCH I USE DAILY
 
 AzureActivity
 | where Caller == "<alphanumeric>"
 
-AzureDiagnostics
-| where userAgent_s contains "<UserAgent>" and clientIP_s == "<IP>"
-| summarize by TimeGenerated, ResourceGroup, Resource, OperationName, requestUri_s, httpStatus_d
-Malformed User Agent query
-
-AADNonInteractiveSignInLogs
-| where UserPrincipalName == "John.Smith@domain.com"
-//| where IPAddress == "<IP>"
-| summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails
-MY PRIMARY AADNONINTERACTIVESIGNINLOGS SEARCH I USE REGULARLY
-
-AsimDnsActivityLogs
-| where DnsQuery contains "<domain.com>"
-| summmarize by TimeGenerated, DnsQuery, DstIpAddr, SrcIpAddr, DvcHostname, EventResult
-Suspicious communication over dns on one endpoint kql query
-
-IdentityInfo
-| where AccountCreationTime between (now(-14d) .. now())
-| summarize by AccountName
-Identity and Access Management Theme KQL query
-Review over the last 2 weeks
-
-SecurityAlert
-| where AlertName contains "Suspected brute-force"
-| summarize arg_max(TimeGenerated,*) by SystemAlertId
-//| project Description
-Display alerts titled Suspected brute force then summarizes them by TimeGenerateed and SystemAlertId
-
-AuditLogs
-| where OperationName startswith "Update"
-| summarize count() by OperationName
-Condiitonal Access Policy Modified related
-
-EmailEvents
-| where SenderIPv4 contains "1.2.3.4"
-Finds emails by ipv4 address
-
-EmailUrlInfo
-| where UrlDomain contains "sample.com"
-| join EmailEvents on NetworkMessageId
-| join UrlClickEvents on NetworkMessageId
-Same combining filters
-This query can be combined with the filters above to locate the link clicks on emails you want
-
-EmailEvent
-| where SenderFromAddress contains "example.com"
-Finds emails based on sender address
-
-EmailEvents
-| where Subject contains "example"
-Finds emails based on subject
-
-UrlClickEvents
-| where NetworkMessageID in ('<alphanumeric>','<alphanumeric>','<alphanumeric>')
-Finds url clicks in a list of message ids
-
-EmailAttachmentInfo
-| where FileName contains "<FileName>"
-| join EmailEvents on NetworkMessageId
-Finds emails where a file with a specific name is attached
-
-DeviceProcessEvents
-| where ProcessCommandLine contains "<FileName>"
-Find events where a file was executed
-
-DeviceEvents
-| where FileName contains "<FileName>"
-Find events where a file was executed
-
-DeviceFileEvents
-| where FileName contains "<FileName>"
-| where ActionType contains "Created"
-Find files matching a file name on endpoints
-
-SigninLogs
-| where TimeGenerated > ago(30d)
-| where UserPrincipalName == "<Username>"
-//| where IPAddress == "<IP>"
-//| where ResultType contains "53005"
-| summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails, ResultType
-THE ULTIMATE NEW SIGNINLOGS QUERY THAT I USE, incorporates timegen into the query itself
-
-AADNonInteractiveSignInLogs
-| where TimeGenerated > ago(30d)
-| where UserPrincipalName == "<Username>"
-//| where IPAddress == "<IP>"
-//| where ResultType contains "53005"
-| summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails, ResultType
-THE ULTIMATE NEW AADNONINTERACTIVESIGNINLOGS QUERY THAT I USE, incorporates timegen into the query itself. Also has added resulttype for viewing suspicious IPs
-
-IdentityInfo
-| where AccountUPN endswith "<Ext. domain.com>" AND IsAccountEnabled == "true"
-IdentityInfo query that looks for external domain users that are enabled within EntraID for your business
-
-SigninLogs
-| where TimeGenerated > ago(30d)
-| where UserPrincipalName == "<username>"
-| where ResultType == "0"
-| summarize count() by IPAddress, Location
-SigninLogs/aadnoninteractivesigninlogs query which uses resulttype of 0 (success) to build a column chart that displays ip by location x and y values respectively.
-
-All with timegenerated period of 30days, can edit.
-
-CommonSecurityLog
-| where TimeGenerated > ago(7d)
-//| where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
-| where DestinationIP == "<IP>" // and SourceIP == "<IP>"
-| project TimeGenerated, DeviceAction, Activity, DestinationHostName, DestinationIP, DestinationPort, SourceIP, SourcePort, RequestURL, RequestContext, SourceUserName, SourceTranslatedAddress
-The new ultimate commonsecuritylog query that incorporates timegenerated
-
-CommnSecurityLog
-| where TimeGenerated > ago(7d)
-//| where DestinationHostName == "<Domain>"
-| where DestinationIP == "<IP>"
-| summarize count() by Activity, DeviceAction, DeviceEventClassID
-| render columnchart
-Commonsecuritylog query which uses 7 day time period
-
-SigninLogs
-| where TimeGenerated > ago(1d)
-| where ResultType != "0"
-| summarize count() by ResultType, UserPrincipalName, IPAddress
-| top 10 by count_
-Looks for any unsuccessful sign in logs over the last 24 hours and summarizes that information by resulttype, user and ipaddress with the top 10 results by counts
-
-SigninLogs
-| where TimeGenerated > ago(30d)
-//| where UserPrincipalName == "<user>"
-| where IPAddress == "<IP>"
-| where ResultType != "0"
-| summarize count() by Location, UserPrincipalName
-| render columnchart
-Visual representation of how many unsuccessful sign ins occurred with specified IP address, displays information aside location and UPN
+Basic AzureActivity, searches for caller
 
 DeviceInfo
 | where OnboardingStatus == "Can be onboarded" and OSPlatform contains ("WindowsServer")
-Simplified KQL query for looking for servers to be onboarded. Wed Theme (EDR) day specific.
 
+Simplified KQL query for looking for servers to be onboarded. Wed Theme (EDR) day specific.
 Still needs fine-tuning. Something exists within defender which makes this query unusable. I need to ifugre out what this is then apply it here
 
 DeviceInfo
 | where OnboardingStatus == "Can be onboarded" and OSPlatform contains ("WindowsServer")
 | where DeviceCategory contains "Endpoint"
 | distinct DeviceName
+
 Resolved the above via:
-> Utilization of time
-> Specifying the need for endpoints
-> Utilizing distinct to minimise results
+Utilization of time
+Specifying the need for endpoints
+Utilizing distinct to minimise results
 
 DeviceInfo
 | where OnboardingStatus == "Can be onboarded" and OSPlatform contains ("WindowsServer")
 | where DeviceCategory contains "Endpoint"
 | distinct DeviceName, OSPlatform, OSVersionInfo, DeviceType, OnboardingStatus
+
 More honed in results of the above
 Can be utilized in Wed Theme Day
 
 IdentityInfo
 | where AccountUpn == "<user>"
 | distinct AccountUpn, CreatedDateTime, JobTitle, City, Country
+
 KQL query for fast identityinfo acquisition of user
 
 IdentityInfo
 | where AccountUpn == "<user>"
 | distinct AccountUpn, IsAccountEnabled, CreatedDateTime, JobTitle, City, Country
+
 Above but now with new and improved IsAccountEnabled
 
 IdentityInfo
 | where AccountUPN == "<user>"
 | distinct AccountUPN, IsAccountEnabled, AccountCreationTime, JobTitle, City, Country
+
 Sentinel specific
 
 IdentityInfo
@@ -257,7 +144,8 @@ IdentityInfo
   | project DeviceMain = DeviceName, LoggedOnUsers, JoinType
   )
   on $left.AccountMain == $right.DeviceMain
-Above but has addition of DeviceInfo to enrich the informaiton more
+
+Above but has addition of DeviceInfo to enrich the information more
 Broken current however, provides results but the results are blank
 
 IdentityInfo
@@ -271,13 +159,18 @@ IdentityInfo
   )
   on $left.AccountMain == $right.DeviceMain
 
+Fixed above using this kql query
+
 DeviceFileEvents
 | where FileName endswith ".crx"
+
 Review files for file format: .crx (chrome web extensions)
 
 DeviceNetworkEvents
 | where Timestamp between (ago(5h) .. ago(3h))
-| where DeviceName == ">device.internaldomain>" //and RemoteIP == "<IP>"
+| where DeviceName contains "<device.internaldomain>" //and RemoteIP == "<IP>"
+
+Check DeviceNetworkEvents for activity between timestamps (2h period) for particular device and IP. Associated with "Hunt for related activity"
 
 let selectedTimestamp = datetime(<time>)
 search in (DeviceNetworkEvents)
@@ -287,6 +180,8 @@ and DeviceName == "<device>"
 | extend Relevance = ifff(Timestamp == selectedTimestamp, "Selected event", ifff(Timestamp < selectedTimestamp, "Earlier event", "Later event"))
 | project-reorder Relevance
 
+Check DeviceNetworkEvents for particular device related activity during specific time. Automated query from "Hunt for related events" in Device Timeline. No added filters alongside relevance
+
 let selectedTimestamp = datetime(<time>)
 search in (DeviceNetworkEvents)
 Timestamp between ((selectedTimestamp - 30m) .. (selectedTimestamp + 30m))
@@ -295,32 +190,39 @@ and DeviceName == "<device>"
 | extend Relevance = ifff(Timestamp == selectedTimestamp, "Selected event", ifff(Timestamp < selectedTimestamp, "Earlier event", "Later event"))
 | project-reorder Relevance, RemoteUrl, RemoteIP
 
+Check DeviceNetworkEvents for particular device related actvity during specific time. Automated query from "Hunt for related events" in Device Timeline but honed in with extra project-reorder filters
+
 AADServicePrincipalSigninLogs
 | where IPAddress == "<IP>"
 | project by TimeGenerated, ServicePrincipalName, Location, ConditionalAccessStatus, IPAddress, LocationDetails, ResultType
+
 Useful for unusual data center login
 
 AzureDiagnostics
 | where userAgent_s == "<useragent>"
 | project TimeGenerated, clientIP_s, clientIp_s, httpStatusCode_d
+
 Check AzureDiagnostics for particular Malformed User Agent
 
 DeviceNetworkEvents
 | where Timestamp > ago(7d)
 | where DeviceName contains "<device>"
 | project Timestamp, DeviceName, ActionType, RemoteIP, RemoteUrl, RemotePort
+
 Useful for TI Maps, review browsing activity for particular device over 7 day period
 
 DeviceNetworkEvents
 | where Timestamp > ago(7d)
 | where RemoteIP contains "<IP>"
 | project Timestamp, DeviceName, ActionType, RemoteIP, RemoteUrl, RemotePort
+
 Useful for TI Maps, review browsing activity for particular IP over 7 day period
 
 DeviceNetworkEvents
 | where Timestamp > ago(7d)
 | where RemoteUrl contains "<Url>"
 | project Timestamp, DeviceName, ActionType, RemoteIP, RemoteUrl, RemotePort
+
 Useful for TI Maps, review browsing activity for particular url/domain over 7 day period
 
 AADNonInteractiveSigninLogs
@@ -330,25 +232,46 @@ AADNonInteractiveSigninLogs
 //| where AppDisplayName == "<App>"
 //| where ResultType contains "53005"
 | summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostirng(MfaDetail), AuthenticationDetails, ResultType
+
 Useful for failed login alerts
 
 AzureActivity
 | where Caller == "<Caller>"
 | where OperationNameValue has_any ("MICROSOFT.SECURITYINSIGHTS/ALERTRULES/DELETE", "MICROSOFT.SECURITYINSIGHTS/WATCHLISTS/DELETE")
 | project TimeGenerated, OperationNameValue, ResourceGroup, Caller, CallerIpAddress, Type
+
 Useful for mass cloud resource deletion
 
 DeviceNetworkEvents
 | where RemoteUrl contains "libgen"
 | summarize count() by RemoteUrl
+
 Displays urls associated to suspicious domain - ti map related - wider search for activity related to a suspicious domain
 
 DeviceNetworkEvents
 | where DeviceName contains "<Device>"
 | project Timestamp, DeviceName, ActionType, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessVersionInfoInternalFileName
 
+Check DeviceNetworkEvents for devicename, then project using filters - ti map specific
+
 Syslog
 | where TimeGenerated > ago(4d)
 | where SyslogMessage contains "<svc account>"
 | project TimeGenerated, SyslogMessage
+
 Useful for Multiple RDP connections made by a single system
+
+CommonSecurityLog
+| where TimeGenerated > ago(7d)
+| where DeviceVendor == "Cyber-Ark" and DeviceProduct == "Vault" //and DeviceEventClassID == "309"
+| where SourceUserName == "<user>"
+| project TimeGenerated, DeviceEventClassID, Activity, SourceUserName
+
+Check commonsecuritylog for CyberArk activity - Useful for: CCX - CyberArk Undefined User Login
+
+AzureDiagnostics
+| where userAgent_s == "<useragent>"
+| where timestamp == <time>
+| project TimeGenerated, clientIP_s, clientIp_s, httpStatusCode_d
+
+Check AzureDiagnostics for particular Malformed User Agent
