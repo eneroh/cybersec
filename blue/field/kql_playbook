@@ -275,3 +275,12 @@ AzureDiagnostics
 | project TimeGenerated, clientIP_s, clientIp_s, httpStatusCode_d
 
 Check AzureDiagnostics for particular Malformed User Agent
+
+let selectedTimestamp = datetime('YYYY-MM-DDTHH:MM:SS.MSZ')
+CommonSecurityLog
+| where TimeGenerated between ((selectedTimestamp - 30m) .. (selectedTimestamp + 30m))
+//| where DestinationHostName == "<Domain>" //and SourceIP == "<IP>"
+| where DestinationIP == "<IP>" //and SourceIP == "<IP>"
+| project TimeGenerated, DeviceVendor, DeviceProduct, DeviceAction, Activity, DestinationHostName, DestinationIP, DestinationPort, SourceIP, SourcePort, RequestURL, RequestContext, SourceUserName, SourceTranslatedAddress
+
+Check CommonSecurityLog for specific timestamp 30mins forwards and backwards via the Dest. IP, then project results
