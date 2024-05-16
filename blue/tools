@@ -17,6 +17,9 @@ https://www.hybrid-analysis.com/
 Microsoft Defender
 Crowdstrike Falcon
 
+--- Identity and Access Management ---
+Microsoft Defender for Identity
+
 --- IP Reputation Gathering ---
 https://virustotal.com
 https://otx.alienvault.com
@@ -69,6 +72,6 @@ SQL - Structured Query Language - Databases
 SPL - Splunk Processing Language
 
 --- Vulnerability Management ---
-Microsoft Defender
+Microsoft Defender for Endpoint
 Tenable Nessus
 Qualys
