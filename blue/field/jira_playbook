@@ -13,7 +13,7 @@ project = <project name> AND description ~ "<IP>" AND status != Closed
 Look for specific ticket with description "<IP>", also status of not closed, for fast closure
 
 status = "Closed" AND assignee = currentUser() AND resolutionDate > startOfDay()
-See the tickets ONLY YOU have completed today (can also be used for other colleagues
+See the tickets ONLY YOU have completed today, can also be used for other colleagues
 
 text ~ "<Alert Name>" AND status != Closed AND project = <project name>
 Blanket search for alert "<Alert Name>"
