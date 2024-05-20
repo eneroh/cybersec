@@ -1,0 +1,48 @@
+=== Information Gathering ===
+
+--- Overview ---
+
+1. --- Introduction to information gathering ---
+2. --- Passive Information Gathering ---
+3. --- Active Information Gathering ---
+
+Pre-requisites:
+1. Basic familiarity with Linux
+2. Basic familiarity with web technologies
+
+Learning Objectives:
+1. Understand the difference between active and passive information gathering
+2. Understand how to perform passive information gathering by leveraging various tools and resource
+3. Students will perform active information gathering
+
+Topic 1:
+--- Introduction to information gathering ---
+Information gathering is the first step of any penetration test and involves gathering or collecting information about an individual, company, website or system that you are targeting.
+
+The more information you have on the target, the more successful you will be during the latter stages of a penetration test.
+
+Information gathering is typically broken down into two types:
+Passive information gathering -
+Involves gathering as much information as possible without actively engaging with the target
+
+Active information gathering -
+Involves gathering as much information as possible by actively engaging with the target system. (You will require authorization in order to perform active information gathering.
+
+Topic 2:
+--- Passive Information Gathering ---
+> IP addresses & DNS information
+> Domain names and domain ownership information
+> Email addresses and social media profiles
+> Web technologies being used on target sites
+> Sub-domains
+
+Topic 3:
+--- Active Information Gathering ---
+> Discovering open ports on target systems
+> Learning about the internal infrastructure of a target network/organisation
+> Enumerating information from target systems
+
+Question:
+Port scanning is passive information gathering.
+FALSE
+No it is active because you are gathering information from the target system.
