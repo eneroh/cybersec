@@ -1,11 +1,88 @@
-=== kql_playbook ===
+Summary
+
+This README houses queries that I have utilized. Inspiration for this document, my upskilling and some queries goes to reprise99, as well as: https://learnsentinel.blog/tag/kql/ and https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/microsoft-defender-for-endpoint-commonly-used-queries-and/ba-p/1795046?ref=rbwilson.ca
+Commands/operators/functions overview
+
+let
+
+Allows you to create a variable and call back to it in a later instance (time, url, device)
+
+union
+
+Combine multiple device query tables (union DeviceProcessEvents, DeviceNetworkEvents)
+
+join
+
+Merge the rows of two tables to form a new table by matching values of the specified columns for each table
+
+distinct
+
+Acts as dedup in SPL, only focuses on results that are special, no duplicates
+
+dcount()
+
+Function - Calculates an estimate of the number of distinct values that are taken by scaler expression in the summary group. Null is ignored entirely.
+
+top
+top 100 by MachineCount
+top 10 by avg_CPU
+top 50 by Timestamp
+
+Displays top X results
+
+extend
+extend = Duration = EndTime - StartTime
+
+Create calculated columns and appends them to the result
+
+project
+| project TimeGenerated
+| project StartLocation =  BeginLocation, TotalInjuries = InjuriesDirect + InjuriesIndirect
+| where Totalinjuries > 5
+
+Create columes, features: rename, drop, insert new computed columns, column order is specified by the order or arguments
+
+summarize
+
+Produces a table that aggregates the content of the input table. Can be used for extra features such as creating visualisations and counts
+
+parse_json()
+
+Function - Interprets string as JSON value, returns value as dynamic
+
+extract_json()
+
+Function - When you need to extract more than one element of a JSON compound object. Use dynamic() when possible
+
+tostring()
+
+Function - Very commonly used with summarize to convert a value to a string (specifically numbers i.e. tostring(123)
+
+series_stats()
+print x=dynamic([23, 46, 23, 87, 4, 8, 3, 75, 2, 56, 13, 75, 32, 16, 29]) 
+| project series_stats(x)
+
+Function - Returns statistics for numerical series in a table with a column for each statistic
+
+count
+CommonSecurityLog
+| count
+
+Operator - Returns the number of records for the input record set
+
+count()
+StormEvents
+| summarize Count=count() by State
+
+Function - Counts the number of records per summarization group or total if summarization is done without grouping. Null values are ignored entirely.
+Useful KQL Queries
 
 CommonSecurityLog
 | where DestinationIP == "<IP>"
 
 Check CommonSecurityLog for dest. ip
 
-CommonSecuityLog
+CommonSecurityLog
 | where DestinationDomainName == "<domain name>"
 
 Checks CommonSecurityLog for Dest. domain name
@@ -77,14 +154,16 @@ SigninLogs
 //| where IPAddress == "<IP>"
 | summarize by TimeGenerated, UserPrincipalName, Location, tostring(Status), tostring(DeviceDetail), IPAddress, AppDisplayName, tostring(LocationDetails), AuthenticationRequirement, tostring(MfaDetail), AuthenticationDetails
 
-MY PRIMARY SIGNINLOGS SEARCH I USE DAILY
+Check SigninLogs for particular user and/or IPAddress then summarize by filters
+Formerly my primary SigninLogs query
 
 CommonSecurityLog
 | where DestinationHostName == "<domain>" //and SourceIP == "<IP>"
 //| where DestinationIP == "<IP>" //and SourceIP == "<IP>"
 | project TimeGenerated, DeviceAction, Activity, DestinationHostName, RequestURL, RequestContext, SourceIP, SourceUserName, SourceTranslatedAddress
 
-MY PRIMARY COMMONSECURITYLOG SEARCH I USE DAILY
+Check CommonSecurityLog for DestinationhostName and/or SourceIP, and/or DestinaionIP and/or SourceIP then project using filters
+Formerly my primary CommonSecurityLog query
 
 AzureActivity
 | where Caller == "<alphanumeric>"
@@ -267,7 +346,7 @@ CommonSecurityLog
 | where SourceUserName == "<user>"
 | project TimeGenerated, DeviceEventClassID, Activity, SourceUserName
 
-Check commonsecuritylog for CyberArk activity - Useful for: <custom> CyberArk Undefined User Login
+Check commonsecuritylog for CyberArk activity - Useful for: - CyberArk Undefined User Login
 
 AzureDiagnostics
 | where userAgent_s == "<useragent>"
@@ -284,3 +363,106 @@ CommonSecurityLog
 | project TimeGenerated, DeviceVendor, DeviceProduct, DeviceAction, Activity, DestinationHostName, DestinationIP, DestinationPort, SourceIP, SourcePort, RequestURL, RequestContext, SourceUserName, SourceTranslatedAddress
 
 Check CommonSecurityLog for specific timestamp 30mins forwards and backwards via the Dest. IP, then project results
+
+DeviceProcessEvents
+| where Timestamp > ago(1h)
+| summarize avg(CPU) by ProcessName
+| top 10 by avg_CPU
+
+Returns the top 10 processes by CPU usage in the last hour
+
+DeviceFileEvents 
+| where SHA1 == "4aa9deb33c936c0087fb05e312ca1f09369acd27"  
+
+Check DeviceFileEvents for SHA1 file hash
+
+DeviceEvents 
+| where ActionType in ("FirewallOutboundConnectionBlocked", "FirewallInboundConnectionBlocked", "FirewallInboundConnectionToAppBlocked") 
+| project DeviceId , Timestamp , InitiatingProcessFileName , InitiatingProcessParentFileName, RemoteIP, RemotePort, LocalIP, LocalPort 
+| summarize MachineCount=dcount(DeviceId) by RemoteIP 
+| top 100 by MachineCount desc 
+
+Check DeviceEvents for devices associated with Firewall Blocked
+
+DeviceLogonEvents 
+| where isnotempty(RemoteIP)  
+    and AccountName !endswith "$" 
+    and RemoteIPType == "Public" 
+| extend Account=strcat(AccountDomain, "\\", AccountName) 
+| summarize  
+    Successful=countif(ActionType == "LogonSuccess"), 
+    Failed = countif(ActionType == "LogonFailed"), 
+    FailedAccountsCount = dcountif(Account, ActionType == "LogonFailed"), 
+    SuccessfulAccountsCount = dcountif(Account, ActionType == "LogonSuccess"), 
+    FailedAccounts = makeset(iff(ActionType == "LogonFailed", Account, ""), 5), 
+    SuccessfulAccounts = makeset(iff(ActionType == "LogonSuccess", Account, ""), 5) 
+    by DeviceName, RemoteIP, RemoteIPType 
+| where Failed > 10 and Successful > 0 and FailedAccountsCount > 2 and SuccessfulAccountsCount == 1  
+
+Look for public IP addresses with multiple failed logon attempts, using multiple accounts and eventually succeeded
+
+// Note - RemoteDeviceName is not available in all remote logon attempts 
+DeviceLogonEvents 
+| where isnotempty(RemoteDeviceName) 
+| extend Account=strcat(AccountDomain, "\\", AccountName) 
+| summarize  
+    Successful=countif(ActionType == "LogonSuccess"), 
+    Failed = countif(ActionType == "LogonFailed"), 
+    FailedAccountsCount = dcountif(Account, ActionType == "LogonFailed"), 
+    SuccessfulAccountsCount = dcountif(Account, ActionType == "LogonSuccess"), 
+    FailedComputerCount = dcountif(DeviceName, ActionType == "LogonFailed"), 
+    SuccessfulComputerCount = dcountif(DeviceName, ActionType == "LogonSuccess") 
+    by RemoteDeviceName 
+| where 
+    Successful > 0 and 
+    ((FailedComputerCount > 100 and FailedComputerCount > SuccessfulComputerCount) or 
+        (FailedAccountsCount > 100 and FailedAccountsCount > SuccessfulAccountsCount)) 
+
+Check DeviceLogonEvents for failed log-ons to multiple machines or using multiple accounts
+
+DeviceEvents 
+| where ActionType in ("AntivirusScanCompleted", "AntivirusScanCancelled") 
+| extend A=parse_json(AdditionalFields)  
+| project Timestamp, DeviceName, ActionType,ScanType = A.ScanTypeIndex, StartedBy= A.User 
+| sort by Timestamp desc 
+
+Check DeviceEvents for Defender Scan Actions completed or cancelled
+
+let Domain = "<suspicious domain/url>";
+DeviceNetworkEvents
+| where Timestamp > ago(7d) and RemoteUrl contains Domain
+| project Timestamp, DeviceName, RemotePort, Remoteurl
+| top 100 by Timestamp desc
+
+Check DeviceNetworkEvents for communication with specific domain/url
+
+union DeviceProcessEvents, DeviceNetworkEvents
+| where Timestamp > ago(7d)
+| where FileName in~ ("powershell.exe","powershell_ise.exe")
+| where ProcessCommandLine has_any("WebClient","DownloadFile","DownloadData","DownloadString","WebRequest","Shellcode","http","https")
+| project Timestamp, DeviceName, InitiatingProcessFuileName, InitiatingProcessCommandLine, FileName, ProcessCommandLine, RemoteIP, RemoteUrl, RemotePort, RemoteIPType
+| top 100 by Timestamp
+
+Check DeviceProcessEvents and DeviceNetworkEvents via union (combine multiple device query tables), for powershell execution events associated with downloading
+
+DeviceProcessEvents 
+| where FolderPath endswith "\\schtasks.exe" and ProcessCommandLine has "/create" and AccountName != "system" 
+| where Timestamp > ago(7d) 
+
+Check DeviceProcessEvents for scheduled tasks created by non-system accounts
+
+DeviceRegistryEvents  
+| where ActionType == "RegistryValueSet"  
+| where RegistryValueName == "DefaultPassword"  
+| where RegistryKey has @"SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" 
+| project Timestamp, DeviceName, RegistryKey | top 100 by Timestamp 
+
+Check DeviceRegistryEvents for possible clear text passwords in twindows registry
+
+DeviceProcessEvents 
+| where Timestamp > ago(14d) 
+| where ProcessCommandLine contains ".decode('base64')" or ProcessCommandLine contains "base64 --decode" or ProcessCommandLine contains ".decode64(" 
+| project Timestamp , DeviceName , FileName , FolderPath , ProcessCommandLine , InitiatingProcessCommandLine  
+| top 100 by Timestamp 
+
+CheckProcessEvents for process executed from binary hidden in base64 encoded file
