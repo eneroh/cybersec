@@ -1,0 +1,29 @@
+===whois_enumeration===
+
+WHOIS
+Internet Protocol
+Query and response protocol used for querying databases that store the registered users or assignees of an internet resource such as a domain name, ip address block or an autonomous system.
+
+whois hackersploit.org
+
+Important
+Name Server
+DNSSEC = Enabled
+
+Due to this pii is redacted
+
+zonetransfer.me
+Teach student and users of dns zone transfers
+
+host hackersploit.org
+
+whois <IP>
+CIDR
+Registered
+Created
+Renewed
+
+--- Quiz ---
+The Whois lookup utility can be used to identify the nameservers of a particular domain.
+
+True
