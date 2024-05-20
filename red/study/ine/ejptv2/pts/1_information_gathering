@@ -1,16 +1,15 @@
 === Information Gathering ===
 
 --- Overview ---
-
 1. --- Introduction to information gathering ---
 2. --- Passive Information Gathering ---
 3. --- Active Information Gathering ---
 
-Pre-requisites:
+--- Pre-requisites ---
 1. Basic familiarity with Linux
 2. Basic familiarity with web technologies
 
-Learning Objectives:
+--- Learning Objectives ---
 1. Understand the difference between active and passive information gathering
 2. Understand how to perform passive information gathering by leveraging various tools and resource
 3. Students will perform active information gathering
@@ -42,7 +41,7 @@ Topic 3:
 > Learning about the internal infrastructure of a target network/organisation
 > Enumerating information from target systems
 
-Question:
+--- Quiz ---
 Port scanning is passive information gathering.
-FALSE
+
 No it is active because you are gathering information from the target system.
