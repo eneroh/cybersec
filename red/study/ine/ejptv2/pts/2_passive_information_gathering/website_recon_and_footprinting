@@ -33,7 +33,7 @@ You can see:
 > Categories - especially hidden categories
 > Posts
 
---- Browser add-ons ---
+--- Tools ---
 > Builtwith/wapplyser
   - Web frameworks
   - Widgets 
@@ -42,4 +42,12 @@ You can see:
   - Javascript Libraries
   - Web hosting providers
   - Sub-domains
-> 
+> Terminal based - whatweb
+> httrack.com - offline website copier
+Analyse source code, identify vulns., understand structure of website
+
+--- Quiz ---
+
+What file contains a list of directories that are not indexed by search engines?
+
+robots.txt
