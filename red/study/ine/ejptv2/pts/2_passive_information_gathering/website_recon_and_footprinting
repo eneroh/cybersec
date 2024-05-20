@@ -1,1 +1,45 @@
+=== website_recon_and_footprinting ===
 
+--- What we are looking for ---
+> IP addresses
+> Directories hidden from search engines
+> Names
+> Email addresses
+> Phone numbers
+> Physical addresses
+> Web technologies being used
+
+--- Procedures ---
+1. Look for IP address utilizing DNS, translates IP address to domain name
+host hackspoilt.org
+
+2x IP addresses = proxy present
+
+https://hackersploit.org/robots.txt
+
+--- What is robots.txt? ---
+When search engines scour the web for content to be indexed on search engines, utilizing the robots.txt file you can specify specific directories to disallow and allow.
+
+robots.txt needs to be public. Gater relevant information for exploitation phase.
+
+https://hackersploit.org/sitemap.xml
+
+--- What is a sitemap? ---
+Provides search engines an organised way of indexing websites.
+
+You can see:
+> Authors
+> Pages
+> Categories - especially hidden categories
+> Posts
+
+--- Browser add-ons ---
+> Builtwith/wapplyser
+  - Web frameworks
+  - Widgets 
+  - Analytics and tracking
+  - Content Delivery Networks
+  - Javascript Libraries
+  - Web hosting providers
+  - Sub-domains
+> 
