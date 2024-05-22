@@ -1,0 +1,35 @@
+=== dns_recon ===
+
+A python script to check name server records. Enumerate general dns records for a given domain. MX, SOA, NS, A (ipv4), AAAA (ipv6) and TXT
+
+dnsrecon comes with kali by default
+
+dnsdumpster is an alternative resource
+
+syntax:
+
+dnsrecon -d <domain>
+
+Passive dns recon, look for name server addresses, clodflare for instance.
+
+A record, ipv4 address
+AAAA record, ipv6 address
+MX record, mail server ipv4 address
+
+Cloudflare doesn't hide mail servers well
+
+Example:
+dnsrecord -d zonetransfer.me
+
+DNSSEC is not configured
+
+=== https://dnsdumpster.com ===
+Very vital
+
+View graph is very useful, displays a network map of what's protected under proxy i.e. cloudflare
+Export as png or xlsx
+
+--- Quiz ---
+Which one of the following DNS records is used to resolve a domain to a mail server?
+
+MX
