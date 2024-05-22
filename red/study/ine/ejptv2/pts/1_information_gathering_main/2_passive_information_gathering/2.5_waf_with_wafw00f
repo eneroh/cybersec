@@ -1,0 +1,20 @@
+=== waf_with_wafw00f ===
+https://github.com/EnableSecurity/wafw00f
+
+Built into kali linux
+
+Passive Information Gathering/recon
+
+--- What is wafw00f? ---
+web application firewall fingerprinting
+
+Examples:
+
+wafw00f hacksploit.org
+wafw00f zonetransfer.me
+wafw00f hackertube.net
+wafw00f <domain> -a is best to utilize
+
+wafw00f zonetransfer.me appears to be behind a WAF
+
+To confirm if this is the case, it would be best to perform a port scan to be certain.
