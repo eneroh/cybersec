@@ -1,0 +1,17 @@
+=== suppression_master - sentinel focus ===
+
+--- Items required for procedure ---
+Microsoft Sentinel
+Ticketing system
+
+--- Procedure ---
+1. Visit Microsoft Sentinel
+2. Choose relevant workspace
+3. Automation in left hand menu
+4. Create "Automation Rule"
+5. Give the automation rule a name, similar to ones already present <alert name/purpose of automation rule>
+6. Input Trigger "When incident is created"
+7. Input Conditions
+8. If incident provider equals All AND Analytic rule name contains "Ti Map" AND IPAddress <equals bad indicator IP>
+9. Scrolll down to Actions and change to closed as <TP or FP> and input comment "Handed to client for follow up" or "<whatever>"
+10. Set Rule expiration can be in 3 months or never > Status "Disabled/Enabled"
