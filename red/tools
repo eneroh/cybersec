@@ -10,6 +10,11 @@ Tomnomnom httpprobe
 gobuster
 ffuf
 
+--- DNS Reconnaissance (Passive Information Gathering) ---
+dnsrecon
+dnsdumpster
+sitereport.netcraft.com
+
 --- Email Exploitation ---
 hunter.io
 breach-parse
