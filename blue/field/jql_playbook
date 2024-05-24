@@ -1,0 +1,20 @@
+=== jql_playbook ===
+
+project = <project> and summary ~ "<alert title>" and status != Closed
+Display all alerts related to <alert title>, under the specific project mentioned with the status of not closed
+
+text ~ "<user>" AND project = <project>
+
+project = <project> and description ~ "<IP address>" and status != closed
+Look for a specific ticket with description "<IP address>" and not closed, aids in mass closure of many tickets
+
+status "Closed" AND assignee = currentUser() AND resolutiondate > startofDay()
+See the closed tickets only you have completed today
+
+text ~ "Suspected Brute Force" AND status != Closed AND project = <project>
+Blanket search for alert "Suspected Brute Force"
+
+text ~ "Description ~ <IP Address>" AND project IN (<project number>) AND status != Closed
+Look for activity associated to alert description: <IP Address> in particular project that is not closed
+
+assignee = "<colleague>" AND project = "<project>" AND status != Closed
