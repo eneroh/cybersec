@@ -1,0 +1,51 @@
+=== account_enumeration_master ===
+
+--- alert associated ---
+Account enumeration reconnaissance involving one user
+
+--- procedure ---
+1.
+Review alert, gather relevant information such as device/s involved
+Accounts associated in the enumeration
+
+2.
+Device and user insight
+After gathering relevant information, perform investigation by utilizing querys:
+
+MS Defender Advanced Huting:
+
+Device query:
+DeviceInfo
+| where DeviceName contains "<device>"
+| extend User = LoggedOnUsers[0].Username
+| project DeviceName, IsAzureADJoined, User, JoinType
+
+User query:
+IdentityInfo
+| where AccountName contains "<user>"
+| project AccountName, AccountDomain, IsAccountEnabled, EmployeeId, JobTitle
+
+3.
+Pivot off of usernames that were enumerated in the alert
+
+union Device*
+| where TimeGenerated between (datetime()..datetime())
+| where DeviceName contains "<device>"
+| search "scan"
+| summarize count() by ActionType, Type
+
+4.
+Review logons
+
+DeviceLogonEvents
+| where TimeGenerated between (datetime()..datetime())
+| where DeviceName contains "<device>"
+| search "scan"
+| summarize make_set(RemoteIP), make_set(FailureReason), make_set(LogonType) by ActionType, AccountName
+
+5.
+Understand what this particular device has to do with this failed logon activity
+
+IdentifyLogonEvents
+| where TimeGenerated between (datetime()..datetime())
+| where
