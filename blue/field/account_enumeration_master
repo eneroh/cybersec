@@ -48,4 +48,62 @@ Understand what this particular device has to do with this failed logon activity
 
 IdentifyLogonEvents
 | where TimeGenerated between (datetime()..datetime())
-| where
+| where AccountDomain == "<device>"
+| where TargetDeviceName contains "<device>"
+| summarize make_set(LogonType, make_set(Protocol), make_set(AccountDomain), make_set(AccountName) by DestinationHostName
+
+6.
+Determine what kind of "Network" connections were established
+
+union Device*
+| where TimeGenerated between (datetime()..datetime())
+| where DeviceName contains "<device>"
+| where ActionType == "LogonSuccess"
+| distinct AccountName, AccountDomain, Type
+
+7.
+RemoteDesktopConnection is discovered, search for successes associated to device
+
+DeviceLogonEvents
+| where TimeGenerated >= ago(90d)
+| where DeviceName contains "<device>"
+| where ActionType == "LogonSuccess"
+| distinct AccountName, AccountDomain, LogonType
+
+8.
+Once sighting successful logins, search reular activity for device tied to remotedesktop and public ip address ranges
+
+DeviceEvents
+| where Timestamp >= ago(90d)
+| where DeviceName contains "<device>"
+| where ActionType contains "RemoteDesktop"
+| where not(ipv4_is_private(LocalIP))
+| summarize count() by LocalIP, bin(Timestamp, 1d)
+| render timechart
+
+9. 
+Display the initiating process for <user> rdp logons
+
+DeviceLogonEvents
+| where AccountName contains "<user>"
+| where AccountDomain contains "<domain>"
+| where ActionType == "LogonSuccess"
+| where LogonType contains "interactive"
+| project TimeGenerated, DeviceName, InitiatingProcessFileName, InitiatingProcessParentFileName, InitiatingProcessCommandLine
+
+Information from this commandline may be base64 encoded, from here you can use a decoder tool 
+
+10.
+A review of the device in device timeline searching for IP associated activity in the search
+
+If the user does not exist in the user database, this may mean that the user has "deception" enabled, this is a feature within defender to make it harder to see activity.
+
+The user <user> is also considered a domain admin so tracking their movements is obscured due to this feature.
+
+--- remediation ---
+> Disable rdp port on machine
+> Disable rdp for public profiles entirely
+> Configure user's router to ensure rdp isn't a possibility
+> Device's considered internet facing hosts should also be thoroughly reviewed and patches/measures may need to be applied pre-emptively or at creation of said internet facing hosts
+
+port: 3389 for rdp
