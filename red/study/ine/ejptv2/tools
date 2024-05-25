@@ -1,0 +1,13 @@
+=== tools ===
+
+--- information gathering - passive ---
+Domain information
+whois
+domain.tld/sitemap.xml
+sitereport.netcraft.com
+dnsrecon
+https://dnsdumpster.com
+https://github.com/EnableSecurity/wafw00f
+Sublist3r
+
+--- information gatehring - active ---
