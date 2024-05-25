@@ -1,1 +1,22 @@
+=== subdomain_enumeration_with_sublist3r ===
 
+https://github.com/aboul3la/Sublist3r
+
+Has brute force functionality (active information gathering)
+
+Does not come pre-installed in kali
+
+Can use different tacs
+
+sublist3r -d hacksploit.org
+
+sublist3r -d hackersploit.org -e yahoo,google
+
+output to .txt file functionality
+
+sublist3r -d hacksploit.org -e yahoo,google
+
+--- Quiz ---
+Sublist3r can be used to perform a subdomain brute force.
+
+TRUE
