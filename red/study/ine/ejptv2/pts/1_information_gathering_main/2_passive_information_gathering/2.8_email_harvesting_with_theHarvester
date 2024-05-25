@@ -1,0 +1,10 @@
+=== email_harvesting_with_theHarvester  ===
+
+theHarvester -d hackersploit.org -b dnsdumpster,duckduckgo,pentesttools,hackertarget,sitedossier,yahoo,virustotal
+
+theHarvester -d zonetransfer.me -b <sources>
+
+--- quiz ---
+theHarvester can also be used to perform subdomain enumeration.
+
+TRUE
