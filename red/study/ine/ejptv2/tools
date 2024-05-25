@@ -1,7 +1,7 @@
 === tools ===
 
 --- information gathering - passive ---
-Domain information
+Domain/site information
 whois
 domain.tld/sitemap.xml
 sitereport.netcraft.com
@@ -9,5 +9,12 @@ dnsrecon
 https://dnsdumpster.com
 https://github.com/EnableSecurity/wafw00f
 https://github.com/aboul3la/Sublist3r
+google dorks
+waybackmachine
+theHarvester
 
---- information gatehring - active ---
+Breach information
+haveibeenpwned.com
+spyse - search engine for penetration testers
+
+--- information gathering - active ---
