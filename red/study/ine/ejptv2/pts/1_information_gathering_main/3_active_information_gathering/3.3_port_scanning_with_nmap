@@ -1,0 +1,39 @@
+=== port_scanning_with_nmap ===
+
+Gather as much info as possible
+
+Not related to service enumeration
+
+--- commands ---
+nmap <targetIP>
+syn scan on most used 100 ports
+
+nmap -Pn (disable pings)
+icmp pings are blocked by windows hosts
+
+nmap -Pn <targetIP> (windows host specific)
+nmap -Pn -p- (scans entire port range)
+nmap -p 80 (scans only 1 port)
+nmap -Pn -p 80,445,3389 (scans multiple specifc ports)
+nmap -Pn -p 8080 (scans 1 particular port)
+nmap -Pn -p1-1000 (scans particular port range)
+nmap -Pn -F <targetIP> (only scans 100 ports)
+nmap -sU (scans UDP port range)
+nmap -Pn -v <targetIP> (displays output during scan [verbosity])
+nmap -Pn -sV <targetIP> (displays versions of services)
+nmap -Pn -sC (default nmap script scan, identifies more information)
+nmap -Pn -F -sV -v -O <targetIP> (inaccurate operating system scan)
+nmap -T (speeds up or slows down your scans)
+nmap -Pn -F -sV -v -O -T4 <targetIP> (not recommended in proper engagements can cause ddos)
+nmap -Pn -F <targeTIP> -oN test.txt (export to .txt file)
+nmap -Pn -F <targeTIP> -oN test.xml (export to .xml file) [placed into metasploit]
+
+--- notes ---
+ports and services indicate os
+good to run udp port scans
+enumeration is tied to active information gathering
+
+--- quiz ---
+Which one of the following Nmap scans can be used to perform a sneaky scan? 
+
+nmap -sV -T1 192.168.1.200
