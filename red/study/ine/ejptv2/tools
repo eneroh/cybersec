@@ -18,3 +18,9 @@ haveibeenpwned.com
 spyse - search engine for penetration testers
 
 --- information gathering - active ---
+dig axfr
+dnsrecon
+dnsenum
+fierce -dns zontransfer.me
+netdiscover
+nmap
