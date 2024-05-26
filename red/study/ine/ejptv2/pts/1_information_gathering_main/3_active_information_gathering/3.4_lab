@@ -1,0 +1,77 @@
+=== lab ===
+
+
+TASK:
+Your task is to discover available live hosts and their open ports using Nmap and identify the running services and applications.
+
+Rules of engagement:
+DO NOT ATTACK IPs:
+192.V.W.1
+10.10.X.1
+
+my IP: 10.1.0.10 (virtual ip)
+additional ip: 10.10.16.3
+
+tried:
+
+--- commands ---
+
+ip a - to gather host information to understand all points
+nmap <targetIP>
+told host down, need -Pn
+
+nmap -Pn -sC -sV -v -p-  10.0.30.19 (took too long)
+nmap -Pn -sC -sV -v -T4 10.0.30.19
+nmap -Pn -sn -sC -sV -v -T4 10.0.30.19 (is busted, do not mix -sn with other commands. If done, must be done separately)
+
+--- hosts on network ---
+
+nmap -Pn -sn 10.0.30.0/24???
+10.1.0.1        02:42:74:63:3b:10      1      42  Unknown vendor              
+10.1.0.6        02:42:0a:0a:10:02      1      42  Unknown vendor              
+10.1.0.11       02:42:0a:0a:10:04      1      42  Unknown vendor              
+10.10.16.1      02:42:74:63:3b:10      3     126  Unknown vendor  
+
+
+--- open ports ---
+
+> tcp
+nmap -Pn -sC -sV -v -p-  10.0.30.19
+nmap -Pn -sC -sV -v -T4 10.0.30.19
+Discovered open port 80/tcp on 10.0.30.19 - website
+Discovered open port 135/tcp on 10.0.30.19 - Remote Procedure Call (RPC) - file sharing
+Discovered open port 445/tcp on 10.0.30.19 - smb (encrypted)
+Discovered open port 3389/tcp on 10.0.30.19 - rdp
+Discovered open port 139/tcp on 10.0.30.19 - smb
+Discovered open port 49154/tcp on 10.0.30.19 - administor scheduled tasks on remote machine
+
+> udp
+nmap -Pn -sC -sV -sU -v -T4 10.0.30.19 (took too long)
+nmap -Pn -sU - v -T4 10.0.30.19
+All 1000 scanned ports on 10.0.30.19 are open|filtered
+
+--- running services ---
+80 - http (httpd, apache)
+135 - msrpc
+139 - netbios-ssn
+445 - microsoft-ds
+3389 - ms-wbt-server? (rdp)
+49154 - msrpc
+49155 - msrpc
+
+OS: MS Windows Server 2008 R2 - 2012
+
+--- running applications ---
+135 - msrpc - Microsoft Windows RPC
+139 - netbios-ssn - Microsoft Windows netbios-ssn
+445 - microsoft-ds Microsoft Windows Server 2008 R2 - 2012 Microsoft-ds
+3389 - ssl/ms-wbt-server? (rdp)
+49154 - msrpc - Microsoft Windows RPC
+49155 - msrpc - Microsoft Windows RPC
+
+--- solution ---
+cat /root/Desktop/target
+ping targetIP to see if it's alive
+nmap -Pn -p 443 10.0.30.19 (443 is filtered here)
+
+I went further than stated in solution
