@@ -1,0 +1,18 @@
+=== footprinting and scanning ===
+
+identify hosts, services and os's on hosts that aids in the exploitation phase of a penetration test
+
+Networking knowledge i.e. osi layer, network and transport layer
+
+Both layers are pivotal in network scanning and footprinting
+
+Protocols located in layers
+
+more hands-on experience
+
+tcp syn scan (-sn)
+udp scanning  (-sU)
+
+Build upon methodology
+
+ACTIVE INFORMATION GATHERING RELATED
