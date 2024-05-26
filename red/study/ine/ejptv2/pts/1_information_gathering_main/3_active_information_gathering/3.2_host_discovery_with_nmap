@@ -1,0 +1,34 @@
+=== host_discovery_with_nmap ===
+
+ping sweep/ping scan
+
+Find out your current IP address
+ip a
+
+10.0.2.15
+
+nmap
+built into kali
+
+--- commands ---
+sudo nmap -sn (no port scan)
+sudo nmap -sn 10.0.0.0/24 | grep “<domain>”
+netdiscover - resolves mac addresses to ip addresses
+sudo netdiscover -i eth0 -r 10.0.0.0/24
+
+
+
+--- activity ---
+sudo nmap -sn 10.0.0.0/24
+displays hosts that are up and associated to the domain
+
+Gather the ip/host information
+
+sudo netdiscover -i eth0 -r 10.0.0.0/24
+
+also refer to subnets
+
+10.0.1.0/24
+10.0.2.0/24
+
+Gather the information here as well
