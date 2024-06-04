@@ -59,7 +59,8 @@ If you see suspicious activity, perform the escalation, if you do not, with all 
 1. Block the suspicious IP/Domain and any additional suspicious IP/Domain sighted
 2. Continued monitoring of network traffic
 3. Activity may be associated with a suspicious add in tied to the user's browser, request a deletion of the add-in/restore the user's browser to factory default
-4. May be c2 behavior, therefore, a review of applications may be necessary. Deletion of suspicious application in add or remove programs may also be recommended
+4. May be c2 behavior, therefore, a review of applications (add or remove programs) may be necessary. Deletion of suspicious application add-in or removal of programs may also be recommended
+5. If the domain/IP is associated to a known app within the environment. Perhaps removal of the associated app triggering threat intel matching could also be a solution
 
 --- Additional Information ----
 Threat Intel Deep Dive
