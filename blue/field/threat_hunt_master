@@ -6,4 +6,16 @@ Out in the wild adversaries are using an exploit to gain access to systems. Is t
 
 Search utilizing queries or your vulnerability management application for this potential attack
 
-Make determination if this is present within environment with your findings collected
+Make determination if this threat is present within environment with your findings collected
+
+Threat hunting in collaboration with a threat intel feed
+Threat intel feed contains:
+Malicious ip
+hashes
+domains
+urls
+etc.
+
+Typical a paid service
+
+Look for threats that are dormant or slipped past security systems
