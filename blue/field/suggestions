@@ -6,4 +6,7 @@ Suggest business sign into "Bugcrowd" and also facilitate the appropriate fundin
 2. User's device has <pop-up> that is not disappearing, device is powered off and isolated from the network. Laptop is in the case of internal I.T., no mention of device in Microsoft Defender. User sessions revoked and pasword is reset. AV scan performed and fully isolated via Defender portal.
 Get device and user added to monitored user/devices watchlist
 
-3. 
+3. User inputted password into phish page
+DFIR involvement asap
+
+4. 
