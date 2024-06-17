@@ -64,3 +64,14 @@ Review user web traffic over 7 day period
 | `convert_24_rex(dest_ip_24)`
 | stats count by user src src_customer_description category url action
 
+index=<index> "failed password"
+| table _time Content
+| sarch Content != *Invalid*
+| eval temp = split(Content, ""),
+user = mvindex(temp, 3),
+ip = mvindex(temp, 5),
+port = mvindex(temp, 7)
+| fields - Content temp
+| stats count by ip user
+| head 10
+Shows which user failed logins by port and ip (can classify Ips as suspicious)
