@@ -67,6 +67,10 @@ Congratulations, you have performed a phish investigation to the level of a mast
 5. Software configuration - Use anti-spoofing and email auth mechanisms to filter messages based on validity checks on the sender domain: SPF, DMARC, DKIM
 6. Password reset in case the user knowingly or unknowingly inputted their credentials
 
+--- notes ---
+> Even though the domain may lead nowhere for you, there can be a special link that needs to be accessed via a specific path for the phishing page to appear
+> Look for any suspicious sharepoint links or anything that appears unrelated to the business in the Device Timeline
+
 --- useful kql queries ---
 EmailEvents
 | where SenderIPv4 contains “1.2.3.4”
