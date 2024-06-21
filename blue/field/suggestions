@@ -1,12 +1,15 @@
 === suggestions ===
 
-1. Businesss get message from random about <vulnerability> with <application>
+1. Business get message from random about <vulnerability> with <application>
 Suggest business sign into "Bugcrowd" and also facilitate the appropriate funding for the service
 
 2. User's device has <pop-up> that is not disappearing, device is powered off and isolated from the network. Laptop is in the case of internal I.T., no mention of device in Microsoft Defender. User sessions revoked and pasword is reset. AV scan performed and fully isolated via Defender portal.
 Get device and user added to monitored user/devices watchlist
 
 3. User inputted password into phish page
-DFIR involvement asap
+Lock down the account and DFIR involvement asap
 
-4. 
+4. Malicious/suspicious IP (as per OSINT tools) is constantly attempting BUT FAILING to sign into account via AADNonInteractiveSigninLogs and the client would like advice on how to proceed.
+If the attempts are from a non-valid token and there are no successes. There is little more that can occur. There is no possibility for success. No further action is necessary.
+
+5.
