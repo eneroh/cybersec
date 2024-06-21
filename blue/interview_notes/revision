@@ -42,3 +42,8 @@
 --- What would you do in an atypical travel scenario? ---
 
 --- What would you do if a computers cached credentials were performed? ---
+
+--- How would you deal with a Malware detected on endpoint alert? ---
+Check file hash in VT, file path, review if the activity was prevented/blocked outright.
+Remediation would be to validate the activity with the user, sometimes these can also be svc accounts or penetration testing related. Still best to validate.
+
