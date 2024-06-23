@@ -29,3 +29,9 @@ Check colleagues triaging
 
 assignee = currentUser() AND resolutiondate > startOfDay() AND summary !~ "Phish"
 Show your tickets that were resolved today but also removes auto-closing phish alerts from search to be more clear and concise
+
+text ~ "<alert title>" AND project = <project board> AND status != Closed AND assignee is EMPTY
+Displays tickets that are not closed, the assignee is empty and only for particular ticket board, with particular alert title
+
+text ~ "<alert title>" AND project = MSO-VIC-OTWAY AND status != Closed AND AN assignee = current user()
+Displays tickets that are not closed, the assignee is the current user and only for particular ticket board, with particular alert title
