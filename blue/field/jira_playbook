@@ -35,3 +35,6 @@ Displays tickets that are not closed, the assignee is empty and only for particu
 
 text ~ "<alert title>" AND project = MSO-VIC-OTWAY AND status != Closed AND AN assignee = current user()
 Displays tickets that are not closed, the assignee is the current user and only for particular ticket board, with particular alert title
+
+assignee = current user() AND status = Closed AND resolutiondate > startofWeek(-1) AND priority IN (High,Highest)
+Check on-call week for current user(), can also check for specific colleagues by changing current user() to "<user>"
