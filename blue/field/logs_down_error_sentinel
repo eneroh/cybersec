@@ -1,0 +1,9 @@
+logs_down_error_sentinel
+
+Check the associated log via:
+
+CommonSecurityLog
+| where TimeGenerated > ago(10m)
+| where DeviceVendor contains "<network appliance>"
+| sort by TimeGenerated
+| take 10
