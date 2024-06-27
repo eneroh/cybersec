@@ -33,8 +33,11 @@ Show your tickets that were resolved today but also removes auto-closing phish a
 text ~ "<alert title>" AND project = <project board> AND status != Closed AND assignee is EMPTY
 Displays tickets that are not closed, the assignee is empty and only for particular ticket board, with particular alert title
 
-text ~ "<alert title>" AND project = MSO-VIC-OTWAY AND status != Closed AND AN assignee = current user()
+text ~ "<alert title>" AND project = <project> AND status != Closed AND AN assignee = current user()
 Displays tickets that are not closed, the assignee is the current user and only for particular ticket board, with particular alert title
 
 assignee = current user() AND status = Closed AND resolutiondate > startofWeek(-1) AND priority IN (High,Highest)
 Check on-call week for current user(), can also check for specific colleagues by changing current user() to "<user>"
+
+text ~ "<text>" AND project = <project> AND status NOT IN (Done,Closed)
+Check project for particular text and the status NOT DONE or CLOSED
