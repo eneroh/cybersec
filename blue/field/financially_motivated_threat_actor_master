@@ -1,0 +1,58 @@
+=== financially_motivated_threat_actor_master - sentinel focus ===
+
+--- alert associated ---
+Suspicious activity linked to a financially motivated actor detected on one endpoint
+
+--- tables ---
+DeviceNetworkEvents
+ASimDnsActivityLogs
+
+--- items required for procedure ---
+> Sandboxing tool: Windows sandbox, urlscan.io
+> Smartphone/home network
+> MS Defender
+> MS Sentinel
+> IP information gathering tool: abuseipdb, virustotal
+> IP VPN proxy checker: ip2proxy.com, ipinfo.io
+
+--- procedure ---
+1. Gather relevant information
+2. Perform OSINT
+OSINT tools, entraid details, defender and sentinel
+3. Perform deep dive
+Review OSINT materials including information dumps that are associated to the suspicious activity, this will be vital in resolving the alert
+Device timeline, as well as Advanced hunting, urlscan.io, reviewing the site itself in a sandbox. Inspect element will be vital.
+
+There are two options in this particular instance:
+Options:
+1. urlscan.io focused
+Check each webpage/navbar url via urlscan.io and with OSINT information check for relevant script mentioned in OSINT located writeup
+
+2. windows sandbox, inspected element focused
+Check each page in windows sandbox and utilize inspect element for relevant js file "<script>.js" once discovered, present information.
+
+4. Present findings
+Present findings in a logical and concise manner
+
+--- useful kql queries ---
+1.
+Tied to Device Timeline > Hunt for related activity
+let selectedTimestamp = datetime(<datetime>)
+search in(DeviceProcessEvents,DeviceNetworkEvents,DeviceFileEvents,DeviceRegistryEvents,DeviceLogonEvents,DeviceImageLoadEvents,DeviceEvents,BehaviorEntities)
+Timestamp between ((selectedTimstamp - 30m) .. (selectedTimestamp + 30m)) and DeviceId == "<DeviceId>"
+| sort by Timestamp desc
+| extend Relevance = ifff(Timestamp == selectedTimestamp,"Selected event",ifff(Timestamp < selectedTimestamp,"Earlier event","Later event"))
+| project-reorder Relevace, RemoteUrl
+
+--- remediation ---
+> Perform AV scan on machine affected
+> Utilize internal proxy/firewall to determine what occurred
+> Add domain/s to network appliance block list
+> Query network appliance for other devices affected/visited domain
+> Validate activity with user
+> Review online resources for next steps
+> Review network appliance for additional requests
+> Ensure no files were downloaded during time period
+
+GOOGLE THE DOMAIN AND LOOK FOR RELEVANT DOCUMENTATION ON HOW TO SPOT THE TRIGGER
+CHECK EACH PAGE TO LOCATE THE SUSPICIOUS JAVASCRIPT ELEMENT
