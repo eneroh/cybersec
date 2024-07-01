@@ -1,0 +1,5 @@
+=== sentinel_notes ===
+
+If you see conditional access policies, refer to the user's sign in logs and utilize KQL to see their conditional access policies, copy and paste the contents into a json/javascript deobfuscator and then read what occurred.
+
+Typically errors will occur due to legacy authentication. But can involve other policies as well.
