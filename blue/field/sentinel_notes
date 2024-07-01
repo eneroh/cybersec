@@ -6,4 +6,6 @@ Typically errors will occur due to legacy authentication. But can involve other 
 2. When reviewing html or javascript, it is important to CHECK MULTIPLE PAGES and potentially use multiple applications i.e. Windows Sandbox and urlscan.io
 Utilizing one of these can get you to where you need to be but having both methods can potentially provide more knowledge
 
-3. 
+3. If you sight an application in use by many users that is constantly making alerts and the application is considered non-suspicious, you can typically suppress or create an automation rule to limit the amount of alerts occur surrounding that alert as it may be a part of internal processes i.e. onboarding.
+
+4. 
