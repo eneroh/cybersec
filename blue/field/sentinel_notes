@@ -1,5 +1,9 @@
 === sentinel_notes ===
 
-If you see conditional access policies, refer to the user's sign in logs and utilize KQL to see their conditional access policies, copy and paste the contents into a json/javascript deobfuscator and then read what occurred.
-
+1. If you see conditional access policies, refer to the user's sign in logs and utilize KQL to see their conditional access policies, copy and paste the contents into a json/javascript deobfuscator and then read what occurred.
 Typically errors will occur due to legacy authentication. But can involve other policies as well.
+
+2. When reviewing html or javascript, it is important to CHECK MULTIPLE PAGES and potentially use multiple applications i.e. Windows Sandbox and urlscan.io
+Utilizing one of these can get you to where you need to be but having both methods can potentially provide more knowledge
+
+3. 
