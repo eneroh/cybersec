@@ -17,7 +17,7 @@ AzureDiagnostics
 1. Gather relevant information
 Gather relevant information from the alert, specificlly: TimeGenerated and the full useragent in question.
 
-It is important to note that the person utilizing the useragent is not present in the alert information. This is tied to a specific field (X-Forwarded-For)
+It is important to note that the ip address utilizing the useragent is not present in the alert information. This is tied to a specific field (X-Forwarded-For)
 
 2. Sentinel Logs Query
 Input custom query:
