@@ -4,6 +4,9 @@
 https://deobfuscate.io/
 cyberchef
 
+--- Data Retrieval ---
+https://www.sans.org/tools/sift-workstation/
+
 --- Digital Forensic and Incident Response (DFIR) ---
 Velociraptor
 
@@ -37,6 +40,10 @@ Suppress
 Popped
 Index
 Table
+
+--- Malware reverse engineering ---
+Ghidra
+Remnux 
 
 --- Network Tools ---
 https://mxtoolbox.com
