@@ -1,7 +1,7 @@
 === Data retrieval project ===
 Project time: 24-48 hours, as disk scanning may take a while depending.
 
-Idea:
+--- Idea ---
 
 Purchase USED hard drive for cheap from ebay or gumtree and attempt to retrieve information from the drive.
 
@@ -13,11 +13,12 @@ Perhaps purchasing from an ebay advertisement that doesn't display drive SMART d
 
 Through closer inspection: dderescue or testdisk seem like potential applications
 
-Tools:
+--- Tools ---
 smartmontools
 gnu shred
 dderescue
 testdisk
+https://www.sans.org/tools/sift-workstation/
 
 --- Procedure ---
 Step 1:
