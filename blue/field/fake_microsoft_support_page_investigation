@@ -13,7 +13,8 @@
 > windows sandbox
 Investigate the suspicious site, click around and see if you can see any suspicious scripts that take you elsewhere
 5. Can occur at anytime in this investigation but it is also smart to check for microsoft's "smartscreen" and google's "safebrowsing", these can also be a big tell of a suspicious site, it is also good to provide this information to your contact
-6. Perform checks in your siem for other users that have visited the site, this can be helpful information
+6. Perform checks in your siem/edr for other users that have visited the site, this can be helpful information
+7. Present information in clear and concise manner
 
 --- remediation ---
 > Block the url/domain/site via network proxy/firewall/whatever
