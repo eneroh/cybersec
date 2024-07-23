@@ -1,0 +1,39 @@
+=== fake_microsoft_support_page_-_investigation ===
+
+--- items to aid in investigation ---
+> Network proxy logs (zscaler)
+> KQL queries
+
+--- procedure ---
+1. Determine time and then convert the time to your relevant logs
+2. Using the time, begin to cut out any un-necessary junk in your network proxy logs export
+3. Once you have a relevant focus point, using the words provided by your contact if social media network and it was mentioned that the user saw an advertisement on said social media website, look for social media network redirections
+4. At this point, it should become clear what the redirect is. Using one of the following:
+> urlscan.io
+> windows sandbox
+Investigate the suspicious site, click around and see if you can see any suspicious scripts that take you elsewhere
+5. Can occur at anytime in this investigation but it is also smart to check for microsoft's "smartscreen" and google's "safebrowsing", these can also be a big tell of a suspicious site, it is also good to provide this information to your contact
+6. Perform checks in your siem for other users that have visited the site, this can be helpful information
+
+--- remediation ---
+> Block the url/domain/site via network proxy/firewall/whatever
+
+--- useful kql queries ---
+let selectedTimestamp = datetime(<iso time>)
+search in (DeviceNetworkEvents)
+Timestamp between ((selectedTimestamp - 20m) - (selectedTimestamp + 20m)) and DeviceName contains "<device>"
+//| where Timestamp > ago(12h)
+| where not(RemoteUrl has any ("<domain>","<domain>","<domain>"))
+| where isnotempty(RemoteUrl)
+| extend Relevance = ifff(Timestamp == selectedTimestamp , "Selected event", ifff(Timestamp < selectedTimestamp, "Earlier event", "Later event"))
+| project Relevance, RemoteUrl
+
+search in (DeviceNetworkEvents) "<suspicious domain>"
+
+--- take aways ---
+> check for smartscreen and safebrowsing in the network proxy logs
+> massive links are typically bad - can be a big tell that something is afoot
+> it's okay to ask clarifying questions to your contact
+> inspect user's auth/sign-in logs
+> microsoft logs are not as good as network proxy logs
+> Site may already be neutralised by the time you perform your investigation i.e. "*.z24.core.windows.net" will be presented and "can't reach this page" will page
