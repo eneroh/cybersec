@@ -28,7 +28,7 @@ A network architecture that combines VPN and SD-WAN capabilities with cloud-nati
 SASE or secure access service edge is a cloud security architecture which combines multiple cloud based security products into one.
 
 Security architecture, such as: 
-zero trust network access ZTNA
+zero trust network access (ZTNA)
 cloud access security broker (CASB)
 NGFW
 FWaaS
