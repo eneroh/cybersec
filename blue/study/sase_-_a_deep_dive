@@ -23,6 +23,7 @@ An architectural model that converges network connectivity with network security
 A network architecture that combines VPN and SD-WAN capabilities with cloud-native security functions such as: secure web gateways, cloud access security brokers, firewalls and zero-trust network access. Delivered from the cloud and provided as a service by a SASE vendor.
 
 =========================
+
 7th definition - my own 
 --- what is SASE? ---
 SASE or secure access service edge is a cloud security architecture which combines multiple cloud based security products into one.
