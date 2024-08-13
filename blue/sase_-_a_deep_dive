@@ -1,0 +1,84 @@
+=== sase_-_a_deep_dive ===
+
+--- preface ---
+So to begin, Im hearing a lot about Secure access service edge (SASE) presently and with this I realise my knowledge is lacking. Therefore, Im going to better my knowledge in relation to this.
+
+--- what is SASE? ---
+1st definition - more general
+Secure access service edge is a security framework that unites wide area networking with zero trust security to safeguard cloud-based enterprises. 
+
+2nd definition - more specific
+A security framework that converges software-defined wide-area networking (SD-WAN) and zero trust security solutions into a converged cloud-delivered platform that securely connects users, systems, endpoints and remote networks to apps and resources.
+
+3rd definition - palo alto
+A cloud native architecture that unifies SD-WAN with multiple security functions like SWG, CASB, FWaaS and ZTNA into one.
+
+4th definition - fortinet
+A cloud architecture model that combines network and security as a service together and delivers them as a single cloud service.
+
+5th definition - cloudflare
+An architectural model that converges network connectivity with network security functions and delivers them through a single cloud platform and/or centralised policy control.
+
+6th definition - cisco
+A network architecture that combines VPN and SD-WAN capabilities with cloud-native security functions such as: secure web gateways, cloud access security brokers, firewalls and zero-trust network access. Delivered from the cloud and provided as a service by a SASE vendor.
+
+--- Now in my own words ---
+
+--- what is SASE? ---
+SASE or secure access service edge is a cloud security architecture which combines multiple cloud based security products into one.
+
+Security architecture, such as: 
+zero trust network access ZTNA
+cloud access security broker (CASB)
+NGFW
+FWaaS
+SD-WAN
+Secure web gateway (SWG)
+
+--- what are the benefits? ---
+Flexibility and scalable
+Potentially monetarily lucrative (however ultimately depends on business size)
+Less lag and optimized performance
+
+--- what are the main traits of SASE? ---
+Typically involves 4 traits:
+1. Identity-driven - Access is granted based on the identity of users and devices.
+2. Cloud-native - Both infrastructure and secuity solutions are cloud-delivered.
+3. Supports all edges - Every physical, digital and logical edge is protected.
+4. Globally distributed - Users are secured no matter where they work.
+
+--- what is the main goal of SASE? ---
+Provide a seamless user experience, optimized connectivity as per cloud infrastructure, comprehensive security.
+
+Does not backhaul traffic like traditional datacenters or private networks for security inspections, SASE enables devices and remote systems to access apps and resources whereever they are-at any time.
+
+--- Key components of SASE ---
+> Software-defined wide area network (SD-WAN)
+> Secure web gateway (SWG)
+> Cloud access security broker (CASB)
+> Firewall as a service (FWaaS)
+> Zero trust network access (ZTNA)
+> Centralised and unified management
+
+--- benefits of SASE [market speak] ---
+When properly implemented SASE allows organisations to ensure secure access no matter where their users, devices or apps are located. Additionally SASE offers:
+1. Flexible, comprehensive security from threat protection to next-generation firewall (NGFW)
+2. Optimized performance and improved user experience (for example, reduced latency and on-demand security)
+3. Reduced cost and complexity, thanks to consolidation of key networking and security functions into fewer solutions.
+4. Agile, scalable network edge, which accelerates digital transformation and IoT adoption and enables the modern hybrid workforce with better productivity and reduce complexity across the organisation.
+
+--- simplified benefits of SASE ---
+1. Flexibility and comprehensive security ranging from multiple security solutions
+2. Optimized performance and user experience
+3. Reduced cost and complexity due to key components being moved to the cloud and no longer entirely necessary on-site
+4. Agile, scalable network edge - essentially points back to flexibility or point 1
+
+--- personal interpretation (what I will use when explaining SASE to another party) ---
+SASE or secure access service edge is a cloud security architecture that combines multiple cloud based applications to achieve a goal of: optimizing cloud infrastructure and security the cloud for organisations and businesses.
+
+--- sources ---
+https://www.microsoft.com/en-au/security/business/security-101/what-is-sase
+https://www.paloaltonetworks.com.au/cyberpedia/what-is-sase
+https://www.fortinet.com/resources/cyberglossary/sase
+https://www.cloudflare.com/learning/access-management/what-is-sase/
+https://www.cisco.com/c/en_au/products/security/what-is-sase-secure-access-service-edge.html
