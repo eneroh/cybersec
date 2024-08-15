@@ -1,0 +1,6 @@
+https://github.com/pikvm/pikvm#diy-getting-started
+
+requires pi 4 2GB
+
+Going to need out-of-band management/IPMI (Intelligent platform management interface) for custom server build
+
