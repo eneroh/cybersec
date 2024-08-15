@@ -6,7 +6,7 @@
 5. Failed logons that have no successes can be disregarded, depending on the situation
 6. Check other activity associated to an IP address before requesting a block. IPs can be in use by multiple parties depending on the situation. It would be recommended to see other activity associated to the first 2 octets of an ip address
 7. Sometimes code query languages can have hard limits, it's important to recognise these. So remember to manually review results if possible
-8. europe.smartscreen.com and safebrowsing.google.com are great indicates of suspicious activity
+8. europe.smartscreen.microsoft.com and safebrowsing.google.com are great indicators of suspicious activity
 9. Always look for the longest link in network proxy logs, also a great indicator of suspicious activity
 10. Attackers can use legitimate cloud services, such as: AWS, GCP, Azure to circumvent security measures. Be aware and do not completely write them out of investigations.
 11. 
