@@ -1,0 +1,59 @@
+=== introduction_to_microsoft_365_defender_xdr ===
+
+--- Defender Services ----
+Microsoft Defender for Endpoint
+Microsoft Defender for Office 365
+Microsoft Defender for Identity
+Microsoft Defender for Cloud Apps
+Microsoft Defender Vulnerability Management
+Microsoft Entra ID Protection
+Microsoft Data Loss Prevention
+App Governance
+
+--- Microsoft Defender for Endpoint ---
+> Endpoint behavioral sensors
+> Cloud security analytics
+> Threat intelligence
+3000 different people world-wide
+
+--- Microsoft Defender for Office 365 ---
+Email specific
+> EOP
+> Defender for Office 365 P1
+> Defender for Office 365 P2
+
+
+--- Microsoft Defender for Identity ---
+Cloud and on-prem
+
+EntraID
+Not just MS specific
+AWS and Google
+Automated responses etc.
+Azure Advanced Threat Protection
+
+--- Microsoft Defender for Cloud Apps) ---
+SaaS
+Beyond the CASB
+Integrates with Microsoft Windows
+
+--- Microsoft Defender Vulnerability Management ---
+Microsoft Threat Intelligence
+
+--- Microsoft Entra ID Protection ---
+> Risky users
+> Risky sign-ins
+
+--- Microsoft Data Loss Prevention ---
+Safeguards
+prevent data from sharing data outside orgs
+paste certain information
+unable to share or print
+
+--- App Governance ---
+Defender for Cloud Apps tie-in
+> Insights
+> Governance
+> Detection
+> Remediation
+
