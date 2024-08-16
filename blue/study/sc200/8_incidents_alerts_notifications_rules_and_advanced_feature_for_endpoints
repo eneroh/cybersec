@@ -1,0 +1,20 @@
+=== incidents_alerts_notifications_rules_and_advanced_feature_for_endpoints ===
+
+admin.microsoft.com > security tab > redirects to > security.microsoft.com (defender) > settings > endpoints
+
+Permissions > Roles > assigned user groups > provide to self
+
+Can create custom roles too
+
+Permissions > Device Groups > Add Device Group > Specify conditions
+
+APIs > SIEM  (Centralise log data)
+
+Rules > Alert suppression
+Rules > Indicators
+
+Configuration manage > Enforcement scope
+Enforce security configuration settings from Intune
+
+On-boarding
+Off-boarding
