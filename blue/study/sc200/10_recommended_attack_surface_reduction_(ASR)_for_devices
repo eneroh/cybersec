@@ -1,0 +1,16 @@
+=== recommended_attack_surface_reduction_(ASR)_for_devices ===
+
+intune.microsoft.com - Microsoft Intune Admin Center
+
+Devices > Enroll devices > Windows enrollment > MDM/MAM user scope - Change setting to All for both.
+
+Endpoint Security > Attack Surface Reduction Rules > Create Policy > Select Platform (Windows 10, Windows 11, and Windows Server) > Select profile > Attack Surface Reduction Rules > Call policy `asrTest`
+
+the asr policy will get deployed onto device soonafter
+
+--- To speed this up and trigger sync ---
+Settings > Accounts > Access work or school > Connected by <Account>
+Sync and/or reboot
+
+--- To see if the ASR rule deployed ---
+intune.microsoft.com > Endpoint security > Attack surface reduction > Select <Your asr policy>, review status
