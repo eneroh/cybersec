@@ -1,0 +1,25 @@
+=== concepts_of_management_with_microsoft_defender_for_endpoint ===
+
+--- What is Microsoft Defender for Endpoint? ---
+> Built to be an enterprise grade endpoint security platform designed to help entyerprise networks prevent, detect, investigate and respond to advanced threats.
+
+--- Microsoft Defender for Endpoint ---
+> Endpoint behavioral sensors
+> Cloud security analytics
+> Threat intelligence
+3000 different people world-wide
+> Threat and vulnerability management
+> Attack surface reduction
+> Next generation protection
+> Endpoint detection and response
+> Automated investigation and remediation
+> Microsoft secure score for devices
+> Microsoft threat experts
+
+--- Integrations with MS Solutions ---
+> Azure Security Center
+> Microsoft Sentinel
+> Intune
+> Microsoft Defender for Cloud Apps
+> Microsoft Defender for Identity
+> Microsoft Defender for Office 365
