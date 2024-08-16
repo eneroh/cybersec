@@ -1,0 +1,25 @@
+=== onboarding_to_manage_devices_using_defender_for_endpoint ===
+
+--- Join to azure activity directory ---
+Accounts > Add a work or school account
+
+--- Microsoft 365 admin center ---
+portal.microsoft.com
+
+Billing > Purchase services > Licenses
+
+Microsoft Defender for Endpoint P1
+Important
+Has less features to P2
+
+--- Features associated to above license ---
+
+--- Onboarding a device onto Defender for Endpoint ---
+
+Grab onboarding script
+Place onto onboarding machine
+Open cmd as administrator
+Run script and input `Y` to confirm onboarding
+
+Check device inventory in portal.microsoft.com
+
