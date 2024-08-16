@@ -1,0 +1,30 @@
+=== concepts_of_microsoft_sentinel ===
+
+The Security Information Event Management (SIEM) and Security Orchestration Automated Response (SOAR)
+
+Sentinel, intelligent security analytics
+
+Cloud based
+
+--- cycle of protection ---
+
+--- Collect data by using data connectors ---
+Links to microsoft platforms
+3rd party data connectors are present as well
+i.e. common event formats, syslog, rest-api
+
+--- correlate alerts into incidents by using analytics rules ---
+
+--- automate and orchestrate
+Logic apps and connectors for:
+ServiceNow
+Jira
+Zendesk
+HTTP requests
+MS Teams
+Slack
+EntraID
+Defender for endpoint
+Defender for cloud apps
+
+--- investigate the scope and root cause of security threats ---
