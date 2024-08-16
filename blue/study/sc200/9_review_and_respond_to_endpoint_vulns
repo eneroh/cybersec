@@ -1,0 +1,6 @@
+=== review_and_respond_to_endpoint_vulns ===
+
+security.microsoft.com > Endpoints > Device Management > Onboarding > Run command prompt script to run detection test
+
+--- Check the incident on the endpoint associated to the detection test above ---
+Settings > Endpoints > Search for the device in question > Select device > Incidents and alerts tab
