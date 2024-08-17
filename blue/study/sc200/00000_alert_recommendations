@@ -1,0 +1,16 @@
+=== alert_recommendations ===
+
+As per the SC200, it is recommended to assign these alerts these specific severities
+
+--- Medium ---
+> Unusual CPU utilization in a virtual machine
+> Excessive number of failed login attempts to an application
+> Anomalous outbound connections from a container instance
+
+--- High ---
+> Unauthorized access attempt to a database
+> Suspicious file modification in a storage account
+> Abnormal network traffic detected
+> Unusual user accessed a key vault
+> Log on from an unusual location
+> Impossible travel activity
