@@ -23,7 +23,7 @@ It is important to note that the ip address utilizing the useragent is not prese
 Input custom query:
 
 AzureDiagnostics
-| where useragent_s contains ''
+| where useragent_s contains '<useragent>'
 | project TimeGenerated, clientIP_s, clientIp_s, httpStatusCode_d
 
 3. Gather findings
