@@ -1,0 +1,1 @@
+ufw allow from <IP> to any port 22 proto TCP
