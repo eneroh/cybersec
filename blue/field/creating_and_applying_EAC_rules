@@ -1,0 +1,25 @@
+=== creating_and_applying_eac_rules ===
+
+1. Visit admin.exchange.microsoft.com
+2. Visit the "Mail flow" tab in the far left hand ribbon menu
+3. Under "Mail flow", select "Rules"
+4. Select "Add a rule"
+5. Input rule name
+6. Input conditions (Apply rule if)
+7. Ensure you only pinpoint from a sender and a recipient (to not affect entire org)
+8. Input (Do the following) options
+- Forward the message
+- Redirect
+- Block
+- Add recipients
+- Apply a disclaimer to the message
+- Modify the message properties
+- Modify the message security
+- Prepend the subject of the message with
+- Generate incident report and send it to
+- Notify the recipient with a message
+9. Save and apply
+
+Example:
+- Blocking all html/htm attachments
+- 
