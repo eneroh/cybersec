@@ -4,11 +4,23 @@
 https://deobfuscate.io/
 cyberchef
 
+--- Data review ---
+Microsoft Excel
+
 --- Data Retrieval ---
 https://www.sans.org/tools/sift-workstation/
 
 --- Digital Forensics and Incident Response (DFIR) ---
 Velociraptor
+
+--- Email analysis ---
+Microsoft Defender > Email & Collaboration > Explorer - security.microsoft.com
+EmailEvents - kql
+Exchange admin center - admin.exchange.microsoft.com
+
+--- Email message header analysis ---
+https://mha.azurewebsites.net/
+mxtoolbox - https://mxtoolbox.com/EmailHeaders.aspx
 
 --- Email monitoring ---
 Microsoft Defender
@@ -17,18 +29,30 @@ Splunk via specific index
 --- File investigation ---
 https://www.hybrid-analysis.com/
 
+--- Firewall GUI ---
+Fortinet
+
 --- Endpoint Detection and Response (EDR) ---
 Microsoft Defender
 Crowdstrike Falcon
+
+--- GRC/Policy management/DLP ---
+Microsoft purview
 
 --- Identity and Access Management ---
 Microsoft Defender for Identity
 EntraID
 
+--- Internet/website archive ---
+Wayback machine - http://web.archive.org/
+
 --- IP Reputation Gathering ---
 https://virustotal.com
 https://otx.alienvault.com
 https://abuseipdb.com
+
+--- IP Torrent Download Checker ---
+https://iknowwhatyoudownload.com
 
 --- IP VPN/Proxy Checker ---
 https://ip2proxy.com
@@ -55,6 +79,13 @@ Zscaler - app-based proxy
 --- Network Investigation ---
 Wireshark
 
+--- Note taking ---
+Notepad
+Notepad++
+Obsidian
+Cherrytree
+Microsoft Word
+
 --- Operational Technology (OT) ---
 Dragos
 
@@ -64,12 +95,21 @@ whatsmyname.app
 social media networks, such as: Linkedin.com
 google dorking
 
+--- Query Languages ---
+CQL - Crowdstrike Query Language
+KQL - Kusto Query Language - Sentinel
+SQL - Structured Query Language - Databases
+SPL - Splunk Processing Language
+
 --- Sandboxing ---
 urlscan.io
 Windows Sandbox
 virtualbox
 vmware
 proxmox
+
+--- Security awareness platform ---
+KnowBe4
 
 --- Security Information and Event Management (SIEM) ---
 Microsoft Sentinel
@@ -79,15 +119,7 @@ Rapid7
 --- Security Orchestration Automation and Response ---
 Palo Alto
 Splunk
-
---- IP Torrent Download Checker ---
-https://iknowwhatyoudownload.com
-
---- Query Languages ---
-CQL - Crowdstrike Query Language
-KQL - Kusto Query Language - Sentinel
-SQL - Structured Query Language - Databases
-SPL - Splunk Processing Language
+PhishER (Email centric) - KnowBe4
 
 --- Vulnerability Management ---
 Microsoft Defender for Endpoint
