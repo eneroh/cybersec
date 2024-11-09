@@ -1,6 +1,53 @@
-https://github.com/pikvm/pikvm#diy-getting-started
+=== pikvm ===
 
-requires pi 4 2GB
+--- Intro ---
+If you need out-of-band management/IPMI (Intelligent platform management interface) for a custom server build, look no further than the piKVM.
 
-Going to need out-of-band management/IPMI (Intelligent platform management interface) for custom server build
+Typically IPMI costs a pretty penny (see server grade motherboards) but with this solution, no crazy additional costs are necessary. Just slightly more responsibility and care is needed with this solution.
 
+For this instance, the SBC necessary will be a Raspberry pi 4 - 2gb
+
+
+--- Items required ---
+==============================================================================================
+No.  |  Item                      |  Name                    |  Price  |  Bought  | Vendor
+==============================================================================================
+1    |  SBC                       |  RPI4_-_2GB              |  76.76  |  TRUE    |  amazon
+==============================================================================================
+2    | USBC_Splitter              |                          |  16.95  |  TRUE    |  amazon
+==============================================================================================
+3    |  HDMI_-_to_-_CSI2_adaptor  |                          |  35.99  |  TRUE    |  amazon
+==============================================================================================
+4    |  sd_card_-_32GB            |  sandisk ext. plus 32gb  |  23.00  |  TRUE    |  jb_hifi
+==============================================================================================
+5    |  usbc_to_usba              |                          |  14.95  |  TRUE    |  amazon
+==============================================================================================
+6    |  usbc_to_usbc              |                          |  14.95  |  TRUE    |  amazon
+==============================================================================================
+7    |  usbc_female_to_usba_male  |                          |         |  TRUE    |  jb_hifi
+==============================================================================================
+8    |  pc/laptop                 |                          |         |          |           
+==============================================================================================
+9    |  terminal                  |                          |         |          |
+==============================================================================================
+10   |  instructions              |  https://docs.pikvm.org/v2/#required-parts  |  |  |
+==============================================================================================
+
+--- Procedure ---
+1. Depending on video platform, download the correct files
+2. Within your terminal, unpack files
+`xz --decompress v2-hdmi-rpi4-latest.img.xz`
+3. Ensure your sd card is connected to your machine
+3. Utilizing dd, input the following command to prepare your sd card for booting
+`sudo dd if=v2-hdmi-rpi4-latest.img of=/dev/mmcblkX`
+4. Once completed, perform tests with rpi4
+
+--- Notes ---
+- If using hdmi-to-cs2 bridge, ensure that cable is connected correctly (review images online for reference)
+- https://github.com/pikvm/pikvm#diy-getting-started for more relevant information
+- Limitations in components and the device itself make framerate not the best but it is definitely manageable
+- The device needs an IP address and the piKVM gui is accessible over the browser
+- May be handy setting a dns name and static IP instead of DHCP'ing it
+- https://docs.pikvm.org/v2/#setting-up-the-hardware - Necessary in procedure
+- This device is called a DIY PiKVM V2
+- The official device sold by pikvm has additional features but not 100% necessary. Also costs a lot more.
