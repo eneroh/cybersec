@@ -49,12 +49,12 @@ Price diff      |                   |                          |  326.6   |     
 4. Once completed, perform tests with rpi4
 
 --- Notes ---
-- If using hdmi-to-cs2 bridge, ensure that cable is connected correctly (review images online for reference)
-- https://github.com/pikvm/pikvm#diy-getting-started for more relevant information
-- Limitations in components and the device itself make framerate not the best but it is definitely manageable
-- The device needs an IP address and the piKVM gui is accessible over the browser
-- May be handy setting a dns name and static IP instead of DHCP'ing it
-- https://docs.pikvm.org/v2/#setting-up-the-hardware - Necessary in procedure
-- Ensure you select the correct files to proceed, separation by DIY and full product, as well as with: hdmi-to-cs2 and usb based hdmi video
-- This device is called a DIY PiKVM V2
-- The official device sold by pikvm has additional features but not 100% necessary. Also costs a lot more.
+> If using hdmi-to-cs2 bridge, ensure that cable is connected correctly (review images online for reference)
+> https://github.com/pikvm/pikvm#diy-getting-started for more relevant information
+> Limitations in components and the device itself make framerate not the best but it is definitely manageable
+> The device needs an IP address and the piKVM gui is accessible over the browser
+> May be handy setting a dns name and static IP instead of DHCP'ing it
+> https://docs.pikvm.org/v2/#setting-up-the-hardware - Necessary in procedure
+> Ensure you select the correct files to proceed, separation by DIY and full product, as well as with: hdmi-to-cs2 and usb based hdmi video
+> This device is called a DIY PiKVM V2
+> The official device sold by pikvm has additional features but not 100% necessary. Also costs a lot more.
