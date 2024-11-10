@@ -3,7 +3,7 @@
 --- Intro ---
 If you need out-of-band management/IPMI (Intelligent platform management interface) for a custom server build, look no further than the piKVM.
 
-Typically IPMI costs a pretty penny (see server grade motherboards) but with this solution, no crazy additional costs are necessary. Just slightly more responsibility and care is needed with this solution.
+Typically IPMI costs a pretty penny (see server grade motherboards) but with this solution, no crazy additional costs are necessary. Just slightly more responsibility and care is needed with this solution i.e. maintaining the pi + software updates
 
 For this instance, the SBC necessary will be a Raspberry pi 4 - 2gb
 
