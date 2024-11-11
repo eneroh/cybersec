@@ -25,10 +25,10 @@ Device timeline, as well as Advanced hunting, urlscan.io, reviewing the site its
 
 There are two options in this particular instance:
 Options:
-1. urlscan.io focused
+3.1. urlscan.io focused
 Check each webpage/navbar url via urlscan.io and with OSINT information check for relevant script mentioned in OSINT located writeup
 
-2. windows sandbox, inspected element focused
+3.2. windows sandbox, inspected element focused
 Check each page in windows sandbox and utilize inspect element for relevant js file "<script>.js" once discovered, present information.
 
 4. Present findings
