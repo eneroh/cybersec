@@ -38,7 +38,7 @@ Utilizing the information collected from the alert, the machine/device affected.
 Gather this information.
 
 Method 1:
-Visit the assets tab in the alert itself and then select the device asasociated and then open the device page.
+Visit the assets tab in the alert itself and then select the device associated and then open the device page.
 
 Method 2:
 Place the device name into the MS Defender search. Within here, select the relevant device.
@@ -47,7 +47,7 @@ Visit the timeline tab and input the search field the relevant ip/domain associa
 
 Ensure that the activity is blocked throughout, however still record the information to provide to the client.
 
-From here you can perform a "hunt for related events", select one of the blocked events and then look for "Hunt for related evens" in the sidebar menu.
+From here you can perform a "hunt for related events", select one of the blocked events and then look for "Hunt for related events" in the sidebar menu.
 
 5. Utilization of Microsoft Defender Advanced Hunting
 You will be presented with an automated query where you will need to understand what events transpired for the user to visit the suspicious link.
