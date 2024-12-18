@@ -10,7 +10,7 @@
 1. Prepare virtualised environment for both kali and win7 machines
 2. Before starting the win7 virtual machine, ensure that the network adaptor is turned off. This is to ensure no updates go to the windows 7 vm, patching the relevant vulnerability
 3. Start virtual machines and go through configuration
-4. Once presented with both login screens for windows and kali virtual machines. Start with ensuring the win7 virtual machine and lab environment is prepared/
+4. Once presented with both login screens for windows and kali virtual machines. Start with ensuring the win7 virtual machine and lab environment is prepared.
 
 Win7 lab environment preparation
 Disable windows firewall
