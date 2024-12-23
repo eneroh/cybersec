@@ -50,6 +50,9 @@ Whatsmyname.app
 john the ripper
 hashcat
 
+--- Post-exploitation ---
+Lolbas
+
 --- Privilege Escalation ---
 WinPeas
 LinPeas
