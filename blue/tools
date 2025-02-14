@@ -76,15 +76,16 @@ https://mxtoolbox.com
 --- Network Monitoring ---
 Zscaler - app-based proxy
 
---- Network Investigation ---
-Wireshark
-
 --- Note taking ---
 Notepad
 Notepad++
 Obsidian
 Cherrytree
 Microsoft Word
+
+--- Network traffic analysis ---
+Progress telerik fiddler classic
+Wireshark
 
 --- Operational Technology (OT) ---
 Dragos
